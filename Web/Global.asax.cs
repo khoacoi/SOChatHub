@@ -32,11 +32,23 @@ namespace Web
             ServiceLocator.SetLocatorProvider(() => new WindsorServiceLocator(_container));
 
             ApplicationStarter.Run(_container, InitializeAction);
+            
+
+            //AreaRegistration.RegisterAllAreas();
+
+            //WebApiConfig.Register(GlobalConfiguration.Configuration);
+            //FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            //RouteConfig.RegisterRoutes(RouteTable.Routes);
+            //BundleConfig.RegisterBundles(BundleTable.Bundles);
+            //AuthConfig.RegisterAuth();
+
+            
         }
 
         private void InitializeAction(IWindsorContainer container)
         {
             var tasks = new IBootstrapperTask[] {
+                new SignalRRegistrationTask(),
                 //new Log4NetRegistrationTask(),
                 new RouteRegistrationTask(),
                 new FilterRegistrationTask(),
