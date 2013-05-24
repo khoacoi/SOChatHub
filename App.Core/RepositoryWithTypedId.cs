@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using App.Common.Security.Authentication;
-//using vn012.Domain.Models.User;
 
 namespace App.Core
 {

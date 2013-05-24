@@ -7,8 +7,8 @@
     <ProjectGuid>{B03E4A0B-939A-4CDF-842D-91ABCB974506}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>vn012.Core</RootNamespace>
-    <AssemblyName>vn012.Core</AssemblyName>
+    <RootNamespace>App.Core</RootNamespace>
+    <AssemblyName>App.Core</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

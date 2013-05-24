@@ -60,7 +60,6 @@ namespace App.Core
                 Component.For<IRepositoryFactory>().AsFactory().LifestylePerWebRequest()
                 //Component.For<ICacheManager>().ImplementedBy<CacheManager>().LifestylePerWebRequest(),
                 //Component.For<ILocalizer>().ImplementedBy<ResxLocalizer>().LifestyleSingleton(),
-                //Component.For<IPayrollGateway>().ImplementedBy<UltiProPayrollGateway>().DependsOn(Property.ForKey("wsUrl").Eq(choiceWebservice)).LifestyleSingleton()
                 );
 
 
@@ -75,12 +74,12 @@ namespace App.Core
                 Classes.FromAssemblyInDirectory(new AssemblyFilter(HttpRuntime.BinDirectory, "App.Domain.*"))
                     .BasedOn(typeof(ICommandHandler<,>))
                     .LifestylePerWebRequest()
+                    .WithService.FirstInterface(),
+                //Register all ICommandHandler<>
+                Classes.FromAssemblyInDirectory(new AssemblyFilter(HttpRuntime.BinDirectory, "App.Domain.*"))
+                    .BasedOn(typeof(ICommandHandler<>))
+                    .LifestylePerWebRequest()
                     .WithService.FirstInterface()
-                ////Register all ICommandHandler<>
-                //Classes.FromAssemblyInDirectory(new AssemblyFilter(HttpRuntime.BinDirectory, "CheckPoint.Domain.*"))
-                //    .BasedOn(typeof(ICommandHandler<>))
-                //    .LifestylePerWebRequest()
-                //    .WithService.FirstInterface()
                 );
         }
     }

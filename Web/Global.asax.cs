@@ -45,9 +45,9 @@ namespace Web
         {
             var tasks = new IBootstrapperTask[] {
                 //new Log4NetRegistrationTask(),
-                //new RouteRegistrationTask(),
+                new RouteRegistrationTask(),
                 new FilterRegistrationTask(),
-                //new BundleRegistrationTask(),
+                new BundleRegistrationTask(),
                 //new ControllerRegistrationTask(),
                 new MvcOverridesRegistrationTask()
                 //new FluentValidationRegistrationTask()
