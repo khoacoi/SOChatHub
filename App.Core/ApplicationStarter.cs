@@ -68,7 +68,7 @@ namespace App.Core
                 Component.For<ICommandHandlerFactory>().AsFactory().LifestylePerWebRequest(),
                 //Register all IQuery instants.
                 Classes.FromAssemblyInDirectory(new AssemblyFilter(HttpRuntime.BinDirectory))
-                    .BasedOn<IQuery>()
+                    .BasedOn<App.Common.Data.IQuery>()
                     .WithService.DefaultInterfaces()
                     .LifestyleTransient(),
                 //Register all ICommandHandler<,>
