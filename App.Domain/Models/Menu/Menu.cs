@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace App.Domain.Models.Menu
 {
-    public class Menu : BOBase
+    public class Menu : SharpLite.Domain.EntityWithTypedId<Guid>
     {
         public virtual string Controller { get; set; }
         public virtual string Action { get; set; }

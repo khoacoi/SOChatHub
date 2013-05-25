@@ -144,6 +144,9 @@
     <Compile Include="Web\ModelBinders\ExtendedDefaultModelBinder.cs" />
     <Compile Include="Web\ModelBinders\IDynamicAware.cs" />
     <Compile Include="Web\ModelBinders\PropertyBindAttribute.cs" />
+    <Compile Include="Web\Mvc\WindsorControllerFactory.cs" />
+    <Compile Include="Web\Mvc\WindsorDependencyResolver.cs" />
+    <Compile Include="Web\Mvc\WindsorFluentValidatorFactory.cs" />
     <Compile Include="Web\Theme\ITheme.cs" />
     <Compile Include="Web\WindsorContainer\WindsorControllerFactory.cs" />
     <Compile Include="Web\WindsorContainer\WindsorDependencyResolver.cs" />

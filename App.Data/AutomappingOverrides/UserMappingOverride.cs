@@ -13,7 +13,7 @@ namespace App.Data.AutomappingOverrides
     {
         public void Override(AutoMapping<User> mapping)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
     }
 }

@@ -14,8 +14,12 @@ namespace Web.Startup
         {
             var bundles = BundleTable.Bundles;
 
+            bundles.Add(new ScriptBundle("~/bundles/json2").Include(
+                        "~/Scripts/plugins/json2/json2.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+                        "~/Scripts/plugins/jquery/jquery-{version}.js",
+                        "~/Scripts/plugins/jquery/jquery.metadata.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(
                         "~/Scripts/jquery-ui-{version}.js"));
@@ -25,13 +29,25 @@ namespace Web.Startup
                         "~/Scripts/jquery.validate*"));
             //Signal-R
             bundles.Add(new ScriptBundle("~/bundles/signalR").Include(
-                "~/Scripts/jquery.signalR-{version}.js"
+                "~/Scripts/plugins/signalR/jquery.signalR-{version}.js"
                 ));
+            //Required
+            bundles.Add(new ScriptBundle("~/bundles/require").IncludeDirectory(
+                       "~/Scripts/plugins/require", "*.js"));
+
+            //KnockoutJS
+            bundles.Add(new ScriptBundle("~/bundles/knockout").Include(
+                       "~/Scripts/plugins/knockout/infuser.js",
+                       "~/Scripts/plugins/knockout/TrafficCop.js",
+                       "~/Scripts/plugins/knockout/knockout-{version}.js",
+                       "~/Scripts/plugins/knockout/knockout.mapping-latest.js",
+                       "~/Scripts/plugins/knockout/koExternalTemplateEngine.js",
+                       "~/Scripts/plugins/knockout/knockout-postbox.js"));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
-                        "~/Scripts/modernizr-*"));
+                        "~/Scripts/plugins/modernizr/modernizr-*"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css"));
 
@@ -53,13 +69,6 @@ namespace Web.Startup
             
 
             ////BundleTable.EnableOptimizations = true;
-
-            //bundles.Add(new ScriptBundle("~/bundles/json2").Include(
-            //            "~/Scripts/plugins/json2/json2.js"));
-
-            //bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-            //            "~/Scripts/plugins/jquery/jquery-{version}.js",
-            //            "~/Scripts/plugins/jquery/jquery.metadata.js"));
 
             //bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(
             //            "~/Scripts/plugins/jquery/jquery-ui-{version}.js",
@@ -85,19 +94,6 @@ namespace Web.Startup
             //                "~/Scripts/plugins/jquery/jquery.numberformatter-1.2.3.js"
             //                ));
 
-            //bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
-            //            "~/Scripts/plugins/modernizr/modernizr-*"));
-
-            //bundles.Add(new ScriptBundle("~/bundles/knockout").Include(
-            //           "~/Scripts/plugins/knockout/infuser.js",
-            //           "~/Scripts/plugins/knockout/TrafficCop.js",
-            //           "~/Scripts/plugins/knockout/knockout-2.2.1.js",
-            //           "~/Scripts/plugins/knockout/knockout.mapping-latest.js",
-            //           "~/Scripts/plugins/knockout/koExternalTemplateEngine.js",
-            //           "~/Scripts/plugins/knockout/knockout-postbox.js"));
-
-            //bundles.Add(new ScriptBundle("~/bundles/require").IncludeDirectory(
-            //           "~/Scripts/plugins/require", "*.js"));
 
             //bundles.Add(new ScriptBundle("~/bundles/headjs").IncludeDirectory(
             //            "~/Scripts/plugins/headjs", "*.js"));

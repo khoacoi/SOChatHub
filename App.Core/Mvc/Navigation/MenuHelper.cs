@@ -19,11 +19,11 @@ namespace App.Core.Mvc.Navigation
         /// <param name="runAsTenant">The run as tenant id.</param>
         /// <returns></returns>
         public static IList<MenuItem> LoadMenuItems(UrlHelper urlHelper)
-        {           
+        {
             var repo = ServiceLocator.Current.GetInstance<IRepositoryFactory>();
             var repoMenu = repo.CreateWithGuid<Menu>();
 
-            var menus = repoMenu.GetAll();
+            var menus = repoMenu.GetAll().ToList();
 
             var items = new List<MenuItem>();
 
@@ -41,6 +41,9 @@ namespace App.Core.Mvc.Navigation
 
                 items.Add(item);
             }
+            //var items = new List<MenuItem>();
+            if (items == null)
+                items = new List<MenuItem>();
 
             return items;
         }

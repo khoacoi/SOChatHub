@@ -19,7 +19,14 @@ namespace App.Core
         {
             get
             {
+                if (this._sessionFactory.GetCurrentSession() == null)
+                {
+                    var session = this._sessionFactory.OpenSession();
+                    session.BeginTransaction();
+                    return session;
+                }
                 return this._sessionFactory.GetCurrentSession();
+                //return this._sessionFactory.GetCurrentSession();
             }
         }
 
@@ -53,6 +60,7 @@ namespace App.Core
             var id = GetEntityId(entity);
             this.Session.SaveOrUpdate((object)entity);
 
+            this.Session.Flush();
             return entity;
         }
 

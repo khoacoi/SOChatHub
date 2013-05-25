@@ -8,14 +8,15 @@ using System.Web.Security;
 using DotNetOpenAuth.AspNet;
 using Microsoft.Web.WebPages.OAuth;
 using WebMatrix.WebData;
-using Web.Filters;
 using Web.Models;
+using Web.ViewModels.Account;
+using App.Core.Mvc;
 
 namespace Web.Controllers
 {
-    [Authorize]
-    [InitializeSimpleMembership]
-    public class AccountController : Controller
+    //[Authorize]
+    //[InitializeSimpleMembership]
+    public class AccountController : PageControllerBase
     {
         //
         // GET: /Account/Login
@@ -63,30 +64,44 @@ namespace Web.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
-            return View();
+            var viewModel = new RegisterUserViewModel();
+            return View(viewModel);
         }
 
         //
         // POST: /Account/Register
 
         [HttpPost]
-        [AllowAnonymous]
-        [ValidateAntiForgeryToken]
-        public ActionResult Register(RegisterModel model)
+        //[AllowAnonymous]
+        //[ValidateAntiForgeryToken]
+        public ActionResult Register(RegisterUserViewModel model)
         {
             if (ModelState.IsValid)
             {
+                var newUser = new App.Domain.Models.User.User();
+                newUser.Email = model.Email;
+                newUser.UserID = model.UserID;
+                newUser.Password = model.Password;
+                newUser.UserRole = App.Domain.Models.User.UserRole.RegularUser;
+
+                var repo = this.RepositoryFactory.CreateWithGuid<App.Domain.Models.User.User>();
+                repo.SaveOrUpdate(newUser);
+
+                return Json(new
+                {
+                    IsSuccess = true
+                });
                 // Attempt to register the user
-                try
-                {
-                    WebSecurity.CreateUserAndAccount(model.UserName, model.Password);
-                    WebSecurity.Login(model.UserName, model.Password);
-                    return RedirectToAction("Index", "Home");
-                }
-                catch (MembershipCreateUserException e)
-                {
-                    ModelState.AddModelError("", ErrorCodeToString(e.StatusCode));
-                }
+                //try
+                //{
+                //    WebSecurity.CreateUserAndAccount(model.UserName, model.Password);
+                //    WebSecurity.Login(model.UserName, model.Password);
+                //    return RedirectToAction("Index", "Home");
+                //}
+                //catch (MembershipCreateUserException e)
+                //{
+                //    ModelState.AddModelError("", ErrorCodeToString(e.StatusCode));
+                //}
             }
 
             // If we got this far, something failed, redisplay form

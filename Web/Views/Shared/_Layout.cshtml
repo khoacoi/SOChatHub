@@ -42,8 +42,8 @@
             </div>
         </footer>
 
-        @Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/bundles/signalR")
+        
+        @Html.Partial("Partials/_ScriptsPartial")
         @RenderSection("scripts", required: false)
     </body>
 </html>

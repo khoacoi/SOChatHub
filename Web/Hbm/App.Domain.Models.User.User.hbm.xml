@@ -1,0 +1,23 @@
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class xmlns="urn:nhibernate-mapping-2.2" name="App.Domain.Models.User.User, App.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="`User`">
+    <id name="Id" type="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ID" />
+      <generator class="guid.comb" />
+    </id>
+    <property name="Email" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="Email" />
+    </property>
+    <property name="UserID" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="UserID" />
+    </property>
+    <property name="Password" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="Password" />
+    </property>
+    <property name="UserRole" type="App.Domain.Models.User.UserRole, App.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <column name="UserRole" />
+    </property>
+    <property name="Name" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="Name" />
+    </property>
+  </class>
+</hibernate-mapping>

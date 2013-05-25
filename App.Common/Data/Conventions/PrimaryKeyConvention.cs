@@ -11,7 +11,7 @@ namespace App.Common.Data.Conventions
     {
         public void Apply(FluentNHibernate.Conventions.Instances.IIdentityInstance instance)
         {
-            instance.Column(instance.EntityType.Name + "ID");
+            instance.Column("ID");
         }
     }
 }

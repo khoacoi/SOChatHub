@@ -42,7 +42,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\IBOBase.cs" />
     <Compile Include="Models\Menu\Menu.cs" />
     <Compile Include="Models\User\User.cs" />
     <Compile Include="Models\User\ValidationException.cs" />

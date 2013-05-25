@@ -57,7 +57,8 @@ namespace App.Core.Mvc.Knockout
             sb.AppendLine(@"<script type=""text/javascript"">");
             sb.AppendLine(string.Format("function {0}() {1} return {2}; {3};", viewModelName, "{", ConvertViewModelToKnockout(viewModel), "}"));
             sb.AppendLine(@"</script>");
-            return MvcHtmlString.Create(sb.ToString());
+            var result = MvcHtmlString.Create(sb.ToString());
+            return result;
         }
 
         /// <summary>

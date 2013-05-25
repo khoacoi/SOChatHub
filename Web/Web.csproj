@@ -48,6 +48,9 @@
     <Reference Include="CommonServiceLocator.WindsorAdapter">
       <HintPath>..\packages\CommonServiceLocator.WindsorAdapter.1.0\lib\NET35\CommonServiceLocator.WindsorAdapter.dll</HintPath>
     </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.0\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AspNet.SignalR.Core">
       <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.1.1.1\lib\net40\Microsoft.AspNet.SignalR.Core.dll</HintPath>
     </Reference>
@@ -67,7 +70,16 @@
     <Reference Include="Owin">
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
     </Reference>
+    <Reference Include="SharpLite.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f2f64e823dfaf078, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\references\SharpLite\SharpLite.Domain.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpLite.NHibernateProvider, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f2f64e823dfaf078, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\references\SharpLite\SharpLite.NHibernateProvider.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
@@ -203,26 +215,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\AuthConfig.cs" />
-    <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="App_Start\FilterConfig.cs" />
-    <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ChatController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Startup\ControllerRegistrationTask.cs" />
+    <Compile Include="ViewModels\AccountModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup\BundleRegistrationTask.cs" />
     <Compile Include="Startup\FilterRegistrationTask.cs" />
+    <Compile Include="Startup\Log4NetRegistrationTask.cs" />
     <Compile Include="Startup\MvcOverridesRegistrationTask.cs" />
     <Compile Include="Startup\RouteRegistrationTask.cs" />
     <Compile Include="Hubs\ChatHub.cs" />
     <Compile Include="Startup\SignalRRegistrationTask.cs" />
+    <Compile Include="ViewModels\Account\RegisterUserViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -281,24 +290,53 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <None Include="Scripts\jquery-1.8.2.intellisense.js" />
-    <Content Include="Scripts\jquery-1.8.2.js" />
-    <Content Include="Scripts\jquery-1.8.2.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery-ui-1.8.24.js" />
-    <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
-    <Content Include="Scripts\jquery.signalR-1.1.1.js" />
-    <Content Include="Scripts\jquery.signalR-1.1.1.min.js" />
-    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
-    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\knockout-2.2.0.debug.js" />
-    <Content Include="Scripts\knockout-2.2.0.js" />
-    <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Web.config" />
+    <None Include="Properties\PublishProfiles\SOChatHubLocalRelease.pubxml" />
+    <None Include="Scripts\plugins\jquery\jquery-1.8.2.intellisense.js" />
+    <Content Include="Scripts\Modules\Account\RegisterUser.js" />
+    <Content Include="Scripts\plugins\knockout\infuser-amd.js" />
+    <Content Include="Scripts\plugins\knockout\infuser-amd.min.gz.js" />
+    <Content Include="Scripts\plugins\knockout\infuser-amd.min.js" />
+    <Content Include="Scripts\plugins\knockout\infuser.js" />
+    <Content Include="Scripts\plugins\knockout\infuser.min.gz.js" />
+    <Content Include="Scripts\plugins\knockout\infuser.min.js" />
+    <Content Include="Scripts\plugins\jquery\jquery-1.8.2.js" />
+    <Content Include="Scripts\plugins\jquery\jquery-1.8.2.min.js" />
+    <None Include="Scripts\plugins\jquery\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\plugins\jquery\jquery-ui-1.8.24.js" />
+    <Content Include="Scripts\plugins\jquery\jquery-ui-1.8.24.min.js" />
+    <Content Include="Scripts\plugins\knockout\knockout-postbox.js" />
+    <Content Include="Scripts\plugins\knockout\knockout-postbox.min.js" />
+    <Content Include="Scripts\plugins\knockout\knockout.mapping-latest.debug.js" />
+    <Content Include="Scripts\plugins\knockout\knockout.mapping-latest.js" />
+    <Content Include="Scripts\plugins\knockout\koExternalTemplateEngine-amd.js" />
+    <Content Include="Scripts\plugins\knockout\koExternalTemplateEngine-amd.min.js" />
+    <Content Include="Scripts\plugins\knockout\koExternalTemplateEngine.js" />
+    <Content Include="Scripts\plugins\knockout\koExternalTemplateEngine.min.js" />
+    <Content Include="Scripts\plugins\knockout\koExternalTemplateEngine_all.js" />
+    <Content Include="Scripts\plugins\knockout\koExternalTemplateEngine_all.min.js" />
+    <Content Include="Scripts\plugins\signalR\jquery.signalR-1.1.1.js" />
+    <Content Include="Scripts\plugins\signalR\jquery.signalR-1.1.1.min.js" />
+    <Content Include="Scripts\plugins\jquery\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\plugins\jquery\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\plugins\jquery\jquery.validate.js" />
+    <Content Include="Scripts\plugins\jquery\jquery.validate.min.js" />
+    <Content Include="Scripts\plugins\jquery\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\plugins\jquery\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\plugins\json2\json2.js" />
+    <Content Include="Scripts\plugins\json2\json2.min.js" />
+    <Content Include="Scripts\plugins\knockout\knockout-2.2.0.debug.js" />
+    <Content Include="Scripts\plugins\knockout\knockout-2.2.0.js" />
+    <Content Include="Scripts\plugins\modernizr\modernizr-2.6.2.js" />
+    <Content Include="Scripts\plugins\require\require.js" />
+    <Content Include="Scripts\plugins\knockout\TrafficCop-amd.js" />
+    <Content Include="Scripts\plugins\knockout\TrafficCop-amd.min.gz.js" />
+    <Content Include="Scripts\plugins\knockout\TrafficCop-amd.min.js" />
+    <Content Include="Scripts\plugins\knockout\TrafficCop.js" />
+    <Content Include="Scripts\plugins\knockout\TrafficCop.min.gz.js" />
+    <Content Include="Scripts\plugins\knockout\TrafficCop.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -339,10 +377,9 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\Chat\Index.cshtml" />
     <Content Include="Views\Home\Chat.cshtml" />
+    <Content Include="Views\Shared\Partials\_ScriptsPartial.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
@@ -362,6 +399,10 @@
     <ProjectReference Include="..\App.Domain\App.Domain.csproj">
       <Project>{1ff79848-b739-4c13-be7b-9f111307aa44}</Project>
       <Name>App.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Module\App.Modules.csproj">
+      <Project>{adbaa27f-7295-4c85-8ea9-b24ceb39c4e0}</Project>
+      <Name>App.Modules</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -7,16 +7,19 @@ using System.Threading.Tasks;
 
 namespace App.Domain.Models.User
 {
-    public class User : BOBase
+    public class User : SharpLite.Domain.EntityWithTypedId<Guid>
     {
-        private string email;
-        private string password;
+        public virtual string Email { get; set; }
+        public virtual string UserID { get; set; }
+        public virtual string Password { get; set; }
+        public virtual UserRole UserRole { get; set; }
+        public virtual string Name { get; set; }
+    }
 
-        public User(string email, string password)
-        {
-            // TODO: Complete member initialization
-            this.email = email;
-            this.password = password;
-        }
+    public enum UserRole
+    {
+        RegularUser,
+        Vip,
+        Administrator,
     }
 }

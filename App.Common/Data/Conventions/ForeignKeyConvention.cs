@@ -11,9 +11,9 @@ namespace App.Common.Data.Conventions
         protected override string GetKeyName(FluentNHibernate.Member property, Type type)
         {
             if (property == null)
-                return type.Name + "ID";
+                return "ID";
 
-            return property.Name + "ID";
+            return "ID";
         }
     }
 }

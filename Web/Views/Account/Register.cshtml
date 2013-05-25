@@ -1,4 +1,5 @@
-﻿@model Web.Models.RegisterModel
+﻿@using App.Core.Mvc.Knockout
+@model Web.ViewModels.Account.RegisterUserViewModel
 @{
     ViewBag.Title = "Register";
 }
@@ -16,22 +17,42 @@
         <legend>Registration Form</legend>
         <ol>
             <li>
-                @Html.LabelFor(m => m.UserName)
-                @Html.TextBoxFor(m => m.UserName)
+                @Html.LabelFor(m => m.Email)
+                @Html.TextBoxFor(m => m.Email, new { data_bind = "value: Email" })
+            </li>
+            <li>
+                @Html.LabelFor(m => m.UserID)
+                @Html.TextBoxFor(m => m.UserID, new { data_bind = "value: UserID" })
             </li>
             <li>
                 @Html.LabelFor(m => m.Password)
-                @Html.PasswordFor(m => m.Password)
+                @Html.PasswordFor(m => m.Password, new { data_bind = "value: Password" })
             </li>
             <li>
                 @Html.LabelFor(m => m.ConfirmPassword)
-                @Html.PasswordFor(m => m.ConfirmPassword)
+                @Html.PasswordFor(m => m.ConfirmPassword, new { data_bind = "value: ConfirmPassword" })
             </li>
         </ol>
-        <input type="submit" value="Register" />
+        @*<input type="submit" value="Register" />*@
+        <input type="button" value="Register" data-bind="click: save"/>
     </fieldset>
 }
 
 @section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
+    @Html.KOViewModelInitialize()
+
+    <script type="text/javascript">
+        require(['@Url.Content("~/Scripts/Modules/Account/RegisterUser.js")'], function () {
+            var options = {
+                RegisterNewUserUrl: '@Url.Action("Register","Account")',
+                RedirectUrl: '@Url.Action("Index","Home")'
+                @*SaveUniversalMaximumUrl: '@Url.TenantAction("SaveUniversalMaximum", "UniversalMaximum")',
+                savedConfirmationMessage: '@Html.LocaleString("SaveComfirmationMessage", typeof(CommonTexts))'*@
+            }
+            RegisterUserViewModelFuntion(options);
+        });
+
+    </script>
+
+    @*@Scripts.Render("~/bundles/jqueryval")*@
 }

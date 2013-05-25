@@ -32,11 +32,26 @@ namespace App.Common.Data
 
         public static void Startup(IWindsorContainer container)
         {
+            _container = container;
+
             LoadModules();
 
             InitializeModule(container, _loadedModules.ToArray());
 
             RegisterModuleData(container, _loadedModules.ToArray());
+
+            BindSessionFactoryToContext();
+        }
+
+        private static void BindSessionFactoryToContext()
+        {
+            var sessionFactory = _container.Resolve<ISessionFactory>();
+            LazySessionContext.Bind(new Lazy<ISession>(() =>
+            {
+                var session = sessionFactory.OpenSession();
+                session.BeginTransaction();
+                return session;
+            }), sessionFactory);
         }
 
         private static void InitializeModule(IWindsorContainer container, IModule[] module)
@@ -110,6 +125,7 @@ namespace App.Common.Data
                         .Conventions.Add(conventions)
                         .IgnoreBase<Entity>()
                         .Where(t => typeof(EntityWithTypedId<Guid>).IsAssignableFrom(t));
+                        //.Where(t=> typeof(EntityWithTypedId<Guid>).IsSubclassOf(BOBase)
 
             if (overrides != null)
             {

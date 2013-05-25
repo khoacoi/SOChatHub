@@ -49,11 +49,11 @@ namespace Web
         {
             var tasks = new IBootstrapperTask[] {
                 new SignalRRegistrationTask(),
-                //new Log4NetRegistrationTask(),
+                new Log4NetRegistrationTask(),
                 new RouteRegistrationTask(),
                 new FilterRegistrationTask(),
                 new BundleRegistrationTask(),
-                //new ControllerRegistrationTask(),
+                new ControllerRegistrationTask(),
                 new MvcOverridesRegistrationTask()
                 //new FluentValidationRegistrationTask()
             };

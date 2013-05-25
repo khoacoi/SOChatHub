@@ -12,6 +12,11 @@ using System.Threading.Tasks;
 using App.Common.Commands;
 using App.Common.Data;
 using System.Web;
+using Castle.MicroKernel.Handlers;
+using Castle.MicroKernel.Context;
+using Castle.MicroKernel;
+using System.Collections;
+using NHibernate;
 
 namespace App.Core
 {
@@ -53,8 +58,8 @@ namespace App.Core
                 //Component.For<IThemeProvider>().ImplementedBy<ChoiceThemeProvider>().LifestyleSingleton(),
                 //Component.For<WorkingContext>().LifestylePerWebRequest(),
                 Component.For<IConnectionString>().Instance(new ConnectionString(connectionString)).LifestyleSingleton(),
-                //Component.For(typeof(IRepository<>)).ImplementedBy(typeof(Repository<>)).DynamicParameters(BindSessionFactoryParameter).LifestyleTransient(),
-                //Component.For(typeof(IRepositoryWithTypedId<,>)).ImplementedBy(typeof(ChoiceRepositoryWithTypedId<,>)).DynamicParameters(BindSessionFactoryParameter).LifestyleTransient(),
+                Component.For(typeof(IRepository<>)).ImplementedBy(typeof(Repository<>)).DynamicParameters(BindSessionFactoryParameter).LifestyleTransient(),
+                Component.For(typeof(IRepositoryWithTypedId<,>)).ImplementedBy(typeof(RepositoryWithTypedId<,>)).DynamicParameters(BindSessionFactoryParameter).LifestyleTransient(),
                 Component.For<ICommandProcessor>().ImplementedBy<CommandProcessor>().LifestylePerWebRequest(),
                 Component.For<IQueryFactory>().AsFactory().LifestylePerWebRequest(),
                 Component.For<IRepositoryFactory>().AsFactory().LifestylePerWebRequest()
@@ -81,6 +86,12 @@ namespace App.Core
                     .LifestylePerWebRequest()
                     .WithService.FirstInterface()
                 );
+        }
+
+        private static ComponentReleasingDelegate BindSessionFactoryParameter(IKernel kernel, CreationContext creationContext, IDictionary parameters)
+        {
+            parameters["sessionFactory"] = kernel.Resolve<ISessionFactory>();
+            return r => { };
         }
     }
 }
