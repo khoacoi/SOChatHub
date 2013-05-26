@@ -1,0 +1,3 @@
+2013-05-25 23:46:08,951 [8] DEBUG NHibernate.SQL - select menu0_.ID as ID0_, menu0_.Controller as Controller0_, menu0_.Action as Action0_, menu0_.IsAdministration as IsAdmini4_0_, menu0_.Name as Name0_ from [Menu] menu0_
+2013-05-25 23:46:08,951 [7] DEBUG NHibernate.SQL - select menu0_.ID as ID0_, menu0_.Controller as Controller0_, menu0_.Action as Action0_, menu0_.IsAdministration as IsAdmini4_0_, menu0_.Name as Name0_ from [Menu] menu0_
+2013-05-25 23:49:05,361 [6] DEBUG NHibernate.SQL - select menu0_.ID as ID0_, menu0_.Controller as Controller0_, menu0_.Action as Action0_, menu0_.IsAdministration as IsAdmini4_0_, menu0_.Name as Name0_ from [Menu] menu0_

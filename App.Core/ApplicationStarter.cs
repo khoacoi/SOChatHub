@@ -34,7 +34,6 @@ namespace App.Core
             registerMvc(container);
 
             DataPersistentCreator.Startup(container);
-            //TenantHost.Startup(container);
         }
 
         /// <summary>
@@ -46,24 +45,12 @@ namespace App.Core
             string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
 
             container.Register(
-                //Component.For<ITenantContextResolver>().ImplementedBy<ChoiceTenantContextResolver>().LifestyleSingleton(),
-                //Component.For<ITenantContext>().UsingFactoryMethod((k, ctx) =>
-                //{
-                //    var resolver = k.Resolve<ITenantContextResolver>();
-                //    return resolver.GetTenantContext();
-                //}).LifestyleTransient(),
-
-                //Component.For<ITenantInfoProvider>().ImplementedBy<ChoiceTenantInfoProvider>().LifestyleTransient(),
-
-                //Component.For<IThemeProvider>().ImplementedBy<ChoiceThemeProvider>().LifestyleSingleton(),
-                //Component.For<WorkingContext>().LifestylePerWebRequest(),
                 Component.For<IConnectionString>().Instance(new ConnectionString(connectionString)).LifestyleSingleton(),
                 Component.For(typeof(IRepository<>)).ImplementedBy(typeof(Repository<>)).DynamicParameters(BindSessionFactoryParameter).LifestyleTransient(),
                 Component.For(typeof(IRepositoryWithTypedId<,>)).ImplementedBy(typeof(RepositoryWithTypedId<,>)).DynamicParameters(BindSessionFactoryParameter).LifestyleTransient(),
                 Component.For<ICommandProcessor>().ImplementedBy<CommandProcessor>().LifestylePerWebRequest(),
                 Component.For<IQueryFactory>().AsFactory().LifestylePerWebRequest(),
                 Component.For<IRepositoryFactory>().AsFactory().LifestylePerWebRequest()
-                //Component.For<ICacheManager>().ImplementedBy<CacheManager>().LifestylePerWebRequest(),
                 //Component.For<ILocalizer>().ImplementedBy<ResxLocalizer>().LifestyleSingleton(),
                 );
 

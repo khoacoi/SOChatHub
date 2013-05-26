@@ -21,6 +21,9 @@ using App.Common.Data.Drivers;
 using App.Common.Extensions;
 using App.Common.Modulary;
 using App.Common.Utilities;
+using NHibernate.Caches.SysCache2;
+using FluentNHibernate.Conventions.Helpers;
+//using FluentNHibernate.Conventions;
 
 namespace App.Common.Data
 {
@@ -36,11 +39,16 @@ namespace App.Common.Data
 
             LoadModules();
 
-            InitializeModule(container, _loadedModules.ToArray());
+            InitializeModule();
 
-            RegisterModuleData(container, _loadedModules.ToArray());
+            BuildUpMasterShell();
 
             BindSessionFactoryToContext();
+        }
+
+        private static void BuildUpMasterShell()
+        {
+            RegisterSessionFactory();
         }
 
         private static void BindSessionFactoryToContext()
@@ -54,7 +62,7 @@ namespace App.Common.Data
             }), sessionFactory);
         }
 
-        private static void InitializeModule(IWindsorContainer container, IModule[] module)
+        private static void InitializeModule()
         {
             _loadedModules.Each(m => m.Initialize(_container));
         }
@@ -70,62 +78,47 @@ namespace App.Common.Data
             }
         }
 
-
-        private static void RegisterModuleData(IWindsorContainer container, IModule[] modules)
+        private static void RegisterSessionFactory()
         {
-            var connectionString = container.Resolve<IConnectionString>();
+            var connectionString = _container.Resolve<IConnectionString>();
 
             var allDomainAssemblies = new List<Assembly>();
-            //allDomainAssemblies.Add(typeof(Tenant).Assembly);
-            modules.Each(m => allDomainAssemblies.AddRange(m.DomainAssemblies));
-
             var allDataAssemblies = new List<Assembly>();
-            //allDataAssemblies.Add(typeof(TenantUserMappingOverride).Assembly);
-            modules.Each(m => allDataAssemblies.AddRange(m.DataAssemblies));
+            _loadedModules.Each(m =>
+                {
+                    allDomainAssemblies.AddRange(m.DomainAssemblies);
+                    allDataAssemblies.AddRange(m.DataAssemblies);
+                });
 
-            container.Register(
-                Component.For<ISessionFactory>().UsingFactoryMethod(() =>
-                    BuildMasterSessionFactory(
-                        connectionString.Value,
-                        allDomainAssemblies.ToArray(),
-                        allDataAssemblies.ToArray())));
+            FluentNHibernate.Conventions.IConvention[] conventions = null;
+            conventions = new FluentNHibernate.Conventions.IConvention[]
+                {
+                    new PrimaryKeyConvention(), 
+                    new ForeignKeyConvention(),
+                    new HasManyConvention(),
+                    new UserTypeConvention()
+                };
 
-            //var tenantInfoProvider = container.Resolve<ITenantInfoProvider>();
-            //var tenants = tenantInfoProvider.GetTenants();
-            //tenants.Each(t =>
-            //{
-            //    container.Register(
-            //        Component.For<ISessionFactory>().Named(t.TenantID.ToString()).UsingFactoryMethod(() =>
-            //            BuildTenantSessionFactory(
-            //                connectionString.Value,
-            //                allDomainAssemblies.ToArray(),
-            //                allDataAssemblies.ToArray()))
-            //        );
-            //});
+
+            _container.Register(
+                Component.For<ISessionFactory>()
+                            .UsingFactoryMethod(() =>
+                                BuildSessionFactory(connectionString.Value,conventions,
+                                    allDomainAssemblies.ToArray(), allDataAssemblies.ToArray())));
+
+            //_container.Register(Component.For<ISession>()
+            //            .LifeStyle.PerWebRequest
+            //            .UsingFactoryMethod(kernel => kernel.Resolve<ISessionFactory>().OpenSession()));
         }
 
-        private static ISessionFactory BuildMasterSessionFactory(string connectionString, Assembly[] assemblies, params Assembly[] overrides)
-        {
-            return InternalBuildSessionFactory(
-                connectionString,
-                new FluentNHibernate.Conventions.IConvention[] 
-                    { 
-                        new PrimaryKeyConvention(), 
-                        new ForeignKeyConvention(),
-                        new HasManyConvention(),
-                        new UserTypeConvention()
-                    },
-                assemblies,
-                overrides);
-        }
-
-        private static ISessionFactory InternalBuildSessionFactory(string connectionString, FluentNHibernate.Conventions.IConvention[] conventions, Assembly[] assemblies, params Assembly[] overrides)
+        private static ISessionFactory BuildSessionFactory(string connectionString, FluentNHibernate.Conventions.IConvention[] conventions, Assembly[] assemblies, params Assembly[] overrides)
         {
             var persistenceModel = AutoMap.Assemblies(assemblies)
                         .Conventions.Add(conventions)
+                        .Conventions.Add(Cache.Is(x => x.NonStrictReadWrite()))
                         .IgnoreBase<Entity>()
                         .Where(t => typeof(EntityWithTypedId<Guid>).IsAssignableFrom(t));
-                        //.Where(t=> typeof(EntityWithTypedId<Guid>).IsSubclassOf(BOBase)
+
 
             if (overrides != null)
             {
@@ -139,8 +132,16 @@ namespace App.Common.Data
                                     .ConnectionString(connectionString)
                                     .Provider<ContextDriverConnectionProvider>())
                             .CurrentSessionContext<LazySessionContext>()
-                            .Mappings(m => m.AutoMappings.Add(persistenceModel))
+                            .Cache(c => c.ProviderClass<SysCacheProvider>().UseSecondLevelCache().UseQueryCache())
+                            .Mappings(m =>
+                            {
+                                m.AutoMappings.Add(persistenceModel);
+                                if (overrides != null)
+                                    overrides.Each(a => m.HbmMappings.AddFromAssembly(a));
+                            })
                             .BuildConfiguration();
+
+
 #if DEBUG
             persistenceModel.WriteMappingsTo(AppDomain.CurrentDomain.BaseDirectory + @"Hbm");
             using (ISession session = config.BuildSessionFactory().OpenSession())
@@ -156,6 +157,5 @@ namespace App.Common.Data
 #endif
             return config.BuildSessionFactory();
         }
-
     }
 }
