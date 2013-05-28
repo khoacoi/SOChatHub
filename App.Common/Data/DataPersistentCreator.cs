@@ -54,12 +54,14 @@ namespace App.Common.Data
         private static void BindSessionFactoryToContext()
         {
             var sessionFactory = _container.Resolve<ISessionFactory>();
-            LazySessionContext.Bind(new Lazy<ISession>(() =>
-            {
-                var session = sessionFactory.OpenSession();
-                session.BeginTransaction();
-                return session;
-            }), sessionFactory);
+            LazySessionContext.Bind(new Lazy<ISession>(() => BeginSession(sessionFactory)), sessionFactory);
+        }
+
+        static ISession BeginSession(ISessionFactory sessionFactory)
+        {
+            var session = sessionFactory.OpenSession();
+            session.BeginTransaction();
+            return session;
         }
 
         private static void InitializeModule()
