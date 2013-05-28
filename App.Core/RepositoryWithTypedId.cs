@@ -52,7 +52,6 @@ namespace App.Core
 
         public virtual T SaveOrUpdate(T entity)
         {
-            var id = GetEntityId(entity);
             this.Session.SaveOrUpdate((object)entity);
 
             this.Session.Flush();
@@ -67,55 +66,7 @@ namespace App.Core
 
         #region Private Methods
 
-        /// <summary>
-        /// Current user logged in to system
-        /// </summary>
-        private User CurrentUser
-        {
-            get { return User.Current; }
-        }
-
-        /// <summary>
-        /// Get Id of Model
-        /// </summary>
-        /// <param name="entity"></param>
-        /// <returns>Guid</returns>
-        private static Guid GetEntityId(T entity)
-        {
-            var propertyInfo = entity.GetType().GetProperty("Id");
-            if (propertyInfo != null)
-            {
-                var propertyValue = propertyInfo.GetValue(entity);
-                return propertyValue != null ? (Guid)propertyValue : Guid.Empty;
-            }
-            return Guid.Empty;
-        }
-
-        /// <summary>
-        /// Get value of propery name is [Entity + Code]
-        /// </summary>
-        /// <param name="entity"></param>
-        /// <returns></returns>
-        private static string GetEntityCode(T entity)
-        {
-            var type = entity.GetType();
-            var propertyInfo = type.GetProperty(type.Name + "Code");            
-
-            if (propertyInfo != null)
-            {
-                var propertyValue = propertyInfo.GetValue(entity);                
-                return propertyValue != null ? propertyValue.ToString() : string.Empty;
-            }
-            //In case there is no [Entiy + code] column
-            var propertyCode = type.GetProperties().FirstOrDefault(e => e.Name.ToLower().Contains("code"));
-            if (propertyCode != null)
-            {
-                var propertyValue = propertyCode.GetValue(entity);
-                return propertyValue != null ? propertyValue.ToString() : string.Empty;
-            }
-            return string.Empty;
-        }
-
         #endregion End Private Methods
+
     }
 }
