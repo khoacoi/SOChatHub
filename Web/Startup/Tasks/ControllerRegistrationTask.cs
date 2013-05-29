@@ -7,7 +7,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Web.Startup
+namespace Web.Startup.Tasks
 {
     public class ControllerRegistrationTask : IBootstrapperTask
     {

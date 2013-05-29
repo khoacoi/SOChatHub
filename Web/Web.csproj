@@ -77,6 +77,13 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\FluentNHibernate.1.3.0.733\lib\FluentNHibernate.dll</HintPath>
     </Reference>
+    <Reference Include="FluentValidation, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\FluentValidation.4.0.0.0\lib\Net40\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation.Mvc">
+      <HintPath>..\packages\FluentValidation.MVC4.4.0.0.0\lib\Net40\FluentValidation.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Iesi.Collections.3.2.0.4000\lib\Net35\Iesi.Collections.dll</HintPath>
@@ -235,17 +242,19 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Startup\ControllerRegistrationTask.cs" />
+    <Compile Include="Startup\Tasks\ControllerRegistrationTask.cs" />
+    <Compile Include="Startup\Tasks\FluentValidationRegistrationTask.cs" />
     <Compile Include="ViewModels\AccountModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Startup\BundleRegistrationTask.cs" />
-    <Compile Include="Startup\FilterRegistrationTask.cs" />
-    <Compile Include="Startup\Log4NetRegistrationTask.cs" />
-    <Compile Include="Startup\MvcOverridesRegistrationTask.cs" />
-    <Compile Include="Startup\RouteRegistrationTask.cs" />
+    <Compile Include="Startup\Tasks\BundleRegistrationTask.cs" />
+    <Compile Include="Startup\Tasks\FilterRegistrationTask.cs" />
+    <Compile Include="Startup\Tasks\Log4NetRegistrationTask.cs" />
+    <Compile Include="Startup\Tasks\MvcOverridesRegistrationTask.cs" />
+    <Compile Include="Startup\Tasks\RouteRegistrationTask.cs" />
     <Compile Include="Hubs\ChatHub.cs" />
-    <Compile Include="Startup\SignalRRegistrationTask.cs" />
+    <Compile Include="Startup\Tasks\SignalRRegistrationTask.cs" />
     <Compile Include="ViewModels\Account\RegisterUserViewModel.cs" />
+    <Compile Include="ViewModels\Account\Validators\RegisterUserValidator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\themes\base\images\animated-overlay.gif" />
