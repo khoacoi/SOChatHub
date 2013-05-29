@@ -12,7 +12,7 @@ using Web.Models;
 using Web.ViewModels.Account;
 using App.Core.Mvc;
 
-namespace Web.Controllers
+namespace Web.Controllers.Account
 {
     //[Authorize]
     //[InitializeSimpleMembership]
@@ -78,10 +78,12 @@ namespace Web.Controllers
         {
             if (ModelState.IsValid)
             {
+                var encryptedPassword = App.Utilities.Security.Crypto.EncryptStringAES(model.Password);
+                var decryptPassword = App.Utilities.Security.Crypto.DecryptStringAES(encryptedPassword);
                 var newUser = new App.Domain.Models.User.User();
                 newUser.Email = model.Email;
                 newUser.UserID = model.UserID;
-                newUser.Password = model.Password;
+                newUser.Password = encryptedPassword;
                 newUser.UserRole = App.Domain.Models.User.UserRole.RegularUser;
 
                 var repo = this.RepositoryFactory.CreateWithGuid<App.Domain.Models.User.User>();

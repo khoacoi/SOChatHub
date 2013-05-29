@@ -229,7 +229,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Account\AccountController.cs" />
     <Compile Include="Controllers\ChatController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -440,6 +440,10 @@
     <ProjectReference Include="..\Module\App.Modules.csproj">
       <Project>{adbaa27f-7295-4c85-8ea9-b24ceb39c4e0}</Project>
       <Name>App.Modules</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utilities\App.Utilities.csproj">
+      <Project>{6ad095f1-629a-4513-8cb8-f039483a5ca3}</Project>
+      <Name>App.Utilities</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
