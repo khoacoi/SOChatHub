@@ -77,7 +77,6 @@ namespace Web.Controllers.Account
             if (ModelState.IsValid)
             {
                 var encryptedPassword = App.Utilities.Security.Crypto.EncryptStringAES(model.Password);
-                var decryptPassword = App.Utilities.Security.Crypto.DecryptStringAES(encryptedPassword);
                 var newUser = new App.Domain.Models.User.User();
                 newUser.Email = model.Email;
                 newUser.UserID = model.UserID;
@@ -94,7 +93,8 @@ namespace Web.Controllers.Account
             }
 
             // If we got this far, something failed, redisplay form
-            return View(model);
+            //return View(model);
+            return this.JsonValidation();
         }
 
         //

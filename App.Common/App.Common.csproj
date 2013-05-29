@@ -153,7 +153,6 @@
     <Compile Include="Web\Theme\ITheme.cs" />
     <Compile Include="Web\WindsorContainer\WindsorControllerFactory.cs" />
     <Compile Include="Web\WindsorContainer\WindsorDependencyResolver.cs" />
-    <Compile Include="Web\WindsorContainer\WindsorFluentValidatorFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\Interceptors\" />
