@@ -12,7 +12,7 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
-using Web.Startup;
+using Web.Startup.Tasks;
 using App.Common.Extensions;
 
 namespace Web
@@ -43,8 +43,8 @@ namespace Web
                 new FilterRegistrationTask(),
                 new BundleRegistrationTask(),
                 new ControllerRegistrationTask(),
-                new MvcOverridesRegistrationTask()
-                //new FluentValidationRegistrationTask()
+                new MvcOverridesRegistrationTask(),
+                new FluentValidationRegistrationTask()
             };
 
             tasks.Each(t => t.Execute(container));

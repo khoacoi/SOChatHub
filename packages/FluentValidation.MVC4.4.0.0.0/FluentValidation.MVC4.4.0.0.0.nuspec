@@ -3,6 +3,7 @@
   <metadata>
     <id>FluentValidation.MVC4</id>
     <version>4.0.0.0</version>
+    <title>FluentValidation.MVC4</title>
     <authors>Jeremy Skinner</authors>
     <owners>Jeremy Skinner</owners>
     <licenseUrl>http://fluentvalidation.codeplex.com/license</licenseUrl>
@@ -11,6 +12,8 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>ASP.NET MVC 4 integration for FluentValidation</description>
     <summary>ASP.NET MVC 4 integration for FluentValidation</summary>
+    <releaseNotes />
+    <copyright />
     <language>en-US</language>
     <dependencies>
       <dependency id="FluentValidation" version="4.0.0.0" />

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Optimization;
 
-namespace Web.Startup
+namespace Web.Startup.Tasks
 {
     public class BundleRegistrationTask : IBootstrapperTask
     {

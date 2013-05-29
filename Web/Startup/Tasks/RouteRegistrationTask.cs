@@ -7,7 +7,7 @@ using System.Web.Http;
 using System.Web.Routing;
 using System.Web.Mvc;
 
-namespace Web.Startup
+namespace Web.Startup.Tasks
 {
     public class RouteRegistrationTask : IBootstrapperTask
     {
