@@ -72,8 +72,6 @@ namespace Web.Controllers.Account
         // POST: /Account/Register
 
         [HttpPost]
-        //[AllowAnonymous]
-        //[ValidateAntiForgeryToken]
         public ActionResult Register(RegisterUserViewModel model)
         {
             if (ModelState.IsValid)
