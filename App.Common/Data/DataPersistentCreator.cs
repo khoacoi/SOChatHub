@@ -107,10 +107,6 @@ namespace App.Common.Data
                             .UsingFactoryMethod(() =>
                                 BuildSessionFactory(connectionString.Value,conventions,
                                     allDomainAssemblies.ToArray(), allDataAssemblies.ToArray())));
-
-            //_container.Register(Component.For<ISession>()
-            //            .LifeStyle.PerWebRequest
-            //            .UsingFactoryMethod(kernel => kernel.Resolve<ISessionFactory>().OpenSession()));
         }
 
         private static ISessionFactory BuildSessionFactory(string connectionString, FluentNHibernate.Conventions.IConvention[] conventions, Assembly[] assemblies, params Assembly[] overrides)

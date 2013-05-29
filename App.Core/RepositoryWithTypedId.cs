@@ -11,7 +11,7 @@ using App.Common.Security.Authentication;
 
 namespace App.Core
 {
-    public class RepositoryWithTypedId<T, TId> : IRepositoryWithTypedId<T, TId> where T : class
+    public class RepositoryWithTypedId<T, TId> : IRepositoryWithTypedId<T, TId> where T : SharpLite.Domain.EntityWithTypedId<Guid>
     {
         private readonly ISessionFactory _sessionFactory;
 
