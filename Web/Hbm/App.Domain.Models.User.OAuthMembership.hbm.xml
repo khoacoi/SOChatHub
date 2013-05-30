@@ -1,0 +1,18 @@
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class xmlns="urn:nhibernate-mapping-2.2" name="App.Domain.Models.User.OAuthMembership, App.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="`OAuthMembership`">
+    <cache usage="nonstrict-read-write" />
+    <id name="Id" type="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ID" />
+      <generator class="guid.comb" />
+    </id>
+    <property name="Provider" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="Provider" />
+    </property>
+    <property name="ProviderUserID" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ProviderUserID" />
+    </property>
+    <many-to-one cascade="save-update" class="App.Domain.Models.User.UserProfile, App.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="UserProfile">
+      <column name="UserProfileID" />
+    </many-to-one>
+  </class>
+</hibernate-mapping>

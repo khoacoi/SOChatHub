@@ -74,10 +74,10 @@ namespace App.Utilities.Security
         /// DecryptStringAES().  The sharedSecret parameters using default.
         /// </summary>
         /// <param name="plainText">The text to encrypt.</param>
-        public static string EncryptStringAES(string plainText)
-        {
-            return EncryptStringAES(plainText, encryptedPublicKey);
-        }
+        //public static string EncryptStringAES(string plainText)
+        //{
+        //    return EncryptStringAES(plainText, encryptedPublicKey);
+        //}
 
         /// <summary>
         /// Decrypt the given string.  Assumes the string was encrypted using 
@@ -142,10 +142,10 @@ namespace App.Utilities.Security
         /// EncryptStringAES(), using an identical sharedSecret.
         /// </summary>
         /// <param name="cipherText">The text to decrypt.</param>
-        public static string DecryptStringAES(string cipherText)
-        {
-            return DecryptStringAES(cipherText, encryptedPublicKey);
-        }
+        //public static string DecryptStringAES(string cipherText)
+        //{
+        //    return DecryptStringAES(cipherText, encryptedPublicKey);
+        //}
 
         private static byte[] ReadByteArray(Stream s)
         {

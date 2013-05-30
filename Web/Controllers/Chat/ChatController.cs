@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Web.Controllers
+namespace Web.Controllers.Chat
 {
     public class ChatController : PageControllerBase
     {

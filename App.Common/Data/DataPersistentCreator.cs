@@ -98,7 +98,8 @@ namespace App.Common.Data
                     new PrimaryKeyConvention(), 
                     new ForeignKeyConvention(),
                     new HasManyConvention(),
-                    new UserTypeConvention()
+                    new UserTypeConvention(),
+                    new CascadeAllConvention()
                 };
 
 

@@ -7,6 +7,7 @@ using System.Web;
 
 namespace App.Common.Security.Authentication
 {
+    [Serializable]
     public class User
     {
         /// <summary>

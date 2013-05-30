@@ -8,9 +8,12 @@ using System.Web.Security;
 using DotNetOpenAuth.AspNet;
 using Microsoft.Web.WebPages.OAuth;
 using WebMatrix.WebData;
-using Web.Models;
 using Web.ViewModels.Account;
 using App.Core.Mvc;
+using App.Domain.Models.User;
+using App.Common.Security;
+using App.Common.Security.Crypto;
+using Web.Controllers.Account.Queries;
 
 namespace Web.Controllers.Account
 {
@@ -34,11 +37,25 @@ namespace Web.Controllers.Account
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public ActionResult Login(LoginModel model, string returnUrl)
+        public ActionResult Login(Web.Models.LoginModel model, string returnUrl)
         {
-            if (ModelState.IsValid && WebSecurity.Login(model.UserName, model.Password, persistCookie: model.RememberMe))
+            if (ModelState.IsValid)
             {
-                return RedirectToLocal(returnUrl);
+                var query = this.QueryFactory.Create<IWebMemberLoginQuery>();
+                var webMemberShip = query.LoginWebMemberShip(model.UserName, model.Password);
+                if (webMemberShip != null)
+                {
+                    App.Common.Security.Authentication.Authentication.SignIn(
+                        new App.Common.Security.Authentication.User()
+                        {
+                            Email = webMemberShip.Email,
+                            UserID = webMemberShip.UserProfile.Id,
+                            UserName = webMemberShip.UserProfile.UserName,
+                            Role = App.Common.Security.Authentication.UserRole.User
+                        }, App.Core.ApplicationSettings.Instance.CookieTimeout);
+
+                    return RedirectToAction("Index", "Home");
+                }
             }
 
             // If we got this far, something failed, redisplay form
@@ -53,7 +70,7 @@ namespace Web.Controllers.Account
         [ValidateAntiForgeryToken]
         public ActionResult LogOff()
         {
-            WebSecurity.Logout();
+            App.Common.Security.Authentication.Authentication.SignOut();
 
             return RedirectToAction("Index", "Home");
         }
@@ -76,15 +93,13 @@ namespace Web.Controllers.Account
         {
             if (ModelState.IsValid)
             {
-                var encryptedPassword = App.Utilities.Security.Crypto.EncryptStringAES(model.Password);
-                var newUser = new App.Domain.Models.User.User();
-                newUser.Email = model.Email;
-                newUser.UserID = model.UserID;
-                newUser.Password = encryptedPassword;
-                newUser.UserRole = App.Domain.Models.User.UserRole.RegularUser;
+                var encryptedPassword = App.Utilities.Security.Crypto.EncryptStringAES(model.Password, model.UserID);
+                var userProfile = new UserProfile() { UserName = model.UserID };
 
-                var repo = this.RepositoryFactory.CreateWithGuid<App.Domain.Models.User.User>();
-                repo.SaveOrUpdate(newUser);
+                var webMemberShip = new WebMemberShip() { UserProfile = userProfile, CreatedDate = DateTime.Now, Email = model.Email, Password = encryptedPassword };
+
+                var repo = this.RepositoryFactory.CreateWithGuid<WebMemberShip>();
+                repo.SaveOrUpdate(webMemberShip);
 
                 return Json(new
                 {
@@ -146,7 +161,7 @@ namespace Web.Controllers.Account
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Manage(LocalPasswordModel model)
+        public ActionResult Manage(Web.Models.LocalPasswordModel model)
         {
             bool hasLocalAccount = OAuthWebSecurity.HasLocalAccount(WebSecurity.GetUserId(User.Identity.Name));
             ViewBag.HasLocalPassword = hasLocalAccount;
@@ -244,55 +259,55 @@ namespace Web.Controllers.Account
                 string loginData = OAuthWebSecurity.SerializeProviderUserId(result.Provider, result.ProviderUserId);
                 ViewBag.ProviderDisplayName = OAuthWebSecurity.GetOAuthClientData(result.Provider).DisplayName;
                 ViewBag.ReturnUrl = returnUrl;
-                return View("ExternalLoginConfirmation", new RegisterExternalLoginModel { UserName = result.UserName, ExternalLoginData = loginData });
+                return View("ExternalLoginConfirmation", new Web.Models.RegisterExternalLoginModel { UserName = result.UserName, ExternalLoginData = loginData });
             }
         }
 
         //
         // POST: /Account/ExternalLoginConfirmation
 
-        [HttpPost]
-        [AllowAnonymous]
-        [ValidateAntiForgeryToken]
-        public ActionResult ExternalLoginConfirmation(RegisterExternalLoginModel model, string returnUrl)
-        {
-            string provider = null;
-            string providerUserId = null;
+        //[HttpPost]
+        //[AllowAnonymous]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult ExternalLoginConfirmation(RegisterExternalLoginModel model, string returnUrl)
+        //{
+        //    string provider = null;
+        //    string providerUserId = null;
 
-            if (User.Identity.IsAuthenticated || !OAuthWebSecurity.TryDeserializeProviderUserId(model.ExternalLoginData, out provider, out providerUserId))
-            {
-                return RedirectToAction("Manage");
-            }
+        //    if (User.Identity.IsAuthenticated || !OAuthWebSecurity.TryDeserializeProviderUserId(model.ExternalLoginData, out provider, out providerUserId))
+        //    {
+        //        return RedirectToAction("Manage");
+        //    }
 
-            if (ModelState.IsValid)
-            {
-                // Insert a new user into the database
-                using (UsersContext db = new UsersContext())
-                {
-                    UserProfile user = db.UserProfiles.FirstOrDefault(u => u.UserName.ToLower() == model.UserName.ToLower());
-                    // Check if user already exists
-                    if (user == null)
-                    {
-                        // Insert name into the profile table
-                        db.UserProfiles.Add(new UserProfile { UserName = model.UserName });
-                        db.SaveChanges();
+        //    if (ModelState.IsValid)
+        //    {
+        //        // Insert a new user into the database
+        //        using (UsersContext db = new UsersContext())
+        //        {
+        //            UserProfile user = db.UserProfiles.FirstOrDefault(u => u.UserName.ToLower() == model.UserName.ToLower());
+        //            // Check if user already exists
+        //            if (user == null)
+        //            {
+        //                // Insert name into the profile table
+        //                db.UserProfiles.Add(new UserProfile { UserName = model.UserName });
+        //                db.SaveChanges();
 
-                        OAuthWebSecurity.CreateOrUpdateAccount(provider, providerUserId, model.UserName);
-                        OAuthWebSecurity.Login(provider, providerUserId, createPersistentCookie: false);
+        //                OAuthWebSecurity.CreateOrUpdateAccount(provider, providerUserId, model.UserName);
+        //                OAuthWebSecurity.Login(provider, providerUserId, createPersistentCookie: false);
 
-                        return RedirectToLocal(returnUrl);
-                    }
-                    else
-                    {
-                        ModelState.AddModelError("UserName", "User name already exists. Please enter a different user name.");
-                    }
-                }
-            }
+        //                return RedirectToLocal(returnUrl);
+        //            }
+        //            else
+        //            {
+        //                ModelState.AddModelError("UserName", "User name already exists. Please enter a different user name.");
+        //            }
+        //        }
+        //    }
 
-            ViewBag.ProviderDisplayName = OAuthWebSecurity.GetOAuthClientData(provider).DisplayName;
-            ViewBag.ReturnUrl = returnUrl;
-            return View(model);
-        }
+        //    ViewBag.ProviderDisplayName = OAuthWebSecurity.GetOAuthClientData(provider).DisplayName;
+        //    ViewBag.ReturnUrl = returnUrl;
+        //    return View(model);
+        //}
 
         //
         // GET: /Account/ExternalLoginFailure
@@ -315,12 +330,12 @@ namespace Web.Controllers.Account
         public ActionResult RemoveExternalLogins()
         {
             ICollection<OAuthAccount> accounts = OAuthWebSecurity.GetAccountsFromUserName(User.Identity.Name);
-            List<ExternalLogin> externalLogins = new List<ExternalLogin>();
+            List<Web.Models.ExternalLogin> externalLogins = new List<Web.Models.ExternalLogin>();
             foreach (OAuthAccount account in accounts)
             {
                 AuthenticationClientData clientData = OAuthWebSecurity.GetOAuthClientData(account.Provider);
 
-                externalLogins.Add(new ExternalLogin
+                externalLogins.Add(new Web.Models.ExternalLogin
                 {
                     Provider = account.Provider,
                     ProviderDisplayName = clientData.DisplayName,

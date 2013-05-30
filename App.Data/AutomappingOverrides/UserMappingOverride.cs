@@ -9,9 +9,9 @@ using App.Domain.Models.User;
 
 namespace App.Data.AutomappingOverrides
 {
-    public class UserMappingOverride : IAutoMappingOverride<User>
+    public class UserProfileMappingOverride : IAutoMappingOverride<UserProfile>
     {
-        public void Override(AutoMapping<User> mapping)
+        public void Override(AutoMapping<UserProfile> mapping)
         {
             //throw new NotImplementedException();
         }

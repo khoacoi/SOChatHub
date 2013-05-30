@@ -40,6 +40,7 @@ namespace Web
                 new SignalRRegistrationTask(),
                 new Log4NetRegistrationTask(),
                 new RouteRegistrationTask(),
+                new AuthorizeRegistrationTask(),
                 new FilterRegistrationTask(),
                 new BundleRegistrationTask(),
                 new ControllerRegistrationTask(),

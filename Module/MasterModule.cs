@@ -21,7 +21,7 @@ namespace App.Modules
         {
             get
             {
-                return new System.Reflection.Assembly[] { typeof(App.Domain.Models.User.User).Assembly };
+                return new System.Reflection.Assembly[] { typeof(App.Domain.Models.User.UserProfile).Assembly };
             }
         }
 
@@ -35,7 +35,7 @@ namespace App.Modules
         {
             get
             {
-                return new System.Reflection.Assembly[] { typeof(App.Data.AutomappingOverrides.UserMappingOverride).Assembly };
+                return new System.Reflection.Assembly[] { typeof(App.Data.AutomappingOverrides.UserProfileMappingOverride).Assembly };
             }
         }
     }

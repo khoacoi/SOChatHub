@@ -47,6 +47,8 @@ namespace App.Core
 
         public string EncryptPublicKey { get; private set; }
 
+        public int CookieTimeout { get; private set; }
+
         /// <summary>
         /// Loads the configs.
         /// </summary>
@@ -54,6 +56,7 @@ namespace App.Core
         {
             EncrypPrivateKey = ConfigurationManager.AppSettings["EncrypPrivateKey"];
             EncryptPublicKey = ConfigurationManager.AppSettings["EncrypPublicKey"];
+            CookieTimeout = int.Parse(ConfigurationManager.AppSettings["CookieTimeout"]);
         }
 
         

@@ -43,8 +43,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Menu\Menu.cs" />
-    <Compile Include="Models\User\User.cs" />
+    <Compile Include="Models\User\OAuthMembership.cs" />
+    <Compile Include="Models\User\UserProfile.cs" />
     <Compile Include="Models\User\ValidationException.cs" />
+    <Compile Include="Models\User\WebMemberShip.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

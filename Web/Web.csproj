@@ -237,11 +237,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\Account\AccountController.cs" />
-    <Compile Include="Controllers\ChatController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\Account\Queries\IWebMemberLoginQuery.cs" />
+    <Compile Include="Controllers\Account\Queries\WebMemberLoginQuery.cs" />
+    <Compile Include="Controllers\Chat\ChatController.cs" />
+    <Compile Include="Controllers\Home\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Startup\Tasks\AuthorizeRegistrationTask.cs" />
     <Compile Include="Startup\Tasks\ControllerRegistrationTask.cs" />
     <Compile Include="Startup\Tasks\FluentValidationRegistrationTask.cs" />
     <Compile Include="ViewModels\AccountModels.cs" />

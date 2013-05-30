@@ -22,13 +22,20 @@ namespace App.Common.Security.Authentication
             if (context.User != null)
                 return;
 
-            var user = Authentication.GetUserInCookie();
-            if (user != null)
+            var ticket = Authentication.GetTicketFromCookie();
+            if (ticket != null)
             {
-                var principal = new Principal(new UserIdentity(user), user.Role);
-                context.User = principal;
+                if (ticket.Expired || !ticket.Verify())
+                {
+                    Authentication.SignOut();
+                }
+                else
+                {
+                    var principal = new Principal(new UserIdentity(ticket.UserData), ticket.UserData.Role);
+                    context.User = principal;
 
-                Thread.CurrentPrincipal = principal;
+                    Thread.CurrentPrincipal = principal;
+                }
             }
         }
 

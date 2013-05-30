@@ -111,6 +111,7 @@
     <Compile Include="Commands\ICommandHandlerFactory.cs" />
     <Compile Include="Commands\ICommandProcessor.cs" />
     <Compile Include="Data\ConnectionString.cs" />
+    <Compile Include="Data\Conventions\CascadeAllConvention.cs" />
     <Compile Include="Data\Conventions\ForeignKeyConvention.cs" />
     <Compile Include="Data\Conventions\HasManyConvention.cs" />
     <Compile Include="Data\Conventions\PrimaryKeyConvention.cs" />
@@ -129,8 +130,10 @@
     <Compile Include="Modulary\ModuleBase.cs" />
     <Compile Include="Modulary\ModuleHolder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\Authentication\AppAuthenticationTicketSerializer.cs" />
     <Compile Include="Security\Authentication\Authentication.cs" />
     <Compile Include="Security\Authentication\AuthenticationModule.cs" />
+    <Compile Include="Security\Authentication\AuthenticationTicket.cs" />
     <Compile Include="Security\Authentication\AuthorizeAttribute.cs" />
     <Compile Include="Security\Authentication\Principal.cs" />
     <Compile Include="Security\Authentication\User.cs" />

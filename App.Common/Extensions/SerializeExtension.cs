@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
@@ -26,6 +27,18 @@ namespace App.Common.Extensions
             return stringBuilder.ToString();
         }
 
+        public static byte[] BinarySerialize<T>(this T raw)
+            where T : class
+        {
+            using (var memoryStream = new MemoryStream())
+            {
+                var binaryFormatter = new BinaryFormatter();
+                binaryFormatter.Serialize(memoryStream, raw);
+                return memoryStream.ToArray();
+            }
+        }
+
+
         /// <summary>
         /// Deserializes the specified string to object.
         /// </summary>
@@ -38,6 +51,16 @@ namespace App.Common.Extensions
             XmlSerializer serializer = new XmlSerializer(typeof(T));
             T account = serializer.Deserialize(new StringReader(rawString)) as T;
             return account;
+        }
+
+        public static T BinaryDeserialize<T>(this byte[] raw)
+            where T : class
+        {
+            using (var memoryStream = new MemoryStream(raw))
+            {
+                var binaryFormatter = new BinaryFormatter();
+                return binaryFormatter.Deserialize(memoryStream) as T;
+            }
         }
     }
 }
