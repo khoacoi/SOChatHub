@@ -34,6 +34,8 @@ namespace Web.Models
         public string UserName { get; set; }
 
         public string ExternalLoginData { get; set; }
+
+        public Guid CurrentUserProfileID { get; set; }
     }
 
     public class LocalPasswordModel

@@ -46,8 +46,8 @@ namespace App.Common.Security.Authentication
                         return _role == UserRole.Adminstrator;
                     case UserRole.User:
                         return _role == UserRole.User;
-                    case UserRole.SSO:
-                        return _role == UserRole.SSO;
+                    case UserRole.OAuth:
+                        return _role == UserRole.OAuth;
                     case UserRole.Guest:
                         return _role == UserRole.Guest;
                 }

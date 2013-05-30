@@ -10,7 +10,7 @@ namespace App.Common.Security.Authentication
     {
         Adminstrator,
         User,
-        SSO,
+        OAuth,
         Guest
     }
 
