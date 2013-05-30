@@ -37,7 +37,7 @@ namespace Web.Controllers.Account
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public ActionResult Login(Web.Models.LoginModel model, string returnUrl)
+        public ActionResult Login(Web.ViewModels.Account.LoginModel model, string returnUrl)
         {
             if (ModelState.IsValid)
             {
@@ -102,7 +102,7 @@ namespace Web.Controllers.Account
                 string loginData = OAuthWebSecurity.SerializeProviderUserId(result.Provider, result.ProviderUserId);
                 ViewBag.ProviderDisplayName = OAuthWebSecurity.GetOAuthClientData(result.Provider).DisplayName;
                 ViewBag.ReturnUrl = returnUrl;
-                return View("ExternalLoginConfirmation", new Web.Models.RegisterExternalLoginModel { UserName = result.UserName, ExternalLoginData = loginData, CurrentUserProfileID = oAuthMemberShip.UserProfile.Id});
+                return View("ExternalLoginConfirmation", new Web.ViewModels.Account.RegisterExternalLoginModel { UserName = result.UserName, ExternalLoginData = loginData, CurrentUserProfileID = oAuthMemberShip.UserProfile.Id});
             }
             else
             {
@@ -154,7 +154,7 @@ namespace Web.Controllers.Account
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public ActionResult ExternalLoginConfirmation(Web.Models.RegisterExternalLoginModel model, string returnUrl)
+        public ActionResult ExternalLoginConfirmation(Web.ViewModels.Account.RegisterExternalLoginModel model, string returnUrl)
         {
             string provider = null;
             string providerUserId = null;
@@ -305,7 +305,7 @@ namespace Web.Controllers.Account
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Manage(Web.Models.LocalPasswordModel model)
+        public ActionResult Manage(Web.ViewModels.Account.LocalPasswordModel model)
         {
             bool hasLocalAccount = OAuthWebSecurity.HasLocalAccount(WebSecurity.GetUserId(User.Identity.Name));
             ViewBag.HasLocalPassword = hasLocalAccount;
@@ -363,9 +363,6 @@ namespace Web.Controllers.Account
             return View(model);
         }
 
-        
-
-        
 
         [AllowAnonymous]
         [ChildActionOnly]
@@ -379,12 +376,12 @@ namespace Web.Controllers.Account
         public ActionResult RemoveExternalLogins()
         {
             ICollection<OAuthAccount> accounts = OAuthWebSecurity.GetAccountsFromUserName(User.Identity.Name);
-            List<Web.Models.ExternalLogin> externalLogins = new List<Web.Models.ExternalLogin>();
+            List<Web.ViewModels.Account.ExternalLogin> externalLogins = new List<Web.ViewModels.Account.ExternalLogin>();
             foreach (OAuthAccount account in accounts)
             {
                 AuthenticationClientData clientData = OAuthWebSecurity.GetOAuthClientData(account.Provider);
 
-                externalLogins.Add(new Web.Models.ExternalLogin
+                externalLogins.Add(new Web.ViewModels.Account.ExternalLogin
                 {
                     Provider = account.Provider,
                     ProviderDisplayName = clientData.DisplayName,

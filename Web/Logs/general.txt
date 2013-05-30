@@ -1,210 +1,210 @@
-2013-05-30 21:10:16,715 [1] DEBUG DotNetOpenAuth.OpenId - .NET Uri class path compression overridden.
-2013-05-30 21:10:16,750 [1] WARN  DotNetOpenAuth.OpenId - Raising minimum OpenID version requirement for Providers to 2.0 to protect this stateless RP from replay attacks.
-2013-05-30 21:10:18,404 [1] INFO  NHibernate.Cfg.Environment - NHibernate 3.3.1.4000 (3.3.3.GA)
-2013-05-30 21:10:18,404 [1] INFO  NHibernate.Cfg.Environment - hibernate-configuration section not found in application configuration file
-2013-05-30 21:10:18,405 [1] INFO  NHibernate.Cfg.Environment - Bytecode provider name : lcg
-2013-05-30 21:10:18,405 [1] INFO  NHibernate.Cfg.Environment - Using reflection optimizer
-2013-05-30 21:10:18,438 [1] WARN  NHibernate.Cfg.Configuration - No mapped documents found in assembly: App.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-2013-05-30 21:10:18,576 [1] DEBUG NHibernate.Cfg.Configuration - Mapping XML:
+2013-05-30 22:20:44,361 [1] DEBUG DotNetOpenAuth.OpenId - .NET Uri class path compression overridden.
+2013-05-30 22:20:44,407 [1] WARN  DotNetOpenAuth.OpenId - Raising minimum OpenID version requirement for Providers to 2.0 to protect this stateless RP from replay attacks.
+2013-05-30 22:20:46,087 [1] INFO  NHibernate.Cfg.Environment - NHibernate 3.3.1.4000 (3.3.3.GA)
+2013-05-30 22:20:46,088 [1] INFO  NHibernate.Cfg.Environment - hibernate-configuration section not found in application configuration file
+2013-05-30 22:20:46,088 [1] INFO  NHibernate.Cfg.Environment - Bytecode provider name : lcg
+2013-05-30 22:20:46,089 [1] INFO  NHibernate.Cfg.Environment - Using reflection optimizer
+2013-05-30 22:20:46,127 [1] WARN  NHibernate.Cfg.Configuration - No mapped documents found in assembly: App.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2013-05-30 22:20:46,272 [1] DEBUG NHibernate.Cfg.Configuration - Mapping XML:
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="App.Domain.Models.Menu.Menu, App.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="`Menu`"><cache usage="nonstrict-read-write" /><id name="Id" type="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="ID" /><generator class="guid.comb" /></id><property name="Controller" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Controller" /></property><property name="Action" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Action" /></property><property name="IsAdministration" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="IsAdministration" /></property><property name="Name" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Name" /></property></class></hibernate-mapping>
-2013-05-30 21:10:18,651 [1] INFO  NHibernate.Dialect.Dialect - Using dialect: NHibernate.Dialect.MsSql2008Dialect
-2013-05-30 21:10:18,700 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder - Mapping class: App.Domain.Models.Menu.Menu -> Menu
-2013-05-30 21:10:18,725 [1] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Id -> ID, type: Guid
-2013-05-30 21:10:18,738 [1] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Controller -> Controller, type: String
-2013-05-30 21:10:18,738 [1] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Action -> Action, type: String
-2013-05-30 21:10:18,738 [1] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: IsAdministration -> IsAdministration, type: Boolean
-2013-05-30 21:10:18,738 [1] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Name -> Name, type: String
-2013-05-30 21:10:18,744 [1] DEBUG NHibernate.Cfg.Configuration - Mapping XML:
+2013-05-30 22:20:46,348 [1] INFO  NHibernate.Dialect.Dialect - Using dialect: NHibernate.Dialect.MsSql2008Dialect
+2013-05-30 22:20:46,398 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder - Mapping class: App.Domain.Models.Menu.Menu -> Menu
+2013-05-30 22:20:46,424 [1] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Id -> ID, type: Guid
+2013-05-30 22:20:46,437 [1] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Controller -> Controller, type: String
+2013-05-30 22:20:46,437 [1] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Action -> Action, type: String
+2013-05-30 22:20:46,437 [1] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: IsAdministration -> IsAdministration, type: Boolean
+2013-05-30 22:20:46,437 [1] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Name -> Name, type: String
+2013-05-30 22:20:46,444 [1] DEBUG NHibernate.Cfg.Configuration - Mapping XML:
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="App.Domain.Models.User.OAuthMembership, App.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="`OAuthMembership`"><cache usage="nonstrict-read-write" /><id name="Id" type="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="ID" /><generator class="guid.comb" /></id><property name="Provider" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Provider" /></property><property name="ProviderUserID" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="ProviderUserID" /></property><many-to-one cascade="save-update" class="App.Domain.Models.User.UserProfile, App.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="UserProfile"><column name="UserProfileID" /></many-to-one></class></hibernate-mapping>
-2013-05-30 21:10:18,750 [1] INFO  NHibernate.Dialect.Dialect - Using dialect: NHibernate.Dialect.MsSql2008Dialect
-2013-05-30 21:10:18,750 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder - Mapping class: App.Domain.Models.User.OAuthMembership -> OAuthMembership
-2013-05-30 21:10:18,750 [1] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Id -> ID, type: Guid
-2013-05-30 21:10:18,750 [1] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Provider -> Provider, type: String
-2013-05-30 21:10:18,750 [1] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: ProviderUserID -> ProviderUserID, type: String
-2013-05-30 21:10:18,759 [1] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: UserProfile -> UserProfileID, type: App.Domain.Models.User.UserProfile
-2013-05-30 21:10:18,759 [1] DEBUG NHibernate.Cfg.Configuration - Mapping XML:
+2013-05-30 22:20:46,449 [1] INFO  NHibernate.Dialect.Dialect - Using dialect: NHibernate.Dialect.MsSql2008Dialect
+2013-05-30 22:20:46,450 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder - Mapping class: App.Domain.Models.User.OAuthMembership -> OAuthMembership
+2013-05-30 22:20:46,450 [1] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Id -> ID, type: Guid
+2013-05-30 22:20:46,450 [1] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Provider -> Provider, type: String
+2013-05-30 22:20:46,450 [1] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: ProviderUserID -> ProviderUserID, type: String
+2013-05-30 22:20:46,459 [1] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: UserProfile -> UserProfileID, type: App.Domain.Models.User.UserProfile
+2013-05-30 22:20:46,459 [1] DEBUG NHibernate.Cfg.Configuration - Mapping XML:
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="App.Domain.Models.User.UserProfile, App.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="`UserProfile`"><cache usage="nonstrict-read-write" /><id name="Id" type="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="ID" /><generator class="guid.comb" /></id><property name="UserName" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="UserName" /></property></class></hibernate-mapping>
-2013-05-30 21:10:18,760 [1] INFO  NHibernate.Dialect.Dialect - Using dialect: NHibernate.Dialect.MsSql2008Dialect
-2013-05-30 21:10:18,760 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder - Mapping class: App.Domain.Models.User.UserProfile -> UserProfile
-2013-05-30 21:10:18,760 [1] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Id -> ID, type: Guid
-2013-05-30 21:10:18,760 [1] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: UserName -> UserName, type: String
-2013-05-30 21:10:18,760 [1] DEBUG NHibernate.Cfg.Configuration - Mapping XML:
+2013-05-30 22:20:46,460 [1] INFO  NHibernate.Dialect.Dialect - Using dialect: NHibernate.Dialect.MsSql2008Dialect
+2013-05-30 22:20:46,460 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder - Mapping class: App.Domain.Models.User.UserProfile -> UserProfile
+2013-05-30 22:20:46,460 [1] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Id -> ID, type: Guid
+2013-05-30 22:20:46,460 [1] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: UserName -> UserName, type: String
+2013-05-30 22:20:46,460 [1] DEBUG NHibernate.Cfg.Configuration - Mapping XML:
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="App.Domain.Models.User.WebMemberShip, App.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="`WebMemberShip`"><cache usage="nonstrict-read-write" /><id name="Id" type="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="ID" /><generator class="guid.comb" /></id><property name="Email" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Email" /></property><property name="Password" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Password" /></property><property name="CreatedDate" type="System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="CreatedDate" /></property><many-to-one cascade="save-update" class="App.Domain.Models.User.UserProfile, App.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="UserProfile"><column name="UserProfileID" /></many-to-one></class></hibernate-mapping>
-2013-05-30 21:10:18,761 [1] INFO  NHibernate.Dialect.Dialect - Using dialect: NHibernate.Dialect.MsSql2008Dialect
-2013-05-30 21:10:18,761 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder - Mapping class: App.Domain.Models.User.WebMemberShip -> WebMemberShip
-2013-05-30 21:10:18,761 [1] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Id -> ID, type: Guid
-2013-05-30 21:10:18,761 [1] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Email -> Email, type: String
-2013-05-30 21:10:18,761 [1] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Password -> Password, type: String
-2013-05-30 21:10:18,761 [1] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: CreatedDate -> CreatedDate, type: DateTime
-2013-05-30 21:10:18,761 [1] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: UserProfile -> UserProfileID, type: App.Domain.Models.User.UserProfile
-2013-05-30 21:10:18,771 [1] INFO  NHibernate.Cfg.Configuration - checking mappings queue
-2013-05-30 21:10:18,771 [1] INFO  NHibernate.Cfg.Configuration - processing one-to-many association mappings
-2013-05-30 21:10:18,771 [1] INFO  NHibernate.Cfg.Configuration - processing one-to-one association property references
-2013-05-30 21:10:18,771 [1] INFO  NHibernate.Cfg.Configuration - processing foreign key constraints
-2013-05-30 21:10:18,773 [1] DEBUG NHibernate.Cfg.Configuration - resolving reference to class: App.Domain.Models.User.UserProfile
-2013-05-30 21:10:18,774 [1] DEBUG NHibernate.Cfg.Configuration - resolving reference to class: App.Domain.Models.User.UserProfile
-2013-05-30 21:10:18,774 [1] INFO  NHibernate.Cfg.Configuration - processing filters (second pass)
-2013-05-30 21:10:18,789 [1] INFO  NHibernate.Dialect.Dialect - Using dialect: NHibernate.Dialect.MsSql2008Dialect
-2013-05-30 21:10:18,792 [1] INFO  NHibernate.Dialect.Dialect - Using dialect: NHibernate.Dialect.MsSql2008Dialect
-2013-05-30 21:10:18,833 [1] INFO  NHibernate.Exceptions.SQLExceptionConverterFactory - Using dialect defined converter
-2013-05-30 21:10:18,833 [1] INFO  NHibernate.Cfg.SettingsFactory - Generate SQL with comments: disabled
-2013-05-30 21:10:18,834 [1] INFO  NHibernate.Connection.ConnectionProviderFactory - Initializing connection provider: App.Common.Data.Drivers.ContextDriverConnectionProvider, App.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-2013-05-30 21:10:18,835 [1] INFO  NHibernate.Connection.ConnectionProvider - Configuring ConnectionProvider
-2013-05-30 21:10:18,836 [1] INFO  NHibernate.Cfg.SettingsFactory - Transaction factory: NHibernate.Transaction.AdoNetWithDistributedTransactionFactory
-2013-05-30 21:10:18,836 [1] INFO  NHibernate.Cfg.SettingsFactory - Optimize cache for minimal puts: False
-2013-05-30 21:10:18,836 [1] INFO  NHibernate.Cfg.SettingsFactory - Connection release mode: auto
-2013-05-30 21:10:18,837 [1] INFO  NHibernate.Cfg.SettingsFactory - Default batch fetch size: 1
-2013-05-30 21:10:18,837 [1] INFO  NHibernate.Cfg.SettingsFactory - Statistics: disabled
-2013-05-30 21:10:18,837 [1] INFO  NHibernate.Cfg.SettingsFactory - Deleted entity synthetic identifier rollback: disabled
-2013-05-30 21:10:18,837 [1] INFO  NHibernate.Cfg.SettingsFactory - Query translator: NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory
-2013-05-30 21:10:18,839 [1] INFO  NHibernate.Cfg.SettingsFactory - Query language substitutions: {'true'='1', 'false'='0', 'yes'=''Y'', 'no'=''N''}
-2013-05-30 21:10:18,840 [1] INFO  NHibernate.Cfg.SettingsFactory - cache provider: NHibernate.Caches.SysCache2.SysCacheProvider, NHibernate.Caches.SysCache2, Version=3.1.0.4000, Culture=neutral, PublicKeyToken=6876f2ea66c9f443
-2013-05-30 21:10:18,842 [1] INFO  NHibernate.Caches.SysCache2.SysCacheProvider - No cache regions specified. Cache regions can be specified in sysCache configuration section with custom settings.
-2013-05-30 21:10:18,842 [1] INFO  NHibernate.Cfg.SettingsFactory - query cache factory: NHibernate.Cache.StandardQueryCacheFactory
-2013-05-30 21:10:18,842 [1] INFO  NHibernate.Cfg.SettingsFactory - Order SQL inserts for batching: enabled
-2013-05-30 21:10:18,842 [1] DEBUG NHibernate.Cfg.SettingsFactory - Wrap result sets: disabled
-2013-05-30 21:10:18,843 [1] INFO  NHibernate.Cfg.SettingsFactory - Batcher factory: NHibernate.AdoNet.SqlClientBatchingBatcherFactory, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
-2013-05-30 21:10:18,843 [1] INFO  NHibernate.Cfg.SettingsFactory - Default entity-mode: Poco
-2013-05-30 21:10:18,843 [1] INFO  NHibernate.Cfg.SettingsFactory - Named query checking : enabled
-2013-05-30 21:10:18,857 [1] INFO  NHibernate.Impl.SessionFactoryImpl - building session factory
-2013-05-30 21:10:18,857 [1] DEBUG NHibernate.Impl.SessionFactoryImpl - Session factory constructed with filter configurations : {}
-2013-05-30 21:10:18,857 [1] DEBUG NHibernate.Impl.SessionFactoryImpl - instantiating session factory with properties: {'use_reflection_optimizer'='True', 'proxyfactory.factory_class'='NHibernate.Bytecode.DefaultProxyFactoryFactory, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'connection.provider'='App.Common.Data.Drivers.ContextDriverConnectionProvider, App.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null', 'connection.driver_class'='NHibernate.Driver.SqlClientDriver, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'dialect'='NHibernate.Dialect.MsSql2008Dialect, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'hibernate.dialect'='NHibernate.Dialect.MsSql2008Dialect, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'connection.connection_string'='Data Source=.;Initial Catalog=SOChatHub;Integrated Security=SSPI', 'current_session_context_class'='SharpLite.NHibernateProvider.LazySessionContext, SharpLite.NHibernateProvider, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f2f64e823dfaf078', 'cache.provider_class'='NHibernate.Caches.SysCache2.SysCacheProvider, NHibernate.Caches.SysCache2, Version=3.1.0.4000, Culture=neutral, PublicKeyToken=6876f2ea66c9f443', 'cache.use_second_level_cache'='true', 'cache.use_query_cache'='true'}
-2013-05-30 21:10:18,859 [1] DEBUG NHibernate.Connection.DriverConnectionProvider - Obtaining IDbConnection from Driver
-2013-05-30 21:10:18,895 [1] DEBUG NHibernate.Connection.ConnectionProvider - Closing connection
-2013-05-30 21:10:18,911 [1] DEBUG NHibernate.Cache.CacheFactory - cache for: App.Domain.Models.Menu.Menu usage strategy: nonstrict-read-write
-2013-05-30 21:10:18,912 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheProvider - building non-configured cache region : App.Domain.Models.Menu.Menu
-2013-05-30 21:10:18,914 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - Configuring cache region
-2013-05-30 21:10:18,914 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no priority specified using default : Default
-2013-05-30 21:10:18,914 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no expiration specified using default : 00:05:00
-2013-05-30 21:10:18,964 [1] DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: App.Domain.Models.Menu.Menu
-2013-05-30 21:10:18,967 [1] DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: App.Domain.Models.Menu.Menu
-2013-05-30 21:10:18,986 [1] DEBUG NHibernate.Tuple.Entity.PocoEntityTuplizer - Create Instantiator using optimizer for:App.Domain.Models.Menu.Menu
-2013-05-30 21:10:19,018 [1] DEBUG NHibernate.Cache.CacheFactory - cache for: App.Domain.Models.User.OAuthMembership usage strategy: nonstrict-read-write
-2013-05-30 21:10:19,018 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheProvider - building non-configured cache region : App.Domain.Models.User.OAuthMembership
-2013-05-30 21:10:19,018 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - Configuring cache region
-2013-05-30 21:10:19,018 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no priority specified using default : Default
-2013-05-30 21:10:19,019 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no expiration specified using default : 00:05:00
-2013-05-30 21:10:19,019 [1] DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: App.Domain.Models.User.OAuthMembership
-2013-05-30 21:10:19,019 [1] DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: App.Domain.Models.User.OAuthMembership
-2013-05-30 21:10:19,020 [1] DEBUG NHibernate.Tuple.Entity.PocoEntityTuplizer - Create Instantiator using optimizer for:App.Domain.Models.User.OAuthMembership
-2013-05-30 21:10:19,021 [1] DEBUG NHibernate.Cache.CacheFactory - cache for: App.Domain.Models.User.UserProfile usage strategy: nonstrict-read-write
-2013-05-30 21:10:19,021 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheProvider - building non-configured cache region : App.Domain.Models.User.UserProfile
-2013-05-30 21:10:19,021 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - Configuring cache region
-2013-05-30 21:10:19,021 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no priority specified using default : Default
-2013-05-30 21:10:19,021 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no expiration specified using default : 00:05:00
-2013-05-30 21:10:19,022 [1] DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: App.Domain.Models.User.UserProfile
-2013-05-30 21:10:19,022 [1] DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: App.Domain.Models.User.UserProfile
-2013-05-30 21:10:19,022 [1] DEBUG NHibernate.Tuple.Entity.PocoEntityTuplizer - Create Instantiator using optimizer for:App.Domain.Models.User.UserProfile
-2013-05-30 21:10:19,022 [1] DEBUG NHibernate.Cache.CacheFactory - cache for: App.Domain.Models.User.WebMemberShip usage strategy: nonstrict-read-write
-2013-05-30 21:10:19,022 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheProvider - building non-configured cache region : App.Domain.Models.User.WebMemberShip
-2013-05-30 21:10:19,022 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - Configuring cache region
-2013-05-30 21:10:19,022 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no priority specified using default : Default
-2013-05-30 21:10:19,022 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no expiration specified using default : 00:05:00
-2013-05-30 21:10:19,023 [1] DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: App.Domain.Models.User.WebMemberShip
-2013-05-30 21:10:19,023 [1] DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: App.Domain.Models.User.WebMemberShip
-2013-05-30 21:10:19,023 [1] DEBUG NHibernate.Tuple.Entity.PocoEntityTuplizer - Create Instantiator using optimizer for:App.Domain.Models.User.WebMemberShip
-2013-05-30 21:10:19,055 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Static SQL for entity: App.Domain.Models.Menu.Menu
-2013-05-30 21:10:19,055 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Version select: SELECT ID FROM [Menu] WHERE ID = ?
-2013-05-30 21:10:19,055 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Snapshot select: SELECT menu_.ID, menu_.Controller as Controller0_, menu_.Action as Action0_, menu_.IsAdministration as IsAdmini4_0_, menu_.Name as Name0_ FROM [Menu] menu_ WHERE menu_.ID=?
-2013-05-30 21:10:19,056 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Insert 0: INSERT INTO [Menu] (Controller, Action, IsAdministration, Name, ID) VALUES (?, ?, ?, ?, ?)
-2013-05-30 21:10:19,056 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Update 0: UPDATE [Menu] SET Controller = ?, Action = ?, IsAdministration = ?, Name = ? WHERE ID = ?
-2013-05-30 21:10:19,056 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Delete 0: DELETE FROM [Menu] WHERE ID = ?
-2013-05-30 21:10:19,081 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.Menu.Menu: SELECT menu0_.ID as ID0_0_, menu0_.Controller as Controller0_0_, menu0_.Action as Action0_0_, menu0_.IsAdministration as IsAdmini4_0_0_, menu0_.Name as Name0_0_ FROM [Menu] menu0_ WHERE menu0_.ID=?
-2013-05-30 21:10:19,081 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.Menu.Menu: SELECT menu0_.ID as ID0_0_, menu0_.Controller as Controller0_0_, menu0_.Action as Action0_0_, menu0_.IsAdministration as IsAdmini4_0_0_, menu0_.Name as Name0_0_ FROM [Menu] menu0_ WHERE menu0_.ID=?
-2013-05-30 21:10:19,081 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.Menu.Menu: SELECT menu0_.ID as ID0_0_, menu0_.Controller as Controller0_0_, menu0_.Action as Action0_0_, menu0_.IsAdministration as IsAdmini4_0_0_, menu0_.Name as Name0_0_ FROM [Menu] menu0_ with (updlock, rowlock) WHERE menu0_.ID=?
-2013-05-30 21:10:19,082 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.Menu.Menu: SELECT menu0_.ID as ID0_0_, menu0_.Controller as Controller0_0_, menu0_.Action as Action0_0_, menu0_.IsAdministration as IsAdmini4_0_0_, menu0_.Name as Name0_0_ FROM [Menu] menu0_ with (updlock, rowlock, nowait) WHERE menu0_.ID=?
-2013-05-30 21:10:19,082 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.Menu.Menu: SELECT menu0_.ID as ID0_0_, menu0_.Controller as Controller0_0_, menu0_.Action as Action0_0_, menu0_.IsAdministration as IsAdmini4_0_0_, menu0_.Name as Name0_0_ FROM [Menu] menu0_ with (updlock, rowlock) WHERE menu0_.ID=?
-2013-05-30 21:10:19,083 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity App.Domain.Models.Menu.Menu: SELECT menu0_.ID as ID0_0_, menu0_.Controller as Controller0_0_, menu0_.Action as Action0_0_, menu0_.IsAdministration as IsAdmini4_0_0_, menu0_.Name as Name0_0_ FROM [Menu] menu0_ WHERE menu0_.ID=?
-2013-05-30 21:10:19,083 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity App.Domain.Models.Menu.Menu: SELECT menu0_.ID as ID0_0_, menu0_.Controller as Controller0_0_, menu0_.Action as Action0_0_, menu0_.IsAdministration as IsAdmini4_0_0_, menu0_.Name as Name0_0_ FROM [Menu] menu0_ WHERE menu0_.ID=?
-2013-05-30 21:10:19,084 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Static SQL for entity: App.Domain.Models.User.OAuthMembership
-2013-05-30 21:10:19,084 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Version select: SELECT ID FROM [OAuthMembership] WHERE ID = ?
-2013-05-30 21:10:19,084 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Snapshot select: SELECT oauthmembe_.ID, oauthmembe_.Provider as Provider1_, oauthmembe_.ProviderUserID as Provider3_1_, oauthmembe_.UserProfileID as UserProf4_1_ FROM [OAuthMembership] oauthmembe_ WHERE oauthmembe_.ID=?
-2013-05-30 21:10:19,084 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Insert 0: INSERT INTO [OAuthMembership] (Provider, ProviderUserID, UserProfileID, ID) VALUES (?, ?, ?, ?)
-2013-05-30 21:10:19,084 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Update 0: UPDATE [OAuthMembership] SET Provider = ?, ProviderUserID = ?, UserProfileID = ? WHERE ID = ?
-2013-05-30 21:10:19,084 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Delete 0: DELETE FROM [OAuthMembership] WHERE ID = ?
-2013-05-30 21:10:19,087 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.OAuthMembership: SELECT oauthmembe0_.ID as ID1_0_, oauthmembe0_.Provider as Provider1_0_, oauthmembe0_.ProviderUserID as Provider3_1_0_, oauthmembe0_.UserProfileID as UserProf4_1_0_ FROM [OAuthMembership] oauthmembe0_ WHERE oauthmembe0_.ID=?
-2013-05-30 21:10:19,087 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.OAuthMembership: SELECT oauthmembe0_.ID as ID1_0_, oauthmembe0_.Provider as Provider1_0_, oauthmembe0_.ProviderUserID as Provider3_1_0_, oauthmembe0_.UserProfileID as UserProf4_1_0_ FROM [OAuthMembership] oauthmembe0_ WHERE oauthmembe0_.ID=?
-2013-05-30 21:10:19,087 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.OAuthMembership: SELECT oauthmembe0_.ID as ID1_0_, oauthmembe0_.Provider as Provider1_0_, oauthmembe0_.ProviderUserID as Provider3_1_0_, oauthmembe0_.UserProfileID as UserProf4_1_0_ FROM [OAuthMembership] oauthmembe0_ with (updlock, rowlock) WHERE oauthmembe0_.ID=?
-2013-05-30 21:10:19,088 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.OAuthMembership: SELECT oauthmembe0_.ID as ID1_0_, oauthmembe0_.Provider as Provider1_0_, oauthmembe0_.ProviderUserID as Provider3_1_0_, oauthmembe0_.UserProfileID as UserProf4_1_0_ FROM [OAuthMembership] oauthmembe0_ with (updlock, rowlock, nowait) WHERE oauthmembe0_.ID=?
-2013-05-30 21:10:19,088 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.OAuthMembership: SELECT oauthmembe0_.ID as ID1_0_, oauthmembe0_.Provider as Provider1_0_, oauthmembe0_.ProviderUserID as Provider3_1_0_, oauthmembe0_.UserProfileID as UserProf4_1_0_ FROM [OAuthMembership] oauthmembe0_ with (updlock, rowlock) WHERE oauthmembe0_.ID=?
-2013-05-30 21:10:19,088 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity App.Domain.Models.User.OAuthMembership: SELECT oauthmembe0_.ID as ID1_0_, oauthmembe0_.Provider as Provider1_0_, oauthmembe0_.ProviderUserID as Provider3_1_0_, oauthmembe0_.UserProfileID as UserProf4_1_0_ FROM [OAuthMembership] oauthmembe0_ WHERE oauthmembe0_.ID=?
-2013-05-30 21:10:19,088 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity App.Domain.Models.User.OAuthMembership: SELECT oauthmembe0_.ID as ID1_0_, oauthmembe0_.Provider as Provider1_0_, oauthmembe0_.ProviderUserID as Provider3_1_0_, oauthmembe0_.UserProfileID as UserProf4_1_0_ FROM [OAuthMembership] oauthmembe0_ WHERE oauthmembe0_.ID=?
-2013-05-30 21:10:19,088 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Static SQL for entity: App.Domain.Models.User.UserProfile
-2013-05-30 21:10:19,088 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Version select: SELECT ID FROM [UserProfile] WHERE ID = ?
-2013-05-30 21:10:19,088 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Snapshot select: SELECT userprofil_.ID, userprofil_.UserName as UserName2_ FROM [UserProfile] userprofil_ WHERE userprofil_.ID=?
-2013-05-30 21:10:19,088 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Insert 0: INSERT INTO [UserProfile] (UserName, ID) VALUES (?, ?)
-2013-05-30 21:10:19,088 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Update 0: UPDATE [UserProfile] SET UserName = ? WHERE ID = ?
-2013-05-30 21:10:19,088 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Delete 0: DELETE FROM [UserProfile] WHERE ID = ?
-2013-05-30 21:10:19,088 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.UserProfile: SELECT userprofil0_.ID as ID2_0_, userprofil0_.UserName as UserName2_0_ FROM [UserProfile] userprofil0_ WHERE userprofil0_.ID=?
-2013-05-30 21:10:19,088 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.UserProfile: SELECT userprofil0_.ID as ID2_0_, userprofil0_.UserName as UserName2_0_ FROM [UserProfile] userprofil0_ WHERE userprofil0_.ID=?
-2013-05-30 21:10:19,088 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.UserProfile: SELECT userprofil0_.ID as ID2_0_, userprofil0_.UserName as UserName2_0_ FROM [UserProfile] userprofil0_ with (updlock, rowlock) WHERE userprofil0_.ID=?
-2013-05-30 21:10:19,088 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.UserProfile: SELECT userprofil0_.ID as ID2_0_, userprofil0_.UserName as UserName2_0_ FROM [UserProfile] userprofil0_ with (updlock, rowlock, nowait) WHERE userprofil0_.ID=?
-2013-05-30 21:10:19,089 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.UserProfile: SELECT userprofil0_.ID as ID2_0_, userprofil0_.UserName as UserName2_0_ FROM [UserProfile] userprofil0_ with (updlock, rowlock) WHERE userprofil0_.ID=?
-2013-05-30 21:10:19,089 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity App.Domain.Models.User.UserProfile: SELECT userprofil0_.ID as ID2_0_, userprofil0_.UserName as UserName2_0_ FROM [UserProfile] userprofil0_ WHERE userprofil0_.ID=?
-2013-05-30 21:10:19,089 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity App.Domain.Models.User.UserProfile: SELECT userprofil0_.ID as ID2_0_, userprofil0_.UserName as UserName2_0_ FROM [UserProfile] userprofil0_ WHERE userprofil0_.ID=?
-2013-05-30 21:10:19,089 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Static SQL for entity: App.Domain.Models.User.WebMemberShip
-2013-05-30 21:10:19,089 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Version select: SELECT ID FROM [WebMemberShip] WHERE ID = ?
-2013-05-30 21:10:19,089 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Snapshot select: SELECT webmembers_.ID, webmembers_.Email as Email3_, webmembers_.Password as Password3_, webmembers_.CreatedDate as CreatedD4_3_, webmembers_.UserProfileID as UserProf5_3_ FROM [WebMemberShip] webmembers_ WHERE webmembers_.ID=?
-2013-05-30 21:10:19,089 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Insert 0: INSERT INTO [WebMemberShip] (Email, Password, CreatedDate, UserProfileID, ID) VALUES (?, ?, ?, ?, ?)
-2013-05-30 21:10:19,089 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Update 0: UPDATE [WebMemberShip] SET Email = ?, Password = ?, CreatedDate = ?, UserProfileID = ? WHERE ID = ?
-2013-05-30 21:10:19,089 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Delete 0: DELETE FROM [WebMemberShip] WHERE ID = ?
-2013-05-30 21:10:19,089 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.WebMemberShip: SELECT webmembers0_.ID as ID3_0_, webmembers0_.Email as Email3_0_, webmembers0_.Password as Password3_0_, webmembers0_.CreatedDate as CreatedD4_3_0_, webmembers0_.UserProfileID as UserProf5_3_0_ FROM [WebMemberShip] webmembers0_ WHERE webmembers0_.ID=?
-2013-05-30 21:10:19,089 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.WebMemberShip: SELECT webmembers0_.ID as ID3_0_, webmembers0_.Email as Email3_0_, webmembers0_.Password as Password3_0_, webmembers0_.CreatedDate as CreatedD4_3_0_, webmembers0_.UserProfileID as UserProf5_3_0_ FROM [WebMemberShip] webmembers0_ WHERE webmembers0_.ID=?
-2013-05-30 21:10:19,089 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.WebMemberShip: SELECT webmembers0_.ID as ID3_0_, webmembers0_.Email as Email3_0_, webmembers0_.Password as Password3_0_, webmembers0_.CreatedDate as CreatedD4_3_0_, webmembers0_.UserProfileID as UserProf5_3_0_ FROM [WebMemberShip] webmembers0_ with (updlock, rowlock) WHERE webmembers0_.ID=?
-2013-05-30 21:10:19,089 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.WebMemberShip: SELECT webmembers0_.ID as ID3_0_, webmembers0_.Email as Email3_0_, webmembers0_.Password as Password3_0_, webmembers0_.CreatedDate as CreatedD4_3_0_, webmembers0_.UserProfileID as UserProf5_3_0_ FROM [WebMemberShip] webmembers0_ with (updlock, rowlock, nowait) WHERE webmembers0_.ID=?
-2013-05-30 21:10:19,089 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.WebMemberShip: SELECT webmembers0_.ID as ID3_0_, webmembers0_.Email as Email3_0_, webmembers0_.Password as Password3_0_, webmembers0_.CreatedDate as CreatedD4_3_0_, webmembers0_.UserProfileID as UserProf5_3_0_ FROM [WebMemberShip] webmembers0_ with (updlock, rowlock) WHERE webmembers0_.ID=?
-2013-05-30 21:10:19,089 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity App.Domain.Models.User.WebMemberShip: SELECT webmembers0_.ID as ID3_0_, webmembers0_.Email as Email3_0_, webmembers0_.Password as Password3_0_, webmembers0_.CreatedDate as CreatedD4_3_0_, webmembers0_.UserProfileID as UserProf5_3_0_ FROM [WebMemberShip] webmembers0_ WHERE webmembers0_.ID=?
-2013-05-30 21:10:19,089 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity App.Domain.Models.User.WebMemberShip: SELECT webmembers0_.ID as ID3_0_, webmembers0_.Email as Email3_0_, webmembers0_.Password as Password3_0_, webmembers0_.CreatedDate as CreatedD4_3_0_, webmembers0_.UserProfileID as UserProf5_3_0_ FROM [WebMemberShip] webmembers0_ WHERE webmembers0_.ID=?
-2013-05-30 21:10:19,090 [1] DEBUG NHibernate.Impl.SessionFactoryObjectFactory - initializing class SessionFactoryObjectFactory
-2013-05-30 21:10:19,091 [1] DEBUG NHibernate.Impl.SessionFactoryObjectFactory - registered: 9d92326537734250955ed82eacea4628(unnamed)
-2013-05-30 21:10:19,091 [1] INFO  NHibernate.Impl.SessionFactoryObjectFactory - no name configured
-2013-05-30 21:10:19,091 [1] DEBUG NHibernate.Impl.SessionFactoryImpl - Instantiated session factory
-2013-05-30 21:10:19,092 [1] INFO  NHibernate.Cache.UpdateTimestampsCache - starting update timestamps cache at region: UpdateTimestampsCache
-2013-05-30 21:10:19,092 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheProvider - building non-configured cache region : UpdateTimestampsCache
-2013-05-30 21:10:19,092 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - Configuring cache region
-2013-05-30 21:10:19,092 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no priority specified using default : Default
-2013-05-30 21:10:19,092 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no expiration specified using default : 00:05:00
-2013-05-30 21:10:19,093 [1] INFO  NHibernate.Cache.StandardQueryCache - starting query cache at region: NHibernate.Cache.StandardQueryCache
-2013-05-30 21:10:19,093 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheProvider - building non-configured cache region : NHibernate.Cache.StandardQueryCache
-2013-05-30 21:10:19,093 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - Configuring cache region
-2013-05-30 21:10:19,093 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no priority specified using default : Default
-2013-05-30 21:10:19,093 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no expiration specified using default : 00:05:00
-2013-05-30 21:10:19,094 [1] DEBUG NHibernate.Impl.SessionFactoryImpl - Checking 0 named HQL queries
-2013-05-30 21:10:19,094 [1] DEBUG NHibernate.Impl.SessionFactoryImpl - Checking 0 named SQL queries
-2013-05-30 21:10:19,108 [1] DEBUG NHibernate.Impl.SessionImpl - [session-id=d5b17588-4d65-4fcc-8134-45f73650888e] opened session at timestamp: 5611307905413120, for session factory: [/9d92326537734250955ed82eacea4628]
-2013-05-30 21:10:19,110 [1] DEBUG NHibernate.Connection.DriverConnectionProvider - Obtaining IDbConnection from Driver
-2013-05-30 21:10:19,112 [1] INFO  NHibernate.Dialect.Dialect - Using dialect: NHibernate.Dialect.MsSql2008Dialect
-2013-05-30 21:10:19,114 [1] INFO  NHibernate.Cfg.Configuration - checking mappings queue
-2013-05-30 21:10:19,114 [1] INFO  NHibernate.Cfg.Configuration - processing one-to-many association mappings
-2013-05-30 21:10:19,114 [1] INFO  NHibernate.Cfg.Configuration - processing one-to-one association property references
-2013-05-30 21:10:19,114 [1] INFO  NHibernate.Cfg.Configuration - processing foreign key constraints
-2013-05-30 21:10:19,114 [1] DEBUG NHibernate.Cfg.Configuration - resolving reference to class: App.Domain.Models.User.UserProfile
-2013-05-30 21:10:19,114 [1] DEBUG NHibernate.Cfg.Configuration - resolving reference to class: App.Domain.Models.User.UserProfile
-2013-05-30 21:10:19,114 [1] INFO  NHibernate.Cfg.Configuration - processing filters (second pass)
-2013-05-30 21:10:19,118 [1] INFO  NHibernate.Cfg.Configuration - checking mappings queue
-2013-05-30 21:10:19,118 [1] INFO  NHibernate.Cfg.Configuration - processing one-to-many association mappings
-2013-05-30 21:10:19,118 [1] INFO  NHibernate.Cfg.Configuration - processing one-to-one association property references
-2013-05-30 21:10:19,118 [1] INFO  NHibernate.Cfg.Configuration - processing foreign key constraints
-2013-05-30 21:10:19,118 [1] DEBUG NHibernate.Cfg.Configuration - resolving reference to class: App.Domain.Models.User.UserProfile
-2013-05-30 21:10:19,118 [1] DEBUG NHibernate.Cfg.Configuration - resolving reference to class: App.Domain.Models.User.UserProfile
-2013-05-30 21:10:19,118 [1] INFO  NHibernate.Cfg.Configuration - processing filters (second pass)
-2013-05-30 21:10:19,127 [1] DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+2013-05-30 22:20:46,461 [1] INFO  NHibernate.Dialect.Dialect - Using dialect: NHibernate.Dialect.MsSql2008Dialect
+2013-05-30 22:20:46,461 [1] INFO  NHibernate.Cfg.XmlHbmBinding.Binder - Mapping class: App.Domain.Models.User.WebMemberShip -> WebMemberShip
+2013-05-30 22:20:46,461 [1] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Id -> ID, type: Guid
+2013-05-30 22:20:46,461 [1] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Email -> Email, type: String
+2013-05-30 22:20:46,461 [1] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Password -> Password, type: String
+2013-05-30 22:20:46,461 [1] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: CreatedDate -> CreatedDate, type: DateTime
+2013-05-30 22:20:46,462 [1] DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: UserProfile -> UserProfileID, type: App.Domain.Models.User.UserProfile
+2013-05-30 22:20:46,470 [1] INFO  NHibernate.Cfg.Configuration - checking mappings queue
+2013-05-30 22:20:46,470 [1] INFO  NHibernate.Cfg.Configuration - processing one-to-many association mappings
+2013-05-30 22:20:46,470 [1] INFO  NHibernate.Cfg.Configuration - processing one-to-one association property references
+2013-05-30 22:20:46,470 [1] INFO  NHibernate.Cfg.Configuration - processing foreign key constraints
+2013-05-30 22:20:46,472 [1] DEBUG NHibernate.Cfg.Configuration - resolving reference to class: App.Domain.Models.User.UserProfile
+2013-05-30 22:20:46,474 [1] DEBUG NHibernate.Cfg.Configuration - resolving reference to class: App.Domain.Models.User.UserProfile
+2013-05-30 22:20:46,474 [1] INFO  NHibernate.Cfg.Configuration - processing filters (second pass)
+2013-05-30 22:20:46,489 [1] INFO  NHibernate.Dialect.Dialect - Using dialect: NHibernate.Dialect.MsSql2008Dialect
+2013-05-30 22:20:46,493 [1] INFO  NHibernate.Dialect.Dialect - Using dialect: NHibernate.Dialect.MsSql2008Dialect
+2013-05-30 22:20:46,535 [1] INFO  NHibernate.Exceptions.SQLExceptionConverterFactory - Using dialect defined converter
+2013-05-30 22:20:46,536 [1] INFO  NHibernate.Cfg.SettingsFactory - Generate SQL with comments: disabled
+2013-05-30 22:20:46,536 [1] INFO  NHibernate.Connection.ConnectionProviderFactory - Initializing connection provider: App.Common.Data.Drivers.ContextDriverConnectionProvider, App.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2013-05-30 22:20:46,537 [1] INFO  NHibernate.Connection.ConnectionProvider - Configuring ConnectionProvider
+2013-05-30 22:20:46,538 [1] INFO  NHibernate.Cfg.SettingsFactory - Transaction factory: NHibernate.Transaction.AdoNetWithDistributedTransactionFactory
+2013-05-30 22:20:46,539 [1] INFO  NHibernate.Cfg.SettingsFactory - Optimize cache for minimal puts: False
+2013-05-30 22:20:46,539 [1] INFO  NHibernate.Cfg.SettingsFactory - Connection release mode: auto
+2013-05-30 22:20:46,539 [1] INFO  NHibernate.Cfg.SettingsFactory - Default batch fetch size: 1
+2013-05-30 22:20:46,539 [1] INFO  NHibernate.Cfg.SettingsFactory - Statistics: disabled
+2013-05-30 22:20:46,539 [1] INFO  NHibernate.Cfg.SettingsFactory - Deleted entity synthetic identifier rollback: disabled
+2013-05-30 22:20:46,539 [1] INFO  NHibernate.Cfg.SettingsFactory - Query translator: NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory
+2013-05-30 22:20:46,542 [1] INFO  NHibernate.Cfg.SettingsFactory - Query language substitutions: {'true'='1', 'false'='0', 'yes'=''Y'', 'no'=''N''}
+2013-05-30 22:20:46,543 [1] INFO  NHibernate.Cfg.SettingsFactory - cache provider: NHibernate.Caches.SysCache2.SysCacheProvider, NHibernate.Caches.SysCache2, Version=3.1.0.4000, Culture=neutral, PublicKeyToken=6876f2ea66c9f443
+2013-05-30 22:20:46,544 [1] INFO  NHibernate.Caches.SysCache2.SysCacheProvider - No cache regions specified. Cache regions can be specified in sysCache configuration section with custom settings.
+2013-05-30 22:20:46,544 [1] INFO  NHibernate.Cfg.SettingsFactory - query cache factory: NHibernate.Cache.StandardQueryCacheFactory
+2013-05-30 22:20:46,545 [1] INFO  NHibernate.Cfg.SettingsFactory - Order SQL inserts for batching: enabled
+2013-05-30 22:20:46,545 [1] DEBUG NHibernate.Cfg.SettingsFactory - Wrap result sets: disabled
+2013-05-30 22:20:46,546 [1] INFO  NHibernate.Cfg.SettingsFactory - Batcher factory: NHibernate.AdoNet.SqlClientBatchingBatcherFactory, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2013-05-30 22:20:46,546 [1] INFO  NHibernate.Cfg.SettingsFactory - Default entity-mode: Poco
+2013-05-30 22:20:46,546 [1] INFO  NHibernate.Cfg.SettingsFactory - Named query checking : enabled
+2013-05-30 22:20:46,559 [1] INFO  NHibernate.Impl.SessionFactoryImpl - building session factory
+2013-05-30 22:20:46,559 [1] DEBUG NHibernate.Impl.SessionFactoryImpl - Session factory constructed with filter configurations : {}
+2013-05-30 22:20:46,560 [1] DEBUG NHibernate.Impl.SessionFactoryImpl - instantiating session factory with properties: {'use_reflection_optimizer'='True', 'proxyfactory.factory_class'='NHibernate.Bytecode.DefaultProxyFactoryFactory, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'connection.provider'='App.Common.Data.Drivers.ContextDriverConnectionProvider, App.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null', 'connection.driver_class'='NHibernate.Driver.SqlClientDriver, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'dialect'='NHibernate.Dialect.MsSql2008Dialect, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'hibernate.dialect'='NHibernate.Dialect.MsSql2008Dialect, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'connection.connection_string'='Data Source=.;Initial Catalog=SOChatHub;Integrated Security=SSPI', 'current_session_context_class'='SharpLite.NHibernateProvider.LazySessionContext, SharpLite.NHibernateProvider, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f2f64e823dfaf078', 'cache.provider_class'='NHibernate.Caches.SysCache2.SysCacheProvider, NHibernate.Caches.SysCache2, Version=3.1.0.4000, Culture=neutral, PublicKeyToken=6876f2ea66c9f443', 'cache.use_second_level_cache'='true', 'cache.use_query_cache'='true'}
+2013-05-30 22:20:46,561 [1] DEBUG NHibernate.Connection.DriverConnectionProvider - Obtaining IDbConnection from Driver
+2013-05-30 22:20:46,638 [1] DEBUG NHibernate.Connection.ConnectionProvider - Closing connection
+2013-05-30 22:20:46,654 [1] DEBUG NHibernate.Cache.CacheFactory - cache for: App.Domain.Models.Menu.Menu usage strategy: nonstrict-read-write
+2013-05-30 22:20:46,655 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheProvider - building non-configured cache region : App.Domain.Models.Menu.Menu
+2013-05-30 22:20:46,657 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - Configuring cache region
+2013-05-30 22:20:46,657 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no priority specified using default : Default
+2013-05-30 22:20:46,657 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no expiration specified using default : 00:05:00
+2013-05-30 22:20:46,707 [1] DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: App.Domain.Models.Menu.Menu
+2013-05-30 22:20:46,711 [1] DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: App.Domain.Models.Menu.Menu
+2013-05-30 22:20:46,727 [1] DEBUG NHibernate.Tuple.Entity.PocoEntityTuplizer - Create Instantiator using optimizer for:App.Domain.Models.Menu.Menu
+2013-05-30 22:20:46,753 [1] DEBUG NHibernate.Cache.CacheFactory - cache for: App.Domain.Models.User.OAuthMembership usage strategy: nonstrict-read-write
+2013-05-30 22:20:46,753 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheProvider - building non-configured cache region : App.Domain.Models.User.OAuthMembership
+2013-05-30 22:20:46,753 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - Configuring cache region
+2013-05-30 22:20:46,753 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no priority specified using default : Default
+2013-05-30 22:20:46,753 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no expiration specified using default : 00:05:00
+2013-05-30 22:20:46,754 [1] DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: App.Domain.Models.User.OAuthMembership
+2013-05-30 22:20:46,754 [1] DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: App.Domain.Models.User.OAuthMembership
+2013-05-30 22:20:46,754 [1] DEBUG NHibernate.Tuple.Entity.PocoEntityTuplizer - Create Instantiator using optimizer for:App.Domain.Models.User.OAuthMembership
+2013-05-30 22:20:46,756 [1] DEBUG NHibernate.Cache.CacheFactory - cache for: App.Domain.Models.User.UserProfile usage strategy: nonstrict-read-write
+2013-05-30 22:20:46,756 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheProvider - building non-configured cache region : App.Domain.Models.User.UserProfile
+2013-05-30 22:20:46,756 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - Configuring cache region
+2013-05-30 22:20:46,756 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no priority specified using default : Default
+2013-05-30 22:20:46,756 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no expiration specified using default : 00:05:00
+2013-05-30 22:20:46,756 [1] DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: App.Domain.Models.User.UserProfile
+2013-05-30 22:20:46,756 [1] DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: App.Domain.Models.User.UserProfile
+2013-05-30 22:20:46,756 [1] DEBUG NHibernate.Tuple.Entity.PocoEntityTuplizer - Create Instantiator using optimizer for:App.Domain.Models.User.UserProfile
+2013-05-30 22:20:46,757 [1] DEBUG NHibernate.Cache.CacheFactory - cache for: App.Domain.Models.User.WebMemberShip usage strategy: nonstrict-read-write
+2013-05-30 22:20:46,757 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheProvider - building non-configured cache region : App.Domain.Models.User.WebMemberShip
+2013-05-30 22:20:46,757 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - Configuring cache region
+2013-05-30 22:20:46,757 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no priority specified using default : Default
+2013-05-30 22:20:46,757 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no expiration specified using default : 00:05:00
+2013-05-30 22:20:46,757 [1] DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: App.Domain.Models.User.WebMemberShip
+2013-05-30 22:20:46,757 [1] DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: App.Domain.Models.User.WebMemberShip
+2013-05-30 22:20:46,757 [1] DEBUG NHibernate.Tuple.Entity.PocoEntityTuplizer - Create Instantiator using optimizer for:App.Domain.Models.User.WebMemberShip
+2013-05-30 22:20:46,787 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Static SQL for entity: App.Domain.Models.Menu.Menu
+2013-05-30 22:20:46,787 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Version select: SELECT ID FROM [Menu] WHERE ID = ?
+2013-05-30 22:20:46,787 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Snapshot select: SELECT menu_.ID, menu_.Controller as Controller0_, menu_.Action as Action0_, menu_.IsAdministration as IsAdmini4_0_, menu_.Name as Name0_ FROM [Menu] menu_ WHERE menu_.ID=?
+2013-05-30 22:20:46,788 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Insert 0: INSERT INTO [Menu] (Controller, Action, IsAdministration, Name, ID) VALUES (?, ?, ?, ?, ?)
+2013-05-30 22:20:46,788 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Update 0: UPDATE [Menu] SET Controller = ?, Action = ?, IsAdministration = ?, Name = ? WHERE ID = ?
+2013-05-30 22:20:46,788 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Delete 0: DELETE FROM [Menu] WHERE ID = ?
+2013-05-30 22:20:46,813 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.Menu.Menu: SELECT menu0_.ID as ID0_0_, menu0_.Controller as Controller0_0_, menu0_.Action as Action0_0_, menu0_.IsAdministration as IsAdmini4_0_0_, menu0_.Name as Name0_0_ FROM [Menu] menu0_ WHERE menu0_.ID=?
+2013-05-30 22:20:46,813 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.Menu.Menu: SELECT menu0_.ID as ID0_0_, menu0_.Controller as Controller0_0_, menu0_.Action as Action0_0_, menu0_.IsAdministration as IsAdmini4_0_0_, menu0_.Name as Name0_0_ FROM [Menu] menu0_ WHERE menu0_.ID=?
+2013-05-30 22:20:46,814 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.Menu.Menu: SELECT menu0_.ID as ID0_0_, menu0_.Controller as Controller0_0_, menu0_.Action as Action0_0_, menu0_.IsAdministration as IsAdmini4_0_0_, menu0_.Name as Name0_0_ FROM [Menu] menu0_ with (updlock, rowlock) WHERE menu0_.ID=?
+2013-05-30 22:20:46,814 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.Menu.Menu: SELECT menu0_.ID as ID0_0_, menu0_.Controller as Controller0_0_, menu0_.Action as Action0_0_, menu0_.IsAdministration as IsAdmini4_0_0_, menu0_.Name as Name0_0_ FROM [Menu] menu0_ with (updlock, rowlock, nowait) WHERE menu0_.ID=?
+2013-05-30 22:20:46,814 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.Menu.Menu: SELECT menu0_.ID as ID0_0_, menu0_.Controller as Controller0_0_, menu0_.Action as Action0_0_, menu0_.IsAdministration as IsAdmini4_0_0_, menu0_.Name as Name0_0_ FROM [Menu] menu0_ with (updlock, rowlock) WHERE menu0_.ID=?
+2013-05-30 22:20:46,815 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity App.Domain.Models.Menu.Menu: SELECT menu0_.ID as ID0_0_, menu0_.Controller as Controller0_0_, menu0_.Action as Action0_0_, menu0_.IsAdministration as IsAdmini4_0_0_, menu0_.Name as Name0_0_ FROM [Menu] menu0_ WHERE menu0_.ID=?
+2013-05-30 22:20:46,815 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity App.Domain.Models.Menu.Menu: SELECT menu0_.ID as ID0_0_, menu0_.Controller as Controller0_0_, menu0_.Action as Action0_0_, menu0_.IsAdministration as IsAdmini4_0_0_, menu0_.Name as Name0_0_ FROM [Menu] menu0_ WHERE menu0_.ID=?
+2013-05-30 22:20:46,816 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Static SQL for entity: App.Domain.Models.User.OAuthMembership
+2013-05-30 22:20:46,816 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Version select: SELECT ID FROM [OAuthMembership] WHERE ID = ?
+2013-05-30 22:20:46,816 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Snapshot select: SELECT oauthmembe_.ID, oauthmembe_.Provider as Provider1_, oauthmembe_.ProviderUserID as Provider3_1_, oauthmembe_.UserProfileID as UserProf4_1_ FROM [OAuthMembership] oauthmembe_ WHERE oauthmembe_.ID=?
+2013-05-30 22:20:46,816 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Insert 0: INSERT INTO [OAuthMembership] (Provider, ProviderUserID, UserProfileID, ID) VALUES (?, ?, ?, ?)
+2013-05-30 22:20:46,816 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Update 0: UPDATE [OAuthMembership] SET Provider = ?, ProviderUserID = ?, UserProfileID = ? WHERE ID = ?
+2013-05-30 22:20:46,816 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Delete 0: DELETE FROM [OAuthMembership] WHERE ID = ?
+2013-05-30 22:20:46,820 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.OAuthMembership: SELECT oauthmembe0_.ID as ID1_0_, oauthmembe0_.Provider as Provider1_0_, oauthmembe0_.ProviderUserID as Provider3_1_0_, oauthmembe0_.UserProfileID as UserProf4_1_0_ FROM [OAuthMembership] oauthmembe0_ WHERE oauthmembe0_.ID=?
+2013-05-30 22:20:46,820 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.OAuthMembership: SELECT oauthmembe0_.ID as ID1_0_, oauthmembe0_.Provider as Provider1_0_, oauthmembe0_.ProviderUserID as Provider3_1_0_, oauthmembe0_.UserProfileID as UserProf4_1_0_ FROM [OAuthMembership] oauthmembe0_ WHERE oauthmembe0_.ID=?
+2013-05-30 22:20:46,820 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.OAuthMembership: SELECT oauthmembe0_.ID as ID1_0_, oauthmembe0_.Provider as Provider1_0_, oauthmembe0_.ProviderUserID as Provider3_1_0_, oauthmembe0_.UserProfileID as UserProf4_1_0_ FROM [OAuthMembership] oauthmembe0_ with (updlock, rowlock) WHERE oauthmembe0_.ID=?
+2013-05-30 22:20:46,820 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.OAuthMembership: SELECT oauthmembe0_.ID as ID1_0_, oauthmembe0_.Provider as Provider1_0_, oauthmembe0_.ProviderUserID as Provider3_1_0_, oauthmembe0_.UserProfileID as UserProf4_1_0_ FROM [OAuthMembership] oauthmembe0_ with (updlock, rowlock, nowait) WHERE oauthmembe0_.ID=?
+2013-05-30 22:20:46,820 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.OAuthMembership: SELECT oauthmembe0_.ID as ID1_0_, oauthmembe0_.Provider as Provider1_0_, oauthmembe0_.ProviderUserID as Provider3_1_0_, oauthmembe0_.UserProfileID as UserProf4_1_0_ FROM [OAuthMembership] oauthmembe0_ with (updlock, rowlock) WHERE oauthmembe0_.ID=?
+2013-05-30 22:20:46,820 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity App.Domain.Models.User.OAuthMembership: SELECT oauthmembe0_.ID as ID1_0_, oauthmembe0_.Provider as Provider1_0_, oauthmembe0_.ProviderUserID as Provider3_1_0_, oauthmembe0_.UserProfileID as UserProf4_1_0_ FROM [OAuthMembership] oauthmembe0_ WHERE oauthmembe0_.ID=?
+2013-05-30 22:20:46,820 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity App.Domain.Models.User.OAuthMembership: SELECT oauthmembe0_.ID as ID1_0_, oauthmembe0_.Provider as Provider1_0_, oauthmembe0_.ProviderUserID as Provider3_1_0_, oauthmembe0_.UserProfileID as UserProf4_1_0_ FROM [OAuthMembership] oauthmembe0_ WHERE oauthmembe0_.ID=?
+2013-05-30 22:20:46,820 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Static SQL for entity: App.Domain.Models.User.UserProfile
+2013-05-30 22:20:46,821 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Version select: SELECT ID FROM [UserProfile] WHERE ID = ?
+2013-05-30 22:20:46,821 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Snapshot select: SELECT userprofil_.ID, userprofil_.UserName as UserName2_ FROM [UserProfile] userprofil_ WHERE userprofil_.ID=?
+2013-05-30 22:20:46,821 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Insert 0: INSERT INTO [UserProfile] (UserName, ID) VALUES (?, ?)
+2013-05-30 22:20:46,821 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Update 0: UPDATE [UserProfile] SET UserName = ? WHERE ID = ?
+2013-05-30 22:20:46,821 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Delete 0: DELETE FROM [UserProfile] WHERE ID = ?
+2013-05-30 22:20:46,821 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.UserProfile: SELECT userprofil0_.ID as ID2_0_, userprofil0_.UserName as UserName2_0_ FROM [UserProfile] userprofil0_ WHERE userprofil0_.ID=?
+2013-05-30 22:20:46,821 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.UserProfile: SELECT userprofil0_.ID as ID2_0_, userprofil0_.UserName as UserName2_0_ FROM [UserProfile] userprofil0_ WHERE userprofil0_.ID=?
+2013-05-30 22:20:46,821 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.UserProfile: SELECT userprofil0_.ID as ID2_0_, userprofil0_.UserName as UserName2_0_ FROM [UserProfile] userprofil0_ with (updlock, rowlock) WHERE userprofil0_.ID=?
+2013-05-30 22:20:46,821 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.UserProfile: SELECT userprofil0_.ID as ID2_0_, userprofil0_.UserName as UserName2_0_ FROM [UserProfile] userprofil0_ with (updlock, rowlock, nowait) WHERE userprofil0_.ID=?
+2013-05-30 22:20:46,821 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.UserProfile: SELECT userprofil0_.ID as ID2_0_, userprofil0_.UserName as UserName2_0_ FROM [UserProfile] userprofil0_ with (updlock, rowlock) WHERE userprofil0_.ID=?
+2013-05-30 22:20:46,821 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity App.Domain.Models.User.UserProfile: SELECT userprofil0_.ID as ID2_0_, userprofil0_.UserName as UserName2_0_ FROM [UserProfile] userprofil0_ WHERE userprofil0_.ID=?
+2013-05-30 22:20:46,821 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity App.Domain.Models.User.UserProfile: SELECT userprofil0_.ID as ID2_0_, userprofil0_.UserName as UserName2_0_ FROM [UserProfile] userprofil0_ WHERE userprofil0_.ID=?
+2013-05-30 22:20:46,821 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Static SQL for entity: App.Domain.Models.User.WebMemberShip
+2013-05-30 22:20:46,821 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Version select: SELECT ID FROM [WebMemberShip] WHERE ID = ?
+2013-05-30 22:20:46,821 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Snapshot select: SELECT webmembers_.ID, webmembers_.Email as Email3_, webmembers_.Password as Password3_, webmembers_.CreatedDate as CreatedD4_3_, webmembers_.UserProfileID as UserProf5_3_ FROM [WebMemberShip] webmembers_ WHERE webmembers_.ID=?
+2013-05-30 22:20:46,821 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Insert 0: INSERT INTO [WebMemberShip] (Email, Password, CreatedDate, UserProfileID, ID) VALUES (?, ?, ?, ?, ?)
+2013-05-30 22:20:46,821 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Update 0: UPDATE [WebMemberShip] SET Email = ?, Password = ?, CreatedDate = ?, UserProfileID = ? WHERE ID = ?
+2013-05-30 22:20:46,821 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Delete 0: DELETE FROM [WebMemberShip] WHERE ID = ?
+2013-05-30 22:20:46,821 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.WebMemberShip: SELECT webmembers0_.ID as ID3_0_, webmembers0_.Email as Email3_0_, webmembers0_.Password as Password3_0_, webmembers0_.CreatedDate as CreatedD4_3_0_, webmembers0_.UserProfileID as UserProf5_3_0_ FROM [WebMemberShip] webmembers0_ WHERE webmembers0_.ID=?
+2013-05-30 22:20:46,821 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.WebMemberShip: SELECT webmembers0_.ID as ID3_0_, webmembers0_.Email as Email3_0_, webmembers0_.Password as Password3_0_, webmembers0_.CreatedDate as CreatedD4_3_0_, webmembers0_.UserProfileID as UserProf5_3_0_ FROM [WebMemberShip] webmembers0_ WHERE webmembers0_.ID=?
+2013-05-30 22:20:46,822 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.WebMemberShip: SELECT webmembers0_.ID as ID3_0_, webmembers0_.Email as Email3_0_, webmembers0_.Password as Password3_0_, webmembers0_.CreatedDate as CreatedD4_3_0_, webmembers0_.UserProfileID as UserProf5_3_0_ FROM [WebMemberShip] webmembers0_ with (updlock, rowlock) WHERE webmembers0_.ID=?
+2013-05-30 22:20:46,822 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.WebMemberShip: SELECT webmembers0_.ID as ID3_0_, webmembers0_.Email as Email3_0_, webmembers0_.Password as Password3_0_, webmembers0_.CreatedDate as CreatedD4_3_0_, webmembers0_.UserProfileID as UserProf5_3_0_ FROM [WebMemberShip] webmembers0_ with (updlock, rowlock, nowait) WHERE webmembers0_.ID=?
+2013-05-30 22:20:46,822 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.WebMemberShip: SELECT webmembers0_.ID as ID3_0_, webmembers0_.Email as Email3_0_, webmembers0_.Password as Password3_0_, webmembers0_.CreatedDate as CreatedD4_3_0_, webmembers0_.UserProfileID as UserProf5_3_0_ FROM [WebMemberShip] webmembers0_ with (updlock, rowlock) WHERE webmembers0_.ID=?
+2013-05-30 22:20:46,822 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity App.Domain.Models.User.WebMemberShip: SELECT webmembers0_.ID as ID3_0_, webmembers0_.Email as Email3_0_, webmembers0_.Password as Password3_0_, webmembers0_.CreatedDate as CreatedD4_3_0_, webmembers0_.UserProfileID as UserProf5_3_0_ FROM [WebMemberShip] webmembers0_ WHERE webmembers0_.ID=?
+2013-05-30 22:20:46,822 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity App.Domain.Models.User.WebMemberShip: SELECT webmembers0_.ID as ID3_0_, webmembers0_.Email as Email3_0_, webmembers0_.Password as Password3_0_, webmembers0_.CreatedDate as CreatedD4_3_0_, webmembers0_.UserProfileID as UserProf5_3_0_ FROM [WebMemberShip] webmembers0_ WHERE webmembers0_.ID=?
+2013-05-30 22:20:46,823 [1] DEBUG NHibernate.Impl.SessionFactoryObjectFactory - initializing class SessionFactoryObjectFactory
+2013-05-30 22:20:46,823 [1] DEBUG NHibernate.Impl.SessionFactoryObjectFactory - registered: e31ccb6333784e1c8385450e2dce2995(unnamed)
+2013-05-30 22:20:46,823 [1] INFO  NHibernate.Impl.SessionFactoryObjectFactory - no name configured
+2013-05-30 22:20:46,823 [1] DEBUG NHibernate.Impl.SessionFactoryImpl - Instantiated session factory
+2013-05-30 22:20:46,825 [1] INFO  NHibernate.Cache.UpdateTimestampsCache - starting update timestamps cache at region: UpdateTimestampsCache
+2013-05-30 22:20:46,825 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheProvider - building non-configured cache region : UpdateTimestampsCache
+2013-05-30 22:20:46,825 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - Configuring cache region
+2013-05-30 22:20:46,825 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no priority specified using default : Default
+2013-05-30 22:20:46,825 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no expiration specified using default : 00:05:00
+2013-05-30 22:20:46,825 [1] INFO  NHibernate.Cache.StandardQueryCache - starting query cache at region: NHibernate.Cache.StandardQueryCache
+2013-05-30 22:20:46,825 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheProvider - building non-configured cache region : NHibernate.Cache.StandardQueryCache
+2013-05-30 22:20:46,825 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - Configuring cache region
+2013-05-30 22:20:46,825 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no priority specified using default : Default
+2013-05-30 22:20:46,825 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no expiration specified using default : 00:05:00
+2013-05-30 22:20:46,827 [1] DEBUG NHibernate.Impl.SessionFactoryImpl - Checking 0 named HQL queries
+2013-05-30 22:20:46,827 [1] DEBUG NHibernate.Impl.SessionFactoryImpl - Checking 0 named SQL queries
+2013-05-30 22:20:46,841 [1] DEBUG NHibernate.Impl.SessionImpl - [session-id=887890a4-bb4e-453e-a354-9f0971bda757] opened session at timestamp: 5611325222207488, for session factory: [/e31ccb6333784e1c8385450e2dce2995]
+2013-05-30 22:20:46,843 [1] DEBUG NHibernate.Connection.DriverConnectionProvider - Obtaining IDbConnection from Driver
+2013-05-30 22:20:46,845 [1] INFO  NHibernate.Dialect.Dialect - Using dialect: NHibernate.Dialect.MsSql2008Dialect
+2013-05-30 22:20:46,846 [1] INFO  NHibernate.Cfg.Configuration - checking mappings queue
+2013-05-30 22:20:46,846 [1] INFO  NHibernate.Cfg.Configuration - processing one-to-many association mappings
+2013-05-30 22:20:46,846 [1] INFO  NHibernate.Cfg.Configuration - processing one-to-one association property references
+2013-05-30 22:20:46,846 [1] INFO  NHibernate.Cfg.Configuration - processing foreign key constraints
+2013-05-30 22:20:46,846 [1] DEBUG NHibernate.Cfg.Configuration - resolving reference to class: App.Domain.Models.User.UserProfile
+2013-05-30 22:20:46,846 [1] DEBUG NHibernate.Cfg.Configuration - resolving reference to class: App.Domain.Models.User.UserProfile
+2013-05-30 22:20:46,846 [1] INFO  NHibernate.Cfg.Configuration - processing filters (second pass)
+2013-05-30 22:20:46,851 [1] INFO  NHibernate.Cfg.Configuration - checking mappings queue
+2013-05-30 22:20:46,851 [1] INFO  NHibernate.Cfg.Configuration - processing one-to-many association mappings
+2013-05-30 22:20:46,851 [1] INFO  NHibernate.Cfg.Configuration - processing one-to-one association property references
+2013-05-30 22:20:46,851 [1] INFO  NHibernate.Cfg.Configuration - processing foreign key constraints
+2013-05-30 22:20:46,851 [1] DEBUG NHibernate.Cfg.Configuration - resolving reference to class: App.Domain.Models.User.UserProfile
+2013-05-30 22:20:46,851 [1] DEBUG NHibernate.Cfg.Configuration - resolving reference to class: App.Domain.Models.User.UserProfile
+2013-05-30 22:20:46,851 [1] INFO  NHibernate.Cfg.Configuration - processing filters (second pass)
+2013-05-30 22:20:46,859 [1] DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
     if exists (select 1 from sys.objects where object_id = OBJECT_ID(N'[FKE18665EB158DC991]') AND parent_object_id = OBJECT_ID('[OAuthMembership]'))
 alter table [OAuthMembership]  drop constraint FKE18665EB158DC991
 
-2013-05-30 21:10:19,127 [1] DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+2013-05-30 22:20:46,859 [1] DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
     if exists (select 1 from sys.objects where object_id = OBJECT_ID(N'[FKC70167A4158DC991]') AND parent_object_id = OBJECT_ID('[WebMemberShip]'))
 alter table [WebMemberShip]  drop constraint FKC70167A4158DC991
 
-2013-05-30 21:10:19,127 [1] DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+2013-05-30 22:20:46,859 [1] DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
     if exists (select * from dbo.sysobjects where id = object_id(N'[Menu]') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table [Menu]
-2013-05-30 21:10:19,127 [1] DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+2013-05-30 22:20:46,859 [1] DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
     if exists (select * from dbo.sysobjects where id = object_id(N'[OAuthMembership]') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table [OAuthMembership]
-2013-05-30 21:10:19,127 [1] DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+2013-05-30 22:20:46,859 [1] DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
     if exists (select * from dbo.sysobjects where id = object_id(N'[UserProfile]') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table [UserProfile]
-2013-05-30 21:10:19,127 [1] DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+2013-05-30 22:20:46,859 [1] DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
     if exists (select * from dbo.sysobjects where id = object_id(N'[WebMemberShip]') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table [WebMemberShip]
-2013-05-30 21:10:19,127 [1] DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+2013-05-30 22:20:46,860 [1] DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
     create table [Menu] (
         ID UNIQUEIDENTIFIER not null,
        Controller NVARCHAR(255) null,
@@ -213,7 +213,7 @@ alter table [WebMemberShip]  drop constraint FKC70167A4158DC991
        Name NVARCHAR(255) null,
        primary key (ID)
     )
-2013-05-30 21:10:19,127 [1] DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+2013-05-30 22:20:46,860 [1] DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
     create table [OAuthMembership] (
         ID UNIQUEIDENTIFIER not null,
        Provider NVARCHAR(255) null,
@@ -221,13 +221,13 @@ alter table [WebMemberShip]  drop constraint FKC70167A4158DC991
        UserProfileID UNIQUEIDENTIFIER null,
        primary key (ID)
     )
-2013-05-30 21:10:19,127 [1] DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+2013-05-30 22:20:46,860 [1] DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
     create table [UserProfile] (
         ID UNIQUEIDENTIFIER not null,
        UserName NVARCHAR(255) null,
        primary key (ID)
     )
-2013-05-30 21:10:19,127 [1] DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+2013-05-30 22:20:46,860 [1] DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
     create table [WebMemberShip] (
         ID UNIQUEIDENTIFIER not null,
        Email NVARCHAR(255) null,
@@ -236,555 +236,151 @@ alter table [WebMemberShip]  drop constraint FKC70167A4158DC991
        UserProfileID UNIQUEIDENTIFIER null,
        primary key (ID)
     )
-2013-05-30 21:10:19,128 [1] DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+2013-05-30 22:20:46,860 [1] DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
     alter table [OAuthMembership] 
         add constraint FKE18665EB158DC991 
         foreign key (UserProfileID) 
         references [UserProfile]
-2013-05-30 21:10:19,128 [1] DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+2013-05-30 22:20:46,860 [1] DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
     alter table [WebMemberShip] 
         add constraint FKC70167A4158DC991 
         foreign key (UserProfileID) 
         references [UserProfile]
-2013-05-30 21:10:19,129 [1] DEBUG NHibernate.Impl.SessionImpl - [session-id=d5b17588-4d65-4fcc-8134-45f73650888e] running ISession.Dispose()
-2013-05-30 21:10:19,130 [1] DEBUG NHibernate.Impl.SessionImpl - [session-id=d5b17588-4d65-4fcc-8134-45f73650888e] executing real Dispose(True)
-2013-05-30 21:10:19,130 [1] DEBUG NHibernate.Impl.SessionImpl - closing session
-2013-05-30 21:10:19,131 [1] DEBUG NHibernate.AdoNet.AbstractBatcher - running BatcherImpl.Dispose(true)
-2013-05-30 21:10:19,132 [1] DEBUG NHibernate.Connection.ConnectionProvider - Closing connection
-2013-05-30 21:10:19,133 [1] DEBUG NHibernate.Impl.SessionImpl - transaction completion
-2013-05-30 21:10:19,137 [1] INFO  NHibernate.Cfg.Configuration - checking mappings queue
-2013-05-30 21:10:19,137 [1] INFO  NHibernate.Cfg.Configuration - processing one-to-many association mappings
-2013-05-30 21:10:19,137 [1] INFO  NHibernate.Cfg.Configuration - processing one-to-one association property references
-2013-05-30 21:10:19,137 [1] INFO  NHibernate.Cfg.Configuration - processing foreign key constraints
-2013-05-30 21:10:19,137 [1] DEBUG NHibernate.Cfg.Configuration - resolving reference to class: App.Domain.Models.User.UserProfile
-2013-05-30 21:10:19,137 [1] DEBUG NHibernate.Cfg.Configuration - resolving reference to class: App.Domain.Models.User.UserProfile
-2013-05-30 21:10:19,137 [1] INFO  NHibernate.Cfg.Configuration - processing filters (second pass)
-2013-05-30 21:10:19,138 [1] INFO  NHibernate.Dialect.Dialect - Using dialect: NHibernate.Dialect.MsSql2008Dialect
-2013-05-30 21:10:19,138 [1] INFO  NHibernate.Dialect.Dialect - Using dialect: NHibernate.Dialect.MsSql2008Dialect
-2013-05-30 21:10:19,139 [1] INFO  NHibernate.Exceptions.SQLExceptionConverterFactory - Using dialect defined converter
-2013-05-30 21:10:19,139 [1] INFO  NHibernate.Cfg.SettingsFactory - Generate SQL with comments: disabled
-2013-05-30 21:10:19,139 [1] INFO  NHibernate.Connection.ConnectionProviderFactory - Initializing connection provider: App.Common.Data.Drivers.ContextDriverConnectionProvider, App.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-2013-05-30 21:10:19,139 [1] INFO  NHibernate.Connection.ConnectionProvider - Configuring ConnectionProvider
-2013-05-30 21:10:19,139 [1] INFO  NHibernate.Cfg.SettingsFactory - Transaction factory: NHibernate.Transaction.AdoNetWithDistributedTransactionFactory
-2013-05-30 21:10:19,139 [1] INFO  NHibernate.Cfg.SettingsFactory - Optimize cache for minimal puts: False
-2013-05-30 21:10:19,139 [1] INFO  NHibernate.Cfg.SettingsFactory - Connection release mode: auto
-2013-05-30 21:10:19,139 [1] INFO  NHibernate.Cfg.SettingsFactory - Default batch fetch size: 1
-2013-05-30 21:10:19,139 [1] INFO  NHibernate.Cfg.SettingsFactory - Statistics: disabled
-2013-05-30 21:10:19,139 [1] INFO  NHibernate.Cfg.SettingsFactory - Deleted entity synthetic identifier rollback: disabled
-2013-05-30 21:10:19,139 [1] INFO  NHibernate.Cfg.SettingsFactory - Query translator: NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory
-2013-05-30 21:10:19,139 [1] INFO  NHibernate.Cfg.SettingsFactory - Query language substitutions: {'true'='1', 'false'='0', 'yes'=''Y'', 'no'=''N''}
-2013-05-30 21:10:19,139 [1] INFO  NHibernate.Cfg.SettingsFactory - cache provider: NHibernate.Caches.SysCache2.SysCacheProvider, NHibernate.Caches.SysCache2, Version=3.1.0.4000, Culture=neutral, PublicKeyToken=6876f2ea66c9f443
-2013-05-30 21:10:19,139 [1] INFO  NHibernate.Cfg.SettingsFactory - query cache factory: NHibernate.Cache.StandardQueryCacheFactory
-2013-05-30 21:10:19,139 [1] INFO  NHibernate.Cfg.SettingsFactory - Order SQL inserts for batching: enabled
-2013-05-30 21:10:19,139 [1] DEBUG NHibernate.Cfg.SettingsFactory - Wrap result sets: disabled
-2013-05-30 21:10:19,140 [1] INFO  NHibernate.Cfg.SettingsFactory - Batcher factory: NHibernate.AdoNet.SqlClientBatchingBatcherFactory, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
-2013-05-30 21:10:19,140 [1] INFO  NHibernate.Cfg.SettingsFactory - Default entity-mode: Poco
-2013-05-30 21:10:19,140 [1] INFO  NHibernate.Cfg.SettingsFactory - Named query checking : enabled
-2013-05-30 21:10:19,140 [1] INFO  NHibernate.Impl.SessionFactoryImpl - building session factory
-2013-05-30 21:10:19,140 [1] DEBUG NHibernate.Impl.SessionFactoryImpl - Session factory constructed with filter configurations : {}
-2013-05-30 21:10:19,140 [1] DEBUG NHibernate.Impl.SessionFactoryImpl - instantiating session factory with properties: {'use_reflection_optimizer'='True', 'proxyfactory.factory_class'='NHibernate.Bytecode.DefaultProxyFactoryFactory, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'connection.provider'='App.Common.Data.Drivers.ContextDriverConnectionProvider, App.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null', 'connection.driver_class'='NHibernate.Driver.SqlClientDriver, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'dialect'='NHibernate.Dialect.MsSql2008Dialect, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'hibernate.dialect'='NHibernate.Dialect.MsSql2008Dialect, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'connection.connection_string'='Data Source=.;Initial Catalog=SOChatHub;Integrated Security=SSPI', 'current_session_context_class'='SharpLite.NHibernateProvider.LazySessionContext, SharpLite.NHibernateProvider, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f2f64e823dfaf078', 'cache.provider_class'='NHibernate.Caches.SysCache2.SysCacheProvider, NHibernate.Caches.SysCache2, Version=3.1.0.4000, Culture=neutral, PublicKeyToken=6876f2ea66c9f443', 'cache.use_second_level_cache'='true', 'cache.use_query_cache'='true'}
-2013-05-30 21:10:19,140 [1] DEBUG NHibernate.Connection.DriverConnectionProvider - Obtaining IDbConnection from Driver
-2013-05-30 21:10:19,141 [1] DEBUG NHibernate.Connection.ConnectionProvider - Closing connection
-2013-05-30 21:10:19,141 [1] DEBUG NHibernate.Cache.CacheFactory - cache for: App.Domain.Models.Menu.Menu usage strategy: nonstrict-read-write
-2013-05-30 21:10:19,141 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheProvider - building non-configured cache region : App.Domain.Models.Menu.Menu
-2013-05-30 21:10:19,141 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - Configuring cache region
-2013-05-30 21:10:19,141 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no priority specified using default : Default
-2013-05-30 21:10:19,141 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no expiration specified using default : 00:05:00
-2013-05-30 21:10:19,141 [1] DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: App.Domain.Models.Menu.Menu
-2013-05-30 21:10:19,141 [1] DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: App.Domain.Models.Menu.Menu
-2013-05-30 21:10:19,141 [1] DEBUG NHibernate.Tuple.Entity.PocoEntityTuplizer - Create Instantiator using optimizer for:App.Domain.Models.Menu.Menu
-2013-05-30 21:10:19,142 [1] DEBUG NHibernate.Cache.CacheFactory - cache for: App.Domain.Models.User.OAuthMembership usage strategy: nonstrict-read-write
-2013-05-30 21:10:19,142 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheProvider - building non-configured cache region : App.Domain.Models.User.OAuthMembership
-2013-05-30 21:10:19,142 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - Configuring cache region
-2013-05-30 21:10:19,142 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no priority specified using default : Default
-2013-05-30 21:10:19,142 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no expiration specified using default : 00:05:00
-2013-05-30 21:10:19,142 [1] DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: App.Domain.Models.User.OAuthMembership
-2013-05-30 21:10:19,142 [1] DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: App.Domain.Models.User.OAuthMembership
-2013-05-30 21:10:19,142 [1] DEBUG NHibernate.Tuple.Entity.PocoEntityTuplizer - Create Instantiator using optimizer for:App.Domain.Models.User.OAuthMembership
-2013-05-30 21:10:19,142 [1] DEBUG NHibernate.Cache.CacheFactory - cache for: App.Domain.Models.User.UserProfile usage strategy: nonstrict-read-write
-2013-05-30 21:10:19,142 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheProvider - building non-configured cache region : App.Domain.Models.User.UserProfile
-2013-05-30 21:10:19,142 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - Configuring cache region
-2013-05-30 21:10:19,142 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no priority specified using default : Default
-2013-05-30 21:10:19,142 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no expiration specified using default : 00:05:00
-2013-05-30 21:10:19,142 [1] DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: App.Domain.Models.User.UserProfile
-2013-05-30 21:10:19,142 [1] DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: App.Domain.Models.User.UserProfile
-2013-05-30 21:10:19,142 [1] DEBUG NHibernate.Tuple.Entity.PocoEntityTuplizer - Create Instantiator using optimizer for:App.Domain.Models.User.UserProfile
-2013-05-30 21:10:19,143 [1] DEBUG NHibernate.Cache.CacheFactory - cache for: App.Domain.Models.User.WebMemberShip usage strategy: nonstrict-read-write
-2013-05-30 21:10:19,143 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheProvider - building non-configured cache region : App.Domain.Models.User.WebMemberShip
-2013-05-30 21:10:19,143 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - Configuring cache region
-2013-05-30 21:10:19,143 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no priority specified using default : Default
-2013-05-30 21:10:19,143 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no expiration specified using default : 00:05:00
-2013-05-30 21:10:19,143 [1] DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: App.Domain.Models.User.WebMemberShip
-2013-05-30 21:10:19,143 [1] DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: App.Domain.Models.User.WebMemberShip
-2013-05-30 21:10:19,143 [1] DEBUG NHibernate.Tuple.Entity.PocoEntityTuplizer - Create Instantiator using optimizer for:App.Domain.Models.User.WebMemberShip
-2013-05-30 21:10:19,143 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Static SQL for entity: App.Domain.Models.Menu.Menu
-2013-05-30 21:10:19,143 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Version select: SELECT ID FROM [Menu] WHERE ID = ?
-2013-05-30 21:10:19,143 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Snapshot select: SELECT menu_.ID, menu_.Controller as Controller0_, menu_.Action as Action0_, menu_.IsAdministration as IsAdmini4_0_, menu_.Name as Name0_ FROM [Menu] menu_ WHERE menu_.ID=?
-2013-05-30 21:10:19,143 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Insert 0: INSERT INTO [Menu] (Controller, Action, IsAdministration, Name, ID) VALUES (?, ?, ?, ?, ?)
-2013-05-30 21:10:19,143 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Update 0: UPDATE [Menu] SET Controller = ?, Action = ?, IsAdministration = ?, Name = ? WHERE ID = ?
-2013-05-30 21:10:19,143 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Delete 0: DELETE FROM [Menu] WHERE ID = ?
-2013-05-30 21:10:19,143 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.Menu.Menu: SELECT menu0_.ID as ID0_0_, menu0_.Controller as Controller0_0_, menu0_.Action as Action0_0_, menu0_.IsAdministration as IsAdmini4_0_0_, menu0_.Name as Name0_0_ FROM [Menu] menu0_ WHERE menu0_.ID=?
-2013-05-30 21:10:19,143 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.Menu.Menu: SELECT menu0_.ID as ID0_0_, menu0_.Controller as Controller0_0_, menu0_.Action as Action0_0_, menu0_.IsAdministration as IsAdmini4_0_0_, menu0_.Name as Name0_0_ FROM [Menu] menu0_ WHERE menu0_.ID=?
-2013-05-30 21:10:19,143 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.Menu.Menu: SELECT menu0_.ID as ID0_0_, menu0_.Controller as Controller0_0_, menu0_.Action as Action0_0_, menu0_.IsAdministration as IsAdmini4_0_0_, menu0_.Name as Name0_0_ FROM [Menu] menu0_ with (updlock, rowlock) WHERE menu0_.ID=?
-2013-05-30 21:10:19,144 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.Menu.Menu: SELECT menu0_.ID as ID0_0_, menu0_.Controller as Controller0_0_, menu0_.Action as Action0_0_, menu0_.IsAdministration as IsAdmini4_0_0_, menu0_.Name as Name0_0_ FROM [Menu] menu0_ with (updlock, rowlock, nowait) WHERE menu0_.ID=?
-2013-05-30 21:10:19,144 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.Menu.Menu: SELECT menu0_.ID as ID0_0_, menu0_.Controller as Controller0_0_, menu0_.Action as Action0_0_, menu0_.IsAdministration as IsAdmini4_0_0_, menu0_.Name as Name0_0_ FROM [Menu] menu0_ with (updlock, rowlock) WHERE menu0_.ID=?
-2013-05-30 21:10:19,144 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity App.Domain.Models.Menu.Menu: SELECT menu0_.ID as ID0_0_, menu0_.Controller as Controller0_0_, menu0_.Action as Action0_0_, menu0_.IsAdministration as IsAdmini4_0_0_, menu0_.Name as Name0_0_ FROM [Menu] menu0_ WHERE menu0_.ID=?
-2013-05-30 21:10:19,144 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity App.Domain.Models.Menu.Menu: SELECT menu0_.ID as ID0_0_, menu0_.Controller as Controller0_0_, menu0_.Action as Action0_0_, menu0_.IsAdministration as IsAdmini4_0_0_, menu0_.Name as Name0_0_ FROM [Menu] menu0_ WHERE menu0_.ID=?
-2013-05-30 21:10:19,144 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Static SQL for entity: App.Domain.Models.User.OAuthMembership
-2013-05-30 21:10:19,144 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Version select: SELECT ID FROM [OAuthMembership] WHERE ID = ?
-2013-05-30 21:10:19,144 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Snapshot select: SELECT oauthmembe_.ID, oauthmembe_.Provider as Provider1_, oauthmembe_.ProviderUserID as Provider3_1_, oauthmembe_.UserProfileID as UserProf4_1_ FROM [OAuthMembership] oauthmembe_ WHERE oauthmembe_.ID=?
-2013-05-30 21:10:19,144 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Insert 0: INSERT INTO [OAuthMembership] (Provider, ProviderUserID, UserProfileID, ID) VALUES (?, ?, ?, ?)
-2013-05-30 21:10:19,144 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Update 0: UPDATE [OAuthMembership] SET Provider = ?, ProviderUserID = ?, UserProfileID = ? WHERE ID = ?
-2013-05-30 21:10:19,144 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Delete 0: DELETE FROM [OAuthMembership] WHERE ID = ?
-2013-05-30 21:10:19,144 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.OAuthMembership: SELECT oauthmembe0_.ID as ID1_0_, oauthmembe0_.Provider as Provider1_0_, oauthmembe0_.ProviderUserID as Provider3_1_0_, oauthmembe0_.UserProfileID as UserProf4_1_0_ FROM [OAuthMembership] oauthmembe0_ WHERE oauthmembe0_.ID=?
-2013-05-30 21:10:19,144 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.OAuthMembership: SELECT oauthmembe0_.ID as ID1_0_, oauthmembe0_.Provider as Provider1_0_, oauthmembe0_.ProviderUserID as Provider3_1_0_, oauthmembe0_.UserProfileID as UserProf4_1_0_ FROM [OAuthMembership] oauthmembe0_ WHERE oauthmembe0_.ID=?
-2013-05-30 21:10:19,144 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.OAuthMembership: SELECT oauthmembe0_.ID as ID1_0_, oauthmembe0_.Provider as Provider1_0_, oauthmembe0_.ProviderUserID as Provider3_1_0_, oauthmembe0_.UserProfileID as UserProf4_1_0_ FROM [OAuthMembership] oauthmembe0_ with (updlock, rowlock) WHERE oauthmembe0_.ID=?
-2013-05-30 21:10:19,144 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.OAuthMembership: SELECT oauthmembe0_.ID as ID1_0_, oauthmembe0_.Provider as Provider1_0_, oauthmembe0_.ProviderUserID as Provider3_1_0_, oauthmembe0_.UserProfileID as UserProf4_1_0_ FROM [OAuthMembership] oauthmembe0_ with (updlock, rowlock, nowait) WHERE oauthmembe0_.ID=?
-2013-05-30 21:10:19,144 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.OAuthMembership: SELECT oauthmembe0_.ID as ID1_0_, oauthmembe0_.Provider as Provider1_0_, oauthmembe0_.ProviderUserID as Provider3_1_0_, oauthmembe0_.UserProfileID as UserProf4_1_0_ FROM [OAuthMembership] oauthmembe0_ with (updlock, rowlock) WHERE oauthmembe0_.ID=?
-2013-05-30 21:10:19,144 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity App.Domain.Models.User.OAuthMembership: SELECT oauthmembe0_.ID as ID1_0_, oauthmembe0_.Provider as Provider1_0_, oauthmembe0_.ProviderUserID as Provider3_1_0_, oauthmembe0_.UserProfileID as UserProf4_1_0_ FROM [OAuthMembership] oauthmembe0_ WHERE oauthmembe0_.ID=?
-2013-05-30 21:10:19,145 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity App.Domain.Models.User.OAuthMembership: SELECT oauthmembe0_.ID as ID1_0_, oauthmembe0_.Provider as Provider1_0_, oauthmembe0_.ProviderUserID as Provider3_1_0_, oauthmembe0_.UserProfileID as UserProf4_1_0_ FROM [OAuthMembership] oauthmembe0_ WHERE oauthmembe0_.ID=?
-2013-05-30 21:10:19,145 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Static SQL for entity: App.Domain.Models.User.UserProfile
-2013-05-30 21:10:19,145 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Version select: SELECT ID FROM [UserProfile] WHERE ID = ?
-2013-05-30 21:10:19,145 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Snapshot select: SELECT userprofil_.ID, userprofil_.UserName as UserName2_ FROM [UserProfile] userprofil_ WHERE userprofil_.ID=?
-2013-05-30 21:10:19,145 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Insert 0: INSERT INTO [UserProfile] (UserName, ID) VALUES (?, ?)
-2013-05-30 21:10:19,145 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Update 0: UPDATE [UserProfile] SET UserName = ? WHERE ID = ?
-2013-05-30 21:10:19,145 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Delete 0: DELETE FROM [UserProfile] WHERE ID = ?
-2013-05-30 21:10:19,145 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.UserProfile: SELECT userprofil0_.ID as ID2_0_, userprofil0_.UserName as UserName2_0_ FROM [UserProfile] userprofil0_ WHERE userprofil0_.ID=?
-2013-05-30 21:10:19,145 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.UserProfile: SELECT userprofil0_.ID as ID2_0_, userprofil0_.UserName as UserName2_0_ FROM [UserProfile] userprofil0_ WHERE userprofil0_.ID=?
-2013-05-30 21:10:19,145 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.UserProfile: SELECT userprofil0_.ID as ID2_0_, userprofil0_.UserName as UserName2_0_ FROM [UserProfile] userprofil0_ with (updlock, rowlock) WHERE userprofil0_.ID=?
-2013-05-30 21:10:19,145 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.UserProfile: SELECT userprofil0_.ID as ID2_0_, userprofil0_.UserName as UserName2_0_ FROM [UserProfile] userprofil0_ with (updlock, rowlock, nowait) WHERE userprofil0_.ID=?
-2013-05-30 21:10:19,145 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.UserProfile: SELECT userprofil0_.ID as ID2_0_, userprofil0_.UserName as UserName2_0_ FROM [UserProfile] userprofil0_ with (updlock, rowlock) WHERE userprofil0_.ID=?
-2013-05-30 21:10:19,145 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity App.Domain.Models.User.UserProfile: SELECT userprofil0_.ID as ID2_0_, userprofil0_.UserName as UserName2_0_ FROM [UserProfile] userprofil0_ WHERE userprofil0_.ID=?
-2013-05-30 21:10:19,145 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity App.Domain.Models.User.UserProfile: SELECT userprofil0_.ID as ID2_0_, userprofil0_.UserName as UserName2_0_ FROM [UserProfile] userprofil0_ WHERE userprofil0_.ID=?
-2013-05-30 21:10:19,145 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Static SQL for entity: App.Domain.Models.User.WebMemberShip
-2013-05-30 21:10:19,145 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Version select: SELECT ID FROM [WebMemberShip] WHERE ID = ?
-2013-05-30 21:10:19,145 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Snapshot select: SELECT webmembers_.ID, webmembers_.Email as Email3_, webmembers_.Password as Password3_, webmembers_.CreatedDate as CreatedD4_3_, webmembers_.UserProfileID as UserProf5_3_ FROM [WebMemberShip] webmembers_ WHERE webmembers_.ID=?
-2013-05-30 21:10:19,145 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Insert 0: INSERT INTO [WebMemberShip] (Email, Password, CreatedDate, UserProfileID, ID) VALUES (?, ?, ?, ?, ?)
-2013-05-30 21:10:19,145 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Update 0: UPDATE [WebMemberShip] SET Email = ?, Password = ?, CreatedDate = ?, UserProfileID = ? WHERE ID = ?
-2013-05-30 21:10:19,145 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Delete 0: DELETE FROM [WebMemberShip] WHERE ID = ?
-2013-05-30 21:10:19,145 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.WebMemberShip: SELECT webmembers0_.ID as ID3_0_, webmembers0_.Email as Email3_0_, webmembers0_.Password as Password3_0_, webmembers0_.CreatedDate as CreatedD4_3_0_, webmembers0_.UserProfileID as UserProf5_3_0_ FROM [WebMemberShip] webmembers0_ WHERE webmembers0_.ID=?
-2013-05-30 21:10:19,145 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.WebMemberShip: SELECT webmembers0_.ID as ID3_0_, webmembers0_.Email as Email3_0_, webmembers0_.Password as Password3_0_, webmembers0_.CreatedDate as CreatedD4_3_0_, webmembers0_.UserProfileID as UserProf5_3_0_ FROM [WebMemberShip] webmembers0_ WHERE webmembers0_.ID=?
-2013-05-30 21:10:19,146 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.WebMemberShip: SELECT webmembers0_.ID as ID3_0_, webmembers0_.Email as Email3_0_, webmembers0_.Password as Password3_0_, webmembers0_.CreatedDate as CreatedD4_3_0_, webmembers0_.UserProfileID as UserProf5_3_0_ FROM [WebMemberShip] webmembers0_ with (updlock, rowlock) WHERE webmembers0_.ID=?
-2013-05-30 21:10:19,146 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.WebMemberShip: SELECT webmembers0_.ID as ID3_0_, webmembers0_.Email as Email3_0_, webmembers0_.Password as Password3_0_, webmembers0_.CreatedDate as CreatedD4_3_0_, webmembers0_.UserProfileID as UserProf5_3_0_ FROM [WebMemberShip] webmembers0_ with (updlock, rowlock, nowait) WHERE webmembers0_.ID=?
-2013-05-30 21:10:19,146 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.WebMemberShip: SELECT webmembers0_.ID as ID3_0_, webmembers0_.Email as Email3_0_, webmembers0_.Password as Password3_0_, webmembers0_.CreatedDate as CreatedD4_3_0_, webmembers0_.UserProfileID as UserProf5_3_0_ FROM [WebMemberShip] webmembers0_ with (updlock, rowlock) WHERE webmembers0_.ID=?
-2013-05-30 21:10:19,146 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity App.Domain.Models.User.WebMemberShip: SELECT webmembers0_.ID as ID3_0_, webmembers0_.Email as Email3_0_, webmembers0_.Password as Password3_0_, webmembers0_.CreatedDate as CreatedD4_3_0_, webmembers0_.UserProfileID as UserProf5_3_0_ FROM [WebMemberShip] webmembers0_ WHERE webmembers0_.ID=?
-2013-05-30 21:10:19,146 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity App.Domain.Models.User.WebMemberShip: SELECT webmembers0_.ID as ID3_0_, webmembers0_.Email as Email3_0_, webmembers0_.Password as Password3_0_, webmembers0_.CreatedDate as CreatedD4_3_0_, webmembers0_.UserProfileID as UserProf5_3_0_ FROM [WebMemberShip] webmembers0_ WHERE webmembers0_.ID=?
-2013-05-30 21:10:19,146 [1] DEBUG NHibernate.Impl.SessionFactoryObjectFactory - registered: f0f009d0078149578cff25f4370d9e86(unnamed)
-2013-05-30 21:10:19,146 [1] INFO  NHibernate.Impl.SessionFactoryObjectFactory - no name configured
-2013-05-30 21:10:19,146 [1] DEBUG NHibernate.Impl.SessionFactoryImpl - Instantiated session factory
-2013-05-30 21:10:19,146 [1] INFO  NHibernate.Cache.UpdateTimestampsCache - starting update timestamps cache at region: UpdateTimestampsCache
-2013-05-30 21:10:19,146 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheProvider - building non-configured cache region : UpdateTimestampsCache
-2013-05-30 21:10:19,146 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - Configuring cache region
-2013-05-30 21:10:19,146 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no priority specified using default : Default
-2013-05-30 21:10:19,146 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no expiration specified using default : 00:05:00
-2013-05-30 21:10:19,146 [1] INFO  NHibernate.Cache.StandardQueryCache - starting query cache at region: NHibernate.Cache.StandardQueryCache
-2013-05-30 21:10:19,146 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheProvider - building non-configured cache region : NHibernate.Cache.StandardQueryCache
-2013-05-30 21:10:19,146 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - Configuring cache region
-2013-05-30 21:10:19,146 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no priority specified using default : Default
-2013-05-30 21:10:19,146 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no expiration specified using default : 00:05:00
-2013-05-30 21:10:19,146 [1] DEBUG NHibernate.Impl.SessionFactoryImpl - Checking 0 named HQL queries
-2013-05-30 21:10:19,146 [1] DEBUG NHibernate.Impl.SessionFactoryImpl - Checking 0 named SQL queries
-2013-05-30 21:10:21,893 [9] DEBUG NHibernate.Impl.SessionImpl - [session-id=bc627979-bbe1-45c9-88f5-97190aca1ccf] opened session at timestamp: 5611307916873728, for session factory: [/f0f009d0078149578cff25f4370d9e86]
-2013-05-30 21:10:21,894 [9] DEBUG NHibernate.Transaction.AdoTransaction - Begin (Unspecified)
-2013-05-30 21:10:21,894 [9] DEBUG NHibernate.Connection.DriverConnectionProvider - Obtaining IDbConnection from Driver
-2013-05-30 21:10:21,905 [9] DEBUG NHibernate.Linq - Expression (partially evaluated): value(NHibernate.Linq.NhQueryable`1[App.Domain.Models.Menu.Menu])
-2013-05-30 21:10:21,911 [9] DEBUG NHibernate.Engine.Query.QueryPlanCache - unable to locate HQL query plan in cache; generating (NHibernate.Linq.NhQueryable`1[App.Domain.Models.Menu.Menu])
-2013-05-30 21:10:22,121 [9] DEBUG NHibernate.Hql.Ast.ANTLR.HqlSqlWalker - select << begin [level=1, statement=select]
-2013-05-30 21:10:22,136 [9] DEBUG NHibernate.Hql.Ast.ANTLR.Tree.FromElement - FromClause{level=1} :  App.Domain.Models.Menu.Menu (<generated>_0) -> menu0_
-2013-05-30 21:10:22,149 [9] DEBUG NHibernate.Hql.Ast.ANTLR.Tree.FromReferenceNode - Resolved :  <generated>_0 -> menu0_.ID
-2013-05-30 21:10:22,152 [9] DEBUG NHibernate.Hql.Ast.ANTLR.HqlSqlWalker - select : finishing up [level=1, statement=select]
-2013-05-30 21:10:22,153 [9] DEBUG NHibernate.Hql.Ast.ANTLR.HqlSqlWalker - processQuery() : ( SELECT ( {select clause} menu0_.ID ) ( FromClause{level=1} [Menu] menu0_ ) )
-2013-05-30 21:10:22,171 [9] DEBUG NHibernate.Hql.Ast.ANTLR.Util.JoinProcessor - Using FROM fragment [[Menu] menu0_]
-2013-05-30 21:10:22,173 [9] DEBUG NHibernate.Hql.Ast.ANTLR.HqlSqlWalker - select >> end [level=1, statement=select]
-2013-05-30 21:10:22,174 [9] DEBUG NHibernate.Hql.Ast.ANTLR.ErrorCounter - throwQueryException() : no errors
-2013-05-30 21:10:22,204 [9] DEBUG NHibernate.Hql.Ast.ANTLR.HqlSqlGenerator - SQL: select menu0_.ID as ID0_, menu0_.Controller as Controller0_, menu0_.Action as Action0_, menu0_.IsAdministration as IsAdmini4_0_, menu0_.Name as Name0_ from [Menu] menu0_
-2013-05-30 21:10:22,204 [9] DEBUG NHibernate.Hql.Ast.ANTLR.ErrorCounter - throwQueryException() : no errors
-2013-05-30 21:10:22,227 [9] DEBUG NHibernate.Engine.Query.QueryPlanCache - located HQL query plan in cache (NHibernate.Linq.NhQueryable`1[App.Domain.Models.Menu.Menu])
-2013-05-30 21:10:22,230 [9] DEBUG NHibernate.Engine.Query.HQLQueryPlan - find: NHibernate.Linq.NhQueryable`1[App.Domain.Models.Menu.Menu]
-2013-05-30 21:10:22,231 [9] DEBUG NHibernate.Engine.QueryParameters - named parameters: {}
-2013-05-30 21:10:22,255 [9] DEBUG NHibernate.AdoNet.AbstractBatcher - Opened new IDbCommand, open IDbCommands: 1
-2013-05-30 21:10:22,255 [9] DEBUG NHibernate.AdoNet.AbstractBatcher - Building an IDbCommand object for the SqlString: select menu0_.ID as ID0_, menu0_.Controller as Controller0_, menu0_.Action as Action0_, menu0_.IsAdministration as IsAdmini4_0_, menu0_.Name as Name0_ from [Menu] menu0_
-2013-05-30 21:10:22,258 [9] INFO  NHibernate.Loader.Loader - select menu0_.ID as ID0_, menu0_.Controller as Controller0_, menu0_.Action as Action0_, menu0_.IsAdministration as IsAdmini4_0_, menu0_.Name as Name0_ from [Menu] menu0_
-2013-05-30 21:10:22,260 [9] DEBUG NHibernate.SQL - select menu0_.ID as ID0_, menu0_.Controller as Controller0_, menu0_.Action as Action0_, menu0_.IsAdministration as IsAdmini4_0_, menu0_.Name as Name0_ from [Menu] menu0_
-2013-05-30 21:10:22,261 [9] DEBUG NHibernate.Transaction.AdoTransaction - Enlist Command
-2013-05-30 21:10:22,299 [9] DEBUG NHibernate.AdoNet.AbstractBatcher - ExecuteReader took 37 ms
-2013-05-30 21:10:22,300 [9] DEBUG NHibernate.AdoNet.AbstractBatcher - Opened IDataReader, open IDataReaders: 1
-2013-05-30 21:10:22,302 [9] DEBUG NHibernate.Loader.Loader - processing result set
-2013-05-30 21:10:22,303 [9] DEBUG NHibernate.Loader.Loader - done processing result set (0 rows)
-2013-05-30 21:10:22,304 [9] DEBUG NHibernate.Driver.NHybridDataReader - running NHybridDataReader.Dispose()
-2013-05-30 21:10:22,304 [9] DEBUG NHibernate.AdoNet.AbstractBatcher - Closed IDataReader, open IDataReaders :0
-2013-05-30 21:10:22,304 [9] DEBUG NHibernate.AdoNet.AbstractBatcher - DataReader was closed after 43 ms
-2013-05-30 21:10:22,305 [9] DEBUG NHibernate.AdoNet.AbstractBatcher - Closed IDbCommand, open IDbCommands: 0
-2013-05-30 21:10:22,306 [9] DEBUG NHibernate.Loader.Loader - total objects hydrated: 0
-2013-05-30 21:10:22,306 [9] DEBUG NHibernate.Engine.StatefulPersistenceContext - initializing non-lazy collections
-2013-05-30 21:10:26,559 [9] DEBUG NHibernate.Transaction.AdoTransaction - Start Commit
-2013-05-30 21:10:26,560 [9] DEBUG NHibernate.Impl.SessionImpl - before transaction completion
-2013-05-30 21:10:26,561 [9] DEBUG NHibernate.Transaction.AdoTransaction - IDbTransaction Committed
-2013-05-30 21:10:26,561 [9] DEBUG NHibernate.Impl.SessionImpl - transaction completion
-2013-05-30 21:10:26,562 [9] DEBUG NHibernate.AdoNet.ConnectionManager - aggressively releasing database connection
-2013-05-30 21:10:26,562 [9] DEBUG NHibernate.Connection.ConnectionProvider - Closing connection
-2013-05-30 21:10:26,562 [9] DEBUG NHibernate.Transaction.AdoTransaction - IDbTransaction disposed.
-2013-05-30 21:10:26,562 [9] DEBUG NHibernate.Impl.SessionImpl - closing session
-2013-05-30 21:10:26,562 [9] DEBUG NHibernate.AdoNet.AbstractBatcher - running BatcherImpl.Dispose(true)
-2013-05-30 21:10:26,562 [9] DEBUG NHibernate.Impl.SessionImpl - [session-id=bc627979-bbe1-45c9-88f5-97190aca1ccf] running ISession.Dispose()
-2013-05-30 21:10:26,562 [9] DEBUG NHibernate.Impl.SessionImpl - [session-id=bc627979-bbe1-45c9-88f5-97190aca1ccf] executing real Dispose(True)
-2013-05-30 21:10:46,608 [5] DEBUG DotNetOpenAuth.Http - HTTP GET https://www.google.com/accounts/o8/id
-2013-05-30 21:10:47,415 [5] DEBUG DotNetOpenAuth.Yadis - An XRDS response was received from GET at user-supplied identifier.
-2013-05-30 21:10:47,462 [5] DEBUG DotNetOpenAuth.Yadis - Total services discovered in XRDS: 1
-2013-05-30 21:10:47,465 [5] DEBUG DotNetOpenAuth.Yadis - [{
-	ClaimedIdentifier: http://specs.openid.net/auth/2.0/identifier_select
-	ProviderLocalIdentifier: http://specs.openid.net/auth/2.0/identifier_select
-	ProviderEndpoint: https://www.google.com/accounts/o8/ud
-	OpenID version: 2.0
-	Service Type URIs:
-		http://specs.openid.net/auth/2.0/server
-		http://openid.net/srv/ax/1.0
-		http://specs.openid.net/extensions/ui/1.0/mode/popup
-		http://specs.openid.net/extensions/ui/1.0/icon
-		http://specs.openid.net/extensions/pape/1.0
-},]
-2013-05-30 21:10:47,471 [5] DEBUG DotNetOpenAuth.Yadis - Skipping HTML discovery because XRDS contained service endpoints.
-2013-05-30 21:10:47,491 [5] INFO  DotNetOpenAuth.Yadis - Performing discovery on user-supplied identifier: https://www.google.com/accounts/o8/id
-2013-05-30 21:10:47,500 [5] DEBUG DotNetOpenAuth.Yadis - Filtering and sorting of endpoints did not affect the list.
-2013-05-30 21:10:47,500 [5] DEBUG DotNetOpenAuth.OpenId - Creating authentication request for user supplied Identifier: https://www.google.com/accounts/o8/id
-2013-05-30 21:10:47,514 [5] DEBUG DotNetOpenAuth.OpenId - No Simple Registration (ClaimsRequest) extension present in the request to spread to AX.
-2013-05-30 21:10:47,523 [5] DEBUG DotNetOpenAuth.Messaging.Channel - Preparing to send CheckIdRequest (2.0) message.
-2013-05-30 21:10:47,565 [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OpenId.ChannelElements.ExtensionsBindingElementRelyingParty applied to message.
-2013-05-30 21:10:47,566 [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OpenId.ChannelElements.RelyingPartySecurityOptions did not apply to message.
-2013-05-30 21:10:47,566 [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OpenId.ChannelElements.BackwardCompatibilityBindingElement did not apply to message.
-2013-05-30 21:10:47,566 [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.Messaging.Bindings.StandardExpirationBindingElement did not apply to message.
-2013-05-30 21:10:47,566 [5] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OpenId.ChannelElements.RelyingPartySigningBindingElement did not apply to message.
-2013-05-30 21:10:47,570 [5] INFO  DotNetOpenAuth.Messaging.Channel - Prepared outgoing CheckIdRequest (2.0) message for https://www.google.com/accounts/o8/ud: 
-	openid.claimed_id: http://specs.openid.net/auth/2.0/identifier_select
-	openid.identity: http://specs.openid.net/auth/2.0/identifier_select
-	openid.return_to: http://localhost:58737/Account/ExternalLoginCallback?__provider__=google&__sid__=0c5ed43ae941417eb17d5360d9bd081f&dnoa.userSuppliedIdentifier=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid
-	openid.realm: http://localhost:58737/
-	openid.mode: checkid_setup
-	openid.ns: http://specs.openid.net/auth/2.0
-	openid.ns.alias3: http://openid.net/srv/ax/1.0
-	openid.alias3.if_available: alias2,alias3,alias4
-	openid.alias3.required: alias1
-	openid.alias3.mode: fetch_request
-	openid.alias3.type.alias1: http://axschema.org/contact/email
-	openid.alias3.count.alias1: 1
-	openid.alias3.type.alias2: http://axschema.org/contact/country/home
-	openid.alias3.count.alias2: 1
-	openid.alias3.type.alias3: http://axschema.org/namePerson/first
-	openid.alias3.count.alias3: 1
-	openid.alias3.type.alias4: http://axschema.org/namePerson/last
-	openid.alias3.count.alias4: 1
-
-2013-05-30 21:10:47,572 [5] DEBUG DotNetOpenAuth.Messaging.Channel - Sending message: CheckIdRequest
-2013-05-30 21:10:47,574 [5] DEBUG DotNetOpenAuth.Http - Redirecting to https://www.google.com/accounts/o8/ud?openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.return_to=http%3A%2F%2Flocalhost%3A58737%2FAccount%2FExternalLoginCallback%3F__provider__%3Dgoogle%26__sid__%3D0c5ed43ae941417eb17d5360d9bd081f%26dnoa.userSuppliedIdentifier%3Dhttps%253A%252F%252Fwww.google.com%252Faccounts%252Fo8%252Fid&openid.realm=http%3A%2F%2Flocalhost%3A58737%2F&openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.ns.alias3=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.alias3.if_available=alias2%2Calias3%2Calias4&openid.alias3.required=alias1&openid.alias3.mode=fetch_request&openid.alias3.type.alias1=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.alias3.count.alias1=1&openid.alias3.type.alias2=http%3A%2F%2Faxschema.org%2Fcontact%2Fcountry%2Fhome&openid.alias3.count.alias2=1&openid.alias3.type.alias3=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.alias3.count.alias3=1&openid.alias3.type.alias4=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.alias3.count.alias4=1
-2013-05-30 21:10:49,000 [10] INFO  DotNetOpenAuth.Messaging.Channel - Scanning incoming request for messages: http://localhost:58737/Account/ExternalLoginCallback?__provider__=google&__sid__=0c5ed43ae941417eb17d5360d9bd081f&dnoa.userSuppliedIdentifier=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-05-30T14%3A10%3A55ZpMOa0o90GRzMcg&openid.return_to=http%3A%2F%2Flocalhost%3A58737%2FAccount%2FExternalLoginCallback%3F__provider__%3Dgoogle%26__sid__%3D0c5ed43ae941417eb17d5360d9bd081f%26dnoa.userSuppliedIdentifier%3Dhttps%253A%252F%252Fwww.google.com%252Faccounts%252Fo8%252Fid&openid.assoc_handle=1.AMlYA9VAyn5LBpE-3xuxIsb7hAGw0pZt2kirCUycOuPJS3Hh7prs1GQnlXdozs-H&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.alias1%2Cext1.value.alias1&openid.sig=apF%2FnTZxJu57wEjiWjLsHbetyos%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawkxd2NAka6Ez6oIkTPopMpikYqm0oDtoGA&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawkxd2NAka6Ez6oIkTPopMpikYqm0oDtoGA&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.alias1=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.alias1=khoacoi1986%40gmail.com
-2013-05-30 21:10:49,001 [10] DEBUG DotNetOpenAuth.Messaging.Channel - Incoming HTTP request: GET http://localhost:58737/Account/ExternalLoginCallback?__provider__=google&__sid__=0c5ed43ae941417eb17d5360d9bd081f&dnoa.userSuppliedIdentifier=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2013-05-30T14%3A10%3A55ZpMOa0o90GRzMcg&openid.return_to=http%3A%2F%2Flocalhost%3A58737%2FAccount%2FExternalLoginCallback%3F__provider__%3Dgoogle%26__sid__%3D0c5ed43ae941417eb17d5360d9bd081f%26dnoa.userSuppliedIdentifier%3Dhttps%253A%252F%252Fwww.google.com%252Faccounts%252Fo8%252Fid&openid.assoc_handle=1.AMlYA9VAyn5LBpE-3xuxIsb7hAGw0pZt2kirCUycOuPJS3Hh7prs1GQnlXdozs-H&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.alias1%2Cext1.value.alias1&openid.sig=apF%2FnTZxJu57wEjiWjLsHbetyos%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawkxd2NAka6Ez6oIkTPopMpikYqm0oDtoGA&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawkxd2NAka6Ez6oIkTPopMpikYqm0oDtoGA&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.alias1=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.alias1=khoacoi1986%40gmail.com
-2013-05-30 21:10:49,024 [10] DEBUG DotNetOpenAuth.Messaging.Channel - Incoming request received: PositiveAssertionResponse
-2013-05-30 21:10:49,027 [10] INFO  DotNetOpenAuth.Messaging.Channel - Processing incoming PositiveAssertionResponse (2.0) message:
-	openid.claimed_id: https://www.google.com/accounts/o8/id?id=AItOawkxd2NAka6Ez6oIkTPopMpikYqm0oDtoGA
-	openid.identity: https://www.google.com/accounts/o8/id?id=AItOawkxd2NAka6Ez6oIkTPopMpikYqm0oDtoGA
-	openid.sig: apF/nTZxJu57wEjiWjLsHbetyos=
-	openid.signed: op_endpoint,claimed_id,identity,return_to,response_nonce,assoc_handle,ns.ext1,ext1.mode,ext1.type.alias1,ext1.value.alias1
-	openid.assoc_handle: 1.AMlYA9VAyn5LBpE-3xuxIsb7hAGw0pZt2kirCUycOuPJS3Hh7prs1GQnlXdozs-H
-	openid.op_endpoint: https://www.google.com/accounts/o8/ud
-	openid.return_to: http://localhost:58737/Account/ExternalLoginCallback?__provider__=google&__sid__=0c5ed43ae941417eb17d5360d9bd081f&dnoa.userSuppliedIdentifier=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid
-	openid.response_nonce: 2013-05-30T14:10:55ZpMOa0o90GRzMcg
-	openid.mode: id_res
-	openid.ns: http://specs.openid.net/auth/2.0
-	__provider__: google
-	__sid__: 0c5ed43ae941417eb17d5360d9bd081f
-	dnoa.userSuppliedIdentifier: https://www.google.com/accounts/o8/id
-	openid.ns.ext1: http://openid.net/srv/ax/1.0
-	openid.ext1.mode: fetch_response
-	openid.ext1.type.alias1: http://axschema.org/contact/email
-	openid.ext1.value.alias1: khoacoi1986@gmail.com
-
-2013-05-30 21:10:49,031 [10] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OpenId.ChannelElements.BackwardCompatibilityBindingElement did not apply to message.
-2013-05-30 21:10:49,032 [10] DEBUG DotNetOpenAuth.Messaging.Bindings - Verifying incoming PositiveAssertionResponse message signature of: apF/nTZxJu57wEjiWjLsHbetyos=
-2013-05-30 21:10:49,043 [10] DEBUG DotNetOpenAuth.Messaging.Channel - Preparing to send CheckAuthenticationRequest (2.0) message.
-2013-05-30 21:10:49,043 [10] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OpenId.ChannelElements.ExtensionsBindingElementRelyingParty did not apply to message.
-2013-05-30 21:10:49,043 [10] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OpenId.ChannelElements.RelyingPartySecurityOptions did not apply to message.
-2013-05-30 21:10:49,043 [10] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OpenId.ChannelElements.BackwardCompatibilityBindingElement did not apply to message.
-2013-05-30 21:10:49,043 [10] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.Messaging.Bindings.StandardExpirationBindingElement did not apply to message.
-2013-05-30 21:10:49,043 [10] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OpenId.ChannelElements.RelyingPartySigningBindingElement did not apply to message.
-2013-05-30 21:10:49,043 [10] INFO  DotNetOpenAuth.Messaging.Channel - Prepared outgoing CheckAuthenticationRequest (2.0) message for https://www.google.com/accounts/o8/ud: 
-	openid.return_to: http://localhost:58737/Account/ExternalLoginCallback?__provider__=google&__sid__=0c5ed43ae941417eb17d5360d9bd081f&dnoa.userSuppliedIdentifier=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid
-	openid.mode: check_authentication
-	openid.ns: http://specs.openid.net/auth/2.0
-	openid.claimed_id: https://www.google.com/accounts/o8/id?id=AItOawkxd2NAka6Ez6oIkTPopMpikYqm0oDtoGA
-	openid.identity: https://www.google.com/accounts/o8/id?id=AItOawkxd2NAka6Ez6oIkTPopMpikYqm0oDtoGA
-	openid.sig: apF/nTZxJu57wEjiWjLsHbetyos=
-	openid.signed: op_endpoint,claimed_id,identity,return_to,response_nonce,assoc_handle,ns.ext1,ext1.mode,ext1.type.alias1,ext1.value.alias1
-	openid.assoc_handle: 1.AMlYA9VAyn5LBpE-3xuxIsb7hAGw0pZt2kirCUycOuPJS3Hh7prs1GQnlXdozs-H
-	openid.op_endpoint: https://www.google.com/accounts/o8/ud
-	openid.response_nonce: 2013-05-30T14:10:55ZpMOa0o90GRzMcg
-	__provider__: google
-	__sid__: 0c5ed43ae941417eb17d5360d9bd081f
-	dnoa.userSuppliedIdentifier: https://www.google.com/accounts/o8/id
-	openid.ns.ext1: http://openid.net/srv/ax/1.0
-	openid.ext1.mode: fetch_response
-	openid.ext1.type.alias1: http://axschema.org/contact/email
-	openid.ext1.value.alias1: khoacoi1986@gmail.com
-
-2013-05-30 21:10:49,043 [10] DEBUG DotNetOpenAuth.Messaging.Channel - Sending CheckAuthenticationRequest request.
-2013-05-30 21:10:49,484 [10] DEBUG DotNetOpenAuth.Http - HTTP POST https://www.google.com/accounts/o8/ud
-2013-05-30 21:10:49,583 [10] DEBUG DotNetOpenAuth.Messaging.Channel - Received CheckAuthenticationResponse response.
-2013-05-30 21:10:49,583 [10] INFO  DotNetOpenAuth.Messaging.Channel - Processing incoming CheckAuthenticationResponse (2.0) message:
-	is_valid: true
-	ns: http://specs.openid.net/auth/2.0
-
-2013-05-30 21:10:49,585 [10] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OpenId.ChannelElements.BackwardCompatibilityBindingElement did not apply to message.
-2013-05-30 21:10:49,585 [10] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OpenId.ChannelElements.RelyingPartySigningBindingElement did not apply to message.
-2013-05-30 21:10:49,585 [10] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.Messaging.Bindings.StandardExpirationBindingElement did not apply to message.
-2013-05-30 21:10:49,586 [10] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OpenId.ChannelElements.RelyingPartySecurityOptions did not apply to message.
-2013-05-30 21:10:49,587 [10] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OpenId.ChannelElements.ExtensionsBindingElementRelyingParty did not apply to message.
-2013-05-30 21:10:49,588 [10] DEBUG DotNetOpenAuth.Messaging.Channel - After binding element processing, the received CheckAuthenticationResponse (2.0) message is: 
-	is_valid: true
-	ns: http://specs.openid.net/auth/2.0
-
-2013-05-30 21:10:49,589 [10] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OpenId.ChannelElements.RelyingPartySigningBindingElement applied to message.
-2013-05-30 21:10:49,591 [10] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.Messaging.Bindings.StandardExpirationBindingElement applied to message.
-2013-05-30 21:10:49,591 [10] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OpenId.ChannelElements.RelyingPartySecurityOptions applied to message.
-2013-05-30 21:10:49,618 [10] DEBUG DotNetOpenAuth.Messaging.Bindings - Binding element DotNetOpenAuth.OpenId.ChannelElements.ExtensionsBindingElementRelyingParty applied to message.
-2013-05-30 21:10:49,618 [10] DEBUG DotNetOpenAuth.Messaging.Channel - After binding element processing, the received PositiveAssertionResponse (2.0) message is: 
-	openid.claimed_id: https://www.google.com/accounts/o8/id?id=AItOawkxd2NAka6Ez6oIkTPopMpikYqm0oDtoGA
-	openid.identity: https://www.google.com/accounts/o8/id?id=AItOawkxd2NAka6Ez6oIkTPopMpikYqm0oDtoGA
-	openid.sig: apF/nTZxJu57wEjiWjLsHbetyos=
-	openid.signed: op_endpoint,claimed_id,identity,return_to,response_nonce,assoc_handle,ns.ext1,ext1.mode,ext1.type.alias1,ext1.value.alias1
-	openid.assoc_handle: 1.AMlYA9VAyn5LBpE-3xuxIsb7hAGw0pZt2kirCUycOuPJS3Hh7prs1GQnlXdozs-H
-	openid.op_endpoint: https://www.google.com/accounts/o8/ud
-	openid.return_to: http://localhost:58737/Account/ExternalLoginCallback?__provider__=google&__sid__=0c5ed43ae941417eb17d5360d9bd081f&dnoa.userSuppliedIdentifier=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid
-	openid.response_nonce: 2013-05-30T14:10:55ZpMOa0o90GRzMcg
-	openid.mode: id_res
-	openid.ns: http://specs.openid.net/auth/2.0
-	__provider__: google
-	__sid__: 0c5ed43ae941417eb17d5360d9bd081f
-	dnoa.userSuppliedIdentifier: https://www.google.com/accounts/o8/id
-	openid.ns.ext1: http://openid.net/srv/ax/1.0
-	openid.ext1.mode: fetch_response
-	openid.ext1.type.alias1: http://axschema.org/contact/email
-	openid.ext1.value.alias1: khoacoi1986@gmail.com
-
-2013-05-30 21:10:49,625 [10] DEBUG DotNetOpenAuth.OpenId - Verifying assertion matches identifier discovery results...
-2013-05-30 21:10:49,625 [10] DEBUG DotNetOpenAuth.Http - HTTP GET https://www.google.com/accounts/o8/id?id=AItOawkxd2NAka6Ez6oIkTPopMpikYqm0oDtoGA
-2013-05-30 21:10:50,532 [10] DEBUG DotNetOpenAuth.Yadis - An XRDS response was received from GET at user-supplied identifier.
-2013-05-30 21:10:50,537 [10] DEBUG DotNetOpenAuth.Yadis - Total services discovered in XRDS: 5
-2013-05-30 21:10:50,537 [10] DEBUG DotNetOpenAuth.Yadis - [{
-	ClaimedIdentifier: https://www.google.com/accounts/o8/id?id=AItOawkxd2NAka6Ez6oIkTPopMpikYqm0oDtoGA
-	ProviderLocalIdentifier: https://www.google.com/accounts/o8/id?id=AItOawkxd2NAka6Ez6oIkTPopMpikYqm0oDtoGA
-	ProviderEndpoint: https://www.google.com/accounts/o8/ud
-	OpenID version: 2.0
-	Service Type URIs:
-		http://specs.openid.net/auth/2.0/signon
-		http://openid.net/srv/ax/1.0
-		http://specs.openid.net/extensions/ui/1.0/mode/popup
-		http://specs.openid.net/extensions/ui/1.0/icon
-		http://specs.openid.net/extensions/pape/1.0
-}, {
-	ClaimedIdentifier: https://www.google.com/accounts/o8/id?id=AItOawkxd2NAka6Ez6oIkTPopMpikYqm0oDtoGA
-	ProviderLocalIdentifier: https://www.google.com/accounts/o8/id?id=AItOawkxd2NAka6Ez6oIkTPopMpikYqm0oDtoGA
-	ProviderEndpoint: https://www.google.com/accounts/o8/ud?source=mail
-	OpenID version: 2.0
-	Service Type URIs:
-		http://specs.openid.net/auth/2.0/signon
-		http://openid.net/srv/ax/1.0
-		http://specs.openid.net/extensions/ui/1.0/mode/popup
-		http://specs.openid.net/extensions/ui/1.0/icon
-		http://specs.openid.net/extensions/pape/1.0
-}, {
-	ClaimedIdentifier: https://www.google.com/accounts/o8/id?id=AItOawkxd2NAka6Ez6oIkTPopMpikYqm0oDtoGA
-	ProviderLocalIdentifier: https://www.google.com/accounts/o8/id?id=AItOawkxd2NAka6Ez6oIkTPopMpikYqm0oDtoGA
-	ProviderEndpoint: https://www.google.com/accounts/o8/ud?source=gmail.com
-	OpenID version: 2.0
-	Service Type URIs:
-		http://specs.openid.net/auth/2.0/signon
-		http://openid.net/srv/ax/1.0
-		http://specs.openid.net/extensions/ui/1.0/mode/popup
-		http://specs.openid.net/extensions/ui/1.0/icon
-		http://specs.openid.net/extensions/pape/1.0
-}, {
-	ClaimedIdentifier: https://www.google.com/accounts/o8/id?id=AItOawkxd2NAka6Ez6oIkTPopMpikYqm0oDtoGA
-	ProviderLocalIdentifier: https://www.google.com/accounts/o8/id?id=AItOawkxd2NAka6Ez6oIkTPopMpikYqm0oDtoGA
-	ProviderEndpoint: https://www.google.com/accounts/o8/ud?source=googlemail.com
-	OpenID version: 2.0
-	Service Type URIs:
-		http://specs.openid.net/auth/2.0/signon
-		http://openid.net/srv/ax/1.0
-		http://specs.openid.net/extensions/ui/1.0/mode/popup
-		http://specs.openid.net/extensions/ui/1.0/icon
-		http://specs.openid.net/extensions/pape/1.0
-}, {
-	ClaimedIdentifier: https://www.google.com/accounts/o8/id?id=AItOawkxd2NAka6Ez6oIkTPopMpikYqm0oDtoGA
-	ProviderLocalIdentifier: https://www.google.com/accounts/o8/id?id=AItOawkxd2NAka6Ez6oIkTPopMpikYqm0oDtoGA
-	ProviderEndpoint: https://www.google.com/accounts/o8/ud?source=profiles
-	OpenID version: 2.0
-	Service Type URIs:
-		http://specs.openid.net/auth/2.0/signon
-		http://openid.net/srv/ax/1.0
-		http://specs.openid.net/extensions/ui/1.0/mode/popup
-		http://specs.openid.net/extensions/ui/1.0/icon
-		http://specs.openid.net/extensions/pape/1.0
-},]
-2013-05-30 21:10:50,537 [10] DEBUG DotNetOpenAuth.Yadis - Skipping HTML discovery because XRDS contained service endpoints.
-2013-05-30 21:10:50,540 [10] INFO  DotNetOpenAuth.OpenId - Received identity assertion for https://www.google.com/accounts/o8/id?id=AItOawkxd2NAka6Ez6oIkTPopMpikYqm0oDtoGA via https://www.google.com/accounts/o8/ud.
-2013-05-30 21:10:50,567 [10] DEBUG NHibernate.Impl.SessionImpl - [session-id=3118b22f-616f-427f-b440-5a6ff701c7b3] opened session at timestamp: 5611308034318336, for session factory: [/f0f009d0078149578cff25f4370d9e86]
-2013-05-30 21:10:50,567 [10] DEBUG NHibernate.Transaction.AdoTransaction - Begin (Unspecified)
-2013-05-30 21:10:50,567 [10] DEBUG NHibernate.Connection.DriverConnectionProvider - Obtaining IDbConnection from Driver
-2013-05-30 21:10:50,588 [10] DEBUG NHibernate.Linq - Expression (partially evaluated): value(NHibernate.Linq.NhQueryable`1[App.Domain.Models.User.OAuthMembership]).Where(x => ((x.ProviderUserID == "https://www.google.com/accounts/o8/id?id=AItOawkxd2NAka6Ez6oIkTPopMpikYqm0oDtoGA") AndAlso (x.Provider == "google"))).SingleOrDefault()
-2013-05-30 21:10:50,599 [10] DEBUG NHibernate.Engine.Query.QueryPlanCache - unable to locate HQL query plan in cache; generating (.SingleOrDefault[App.Domain.Models.User.OAuthMembership](.Where[App.Domain.Models.User.OAuthMembership](NHibernate.Linq.NhQueryable`1[App.Domain.Models.User.OAuthMembership], Quote((x, ) => (AndAlso(String.op_Equality(x.ProviderUserID, p1), String.op_Equality(x.Provider, p2)))), ), ))
-2013-05-30 21:10:50,656 [10] DEBUG NHibernate.Hql.Ast.ANTLR.HqlSqlWalker - select << begin [level=1, statement=select]
-2013-05-30 21:10:50,656 [10] DEBUG NHibernate.Hql.Ast.ANTLR.Tree.FromElement - FromClause{level=1} :  App.Domain.Models.User.OAuthMembership (x) -> oauthmembe0_
-2013-05-30 21:10:50,656 [10] DEBUG NHibernate.Hql.Ast.ANTLR.Tree.FromReferenceNode - Resolved :  x -> oauthmembe0_.ID
-2013-05-30 21:10:50,675 [10] DEBUG NHibernate.Hql.Ast.ANTLR.Tree.FromReferenceNode - Resolved :  x -> oauthmembe0_.ID
-2013-05-30 21:10:50,679 [10] INFO  NHibernate.Hql.Ast.ANTLR.Tree.FromElement - handling property dereference [App.Domain.Models.User.OAuthMembership (x) -> ProviderUserID (Class)]
-2013-05-30 21:10:50,681 [10] DEBUG NHibernate.Hql.Ast.ANTLR.Tree.DotNode - getDataType() : ProviderUserID -> NHibernate.Type.StringType
-2013-05-30 21:10:50,683 [10] DEBUG NHibernate.Hql.Ast.ANTLR.Tree.FromReferenceNode - Resolved :  x.ProviderUserID -> oauthmembe0_.ProviderUserID
-2013-05-30 21:10:50,690 [10] DEBUG NHibernate.Hql.Ast.ANTLR.Tree.FromReferenceNode - Resolved :  x -> oauthmembe0_.ID
-2013-05-30 21:10:50,690 [10] INFO  NHibernate.Hql.Ast.ANTLR.Tree.FromElement - handling property dereference [App.Domain.Models.User.OAuthMembership (x) -> Provider (Class)]
-2013-05-30 21:10:50,690 [10] DEBUG NHibernate.Hql.Ast.ANTLR.Tree.DotNode - getDataType() : Provider -> NHibernate.Type.StringType
-2013-05-30 21:10:50,690 [10] DEBUG NHibernate.Hql.Ast.ANTLR.Tree.FromReferenceNode - Resolved :  x.Provider -> oauthmembe0_.Provider
-2013-05-30 21:10:50,691 [10] DEBUG NHibernate.Hql.Ast.ANTLR.HqlSqlWalker - select : finishing up [level=1, statement=select]
-2013-05-30 21:10:50,691 [10] DEBUG NHibernate.Hql.Ast.ANTLR.HqlSqlWalker - processQuery() : ( SELECT ( {select clause} oauthmembe0_.ID ) ( FromClause{level=1} [OAuthMembership] oauthmembe0_ ) ( where ( and ( == ( oauthmembe0_.ProviderUserID oauthmembe0_.ID ProviderUserID ) ? ) ( == ( oauthmembe0_.Provider oauthmembe0_.ID Provider ) ? ) ) ) )
-2013-05-30 21:10:50,691 [10] DEBUG NHibernate.Hql.Ast.ANTLR.Util.JoinProcessor - Using FROM fragment [[OAuthMembership] oauthmembe0_]
-2013-05-30 21:10:50,691 [10] DEBUG NHibernate.Hql.Ast.ANTLR.HqlSqlWalker - select >> end [level=1, statement=select]
-2013-05-30 21:10:50,691 [10] DEBUG NHibernate.Hql.Ast.ANTLR.ErrorCounter - throwQueryException() : no errors
-2013-05-30 21:10:50,704 [10] DEBUG NHibernate.Hql.Ast.ANTLR.HqlSqlGenerator - SQL: select oauthmembe0_.ID as ID1_, oauthmembe0_.Provider as Provider1_, oauthmembe0_.ProviderUserID as Provider3_1_, oauthmembe0_.UserProfileID as UserProf4_1_ from [OAuthMembership] oauthmembe0_ where oauthmembe0_.ProviderUserID=? and oauthmembe0_.Provider=?
-2013-05-30 21:10:50,704 [10] DEBUG NHibernate.Hql.Ast.ANTLR.ErrorCounter - throwQueryException() : no errors
-2013-05-30 21:10:50,708 [10] DEBUG NHibernate.Engine.Query.QueryPlanCache - located HQL query plan in cache (.SingleOrDefault[App.Domain.Models.User.OAuthMembership](.Where[App.Domain.Models.User.OAuthMembership](NHibernate.Linq.NhQueryable`1[App.Domain.Models.User.OAuthMembership], Quote((x, ) => (AndAlso(String.op_Equality(x.ProviderUserID, p1), String.op_Equality(x.Provider, p2)))), ), ))
-2013-05-30 21:10:50,708 [10] DEBUG NHibernate.Engine.Query.HQLQueryPlan - find: .SingleOrDefault[App.Domain.Models.User.OAuthMembership](.Where[App.Domain.Models.User.OAuthMembership](NHibernate.Linq.NhQueryable`1[App.Domain.Models.User.OAuthMembership], Quote((x, ) => (AndAlso(String.op_Equality(x.ProviderUserID, p1), String.op_Equality(x.Provider, p2)))), ), )
-2013-05-30 21:10:50,709 [10] DEBUG NHibernate.Engine.QueryParameters - named parameters: {'p1'='https://www.google.com/accounts/o8/id?id=AItOawkxd2NAka6Ez6oIkTPopMpikYqm0oDtoGA', 'p2'='google'}
-2013-05-30 21:10:50,716 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Opened new IDbCommand, open IDbCommands: 1
-2013-05-30 21:10:50,716 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Building an IDbCommand object for the SqlString: select oauthmembe0_.ID as ID1_, oauthmembe0_.Provider as Provider1_, oauthmembe0_.ProviderUserID as Provider3_1_, oauthmembe0_.UserProfileID as UserProf4_1_ from [OAuthMembership] oauthmembe0_ where oauthmembe0_.ProviderUserID=? and oauthmembe0_.Provider=?
-2013-05-30 21:10:50,717 [10] DEBUG NHibernate.Type.StringType - binding 'https://www.google.com/accounts/o8/id?id=AItOawkxd2NAka6Ez6oIkTPopMpikYqm0oDtoGA' to parameter: 0
-2013-05-30 21:10:50,717 [10] DEBUG NHibernate.Type.StringType - binding 'google' to parameter: 1
-2013-05-30 21:10:50,718 [10] INFO  NHibernate.Loader.Loader - select oauthmembe0_.ID as ID1_, oauthmembe0_.Provider as Provider1_, oauthmembe0_.ProviderUserID as Provider3_1_, oauthmembe0_.UserProfileID as UserProf4_1_ from [OAuthMembership] oauthmembe0_ where oauthmembe0_.ProviderUserID=@p0 and oauthmembe0_.Provider=@p1
-2013-05-30 21:10:50,719 [10] DEBUG NHibernate.SQL - select oauthmembe0_.ID as ID1_, oauthmembe0_.Provider as Provider1_, oauthmembe0_.ProviderUserID as Provider3_1_, oauthmembe0_.UserProfileID as UserProf4_1_ from [OAuthMembership] oauthmembe0_ where oauthmembe0_.ProviderUserID=@p0 and oauthmembe0_.Provider=@p1;@p0 = 'https://www.google.com/accounts/o8/id?id=AItOawkxd2NAka6Ez6oIkTPopMpikYqm0oDtoGA' [Type: String (4000)], @p1 = 'google' [Type: String (4000)]
-2013-05-30 21:10:50,719 [10] DEBUG NHibernate.Transaction.AdoTransaction - Enlist Command
-2013-05-30 21:10:50,738 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - ExecuteReader took 18 ms
-2013-05-30 21:10:50,738 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Opened IDataReader, open IDataReaders: 1
-2013-05-30 21:10:50,738 [10] DEBUG NHibernate.Loader.Loader - processing result set
-2013-05-30 21:10:50,738 [10] DEBUG NHibernate.Loader.Loader - result set row: 0
-2013-05-30 21:10:50,741 [10] DEBUG NHibernate.Type.GuidType - returning '3723255e-239a-4a24-9589-a1ce015a33ad' as column: ID1_
-2013-05-30 21:10:50,743 [10] DEBUG NHibernate.Loader.Loader - result row: EntityKey[App.Domain.Models.User.OAuthMembership#3723255e-239a-4a24-9589-a1ce015a33ad]
-2013-05-30 21:10:50,748 [10] DEBUG NHibernate.Loader.Loader - Initializing object from DataReader: [App.Domain.Models.User.OAuthMembership#3723255e-239a-4a24-9589-a1ce015a33ad]
-2013-05-30 21:10:50,752 [10] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Hydrating entity: [App.Domain.Models.User.OAuthMembership#3723255e-239a-4a24-9589-a1ce015a33ad]
-2013-05-30 21:10:50,753 [10] DEBUG NHibernate.Type.StringType - returning 'google' as column: Provider1_
-2013-05-30 21:10:50,753 [10] DEBUG NHibernate.Type.StringType - returning 'https://www.google.com/accounts/o8/id?id=AItOawkxd2NAka6Ez6oIkTPopMpikYqm0oDtoGA' as column: Provider3_1_
-2013-05-30 21:10:50,753 [10] DEBUG NHibernate.Type.GuidType - returning 'd6ea96de-a21b-4944-8338-a1ce015a33ae' as column: UserProf4_1_
-2013-05-30 21:10:50,755 [10] DEBUG NHibernate.Loader.Loader - done processing result set (1 rows)
-2013-05-30 21:10:50,755 [10] DEBUG NHibernate.Driver.NHybridDataReader - running NHybridDataReader.Dispose()
-2013-05-30 21:10:50,756 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Closed IDataReader, open IDataReaders :0
-2013-05-30 21:10:50,756 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - DataReader was closed after 36 ms
-2013-05-30 21:10:50,756 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Closed IDbCommand, open IDbCommands: 0
-2013-05-30 21:10:50,756 [10] DEBUG NHibernate.Loader.Loader - total objects hydrated: 1
-2013-05-30 21:10:50,758 [10] DEBUG NHibernate.Engine.TwoPhaseLoad - resolving associations for [App.Domain.Models.User.OAuthMembership#3723255e-239a-4a24-9589-a1ce015a33ad]
-2013-05-30 21:10:50,762 [10] DEBUG NHibernate.Event.Default.DefaultLoadEventListener - loading entity: [App.Domain.Models.User.UserProfile#d6ea96de-a21b-4944-8338-a1ce015a33ae]
-2013-05-30 21:10:50,763 [10] DEBUG NHibernate.Event.Default.DefaultLoadEventListener - creating new proxy for entity
-2013-05-30 21:10:50,825 [10] DEBUG NHibernate.Engine.TwoPhaseLoad - adding entity to second-level cache: [App.Domain.Models.User.OAuthMembership#3723255e-239a-4a24-9589-a1ce015a33ad]
-2013-05-30 21:10:50,828 [10] DEBUG NHibernate.Cache.NonstrictReadWriteCache - Caching: App.Domain.Models.User.OAuthMembership#3723255e-239a-4a24-9589-a1ce015a33ad
-2013-05-30 21:10:50,829 [10] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - root cache item for region not found.
-2013-05-30 21:10:50,830 [10] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - Creating root cache entry for cache region: App.Domain.Models.User.OAuthMembership
-2013-05-30 21:10:50,831 [10] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - adding new data: key=NHibernate-Cache:App.Domain.Models.User.OAuthMembership:App.Domain.Models.User.OAuthMembership#3723255e-239a-4a24-9589-a1ce015a33ad@-1246138409 & value=NHibernate.Cache.Entry.CacheEntry
-2013-05-30 21:10:50,831 [10] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - item will expire at: 05/30/2013 21:15:50
-2013-05-30 21:10:50,833 [10] DEBUG NHibernate.Engine.TwoPhaseLoad - done materializing entity [App.Domain.Models.User.OAuthMembership#3723255e-239a-4a24-9589-a1ce015a33ad]
-2013-05-30 21:10:50,833 [10] DEBUG NHibernate.Engine.StatefulPersistenceContext - initializing non-lazy collections
-2013-05-30 21:10:50,836 [10] DEBUG NHibernate.Impl.SessionImpl - initializing proxy: [App.Domain.Models.User.UserProfile#d6ea96de-a21b-4944-8338-a1ce015a33ae]
-2013-05-30 21:10:50,837 [10] DEBUG NHibernate.Event.Default.DefaultLoadEventListener - attempting to resolve: [App.Domain.Models.User.UserProfile#d6ea96de-a21b-4944-8338-a1ce015a33ae]
-2013-05-30 21:10:50,838 [10] DEBUG NHibernate.Cache.NonstrictReadWriteCache - Cache lookup: App.Domain.Models.User.UserProfile#d6ea96de-a21b-4944-8338-a1ce015a33ae
-2013-05-30 21:10:50,839 [10] DEBUG NHibernate.Cache.NonstrictReadWriteCache - Cache miss
-2013-05-30 21:10:50,839 [10] DEBUG NHibernate.Event.Default.DefaultLoadEventListener - object not resolved in any cache: [App.Domain.Models.User.UserProfile#d6ea96de-a21b-4944-8338-a1ce015a33ae]
-2013-05-30 21:10:50,839 [10] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Fetching entity: [App.Domain.Models.User.UserProfile#d6ea96de-a21b-4944-8338-a1ce015a33ae]
-2013-05-30 21:10:50,841 [10] DEBUG NHibernate.Loader.Loader - loading entity: [App.Domain.Models.User.UserProfile#d6ea96de-a21b-4944-8338-a1ce015a33ae]
-2013-05-30 21:10:50,844 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Opened new IDbCommand, open IDbCommands: 1
-2013-05-30 21:10:50,844 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Building an IDbCommand object for the SqlString: SELECT userprofil0_.ID as ID2_0_, userprofil0_.UserName as UserName2_0_ FROM [UserProfile] userprofil0_ WHERE userprofil0_.ID=?
-2013-05-30 21:10:50,845 [10] DEBUG NHibernate.Type.GuidType - binding 'd6ea96de-a21b-4944-8338-a1ce015a33ae' to parameter: 0
-2013-05-30 21:10:50,845 [10] INFO  NHibernate.Loader.Loader - SELECT userprofil0_.ID as ID2_0_, userprofil0_.UserName as UserName2_0_ FROM [UserProfile] userprofil0_ WHERE userprofil0_.ID=@p0
-2013-05-30 21:10:50,845 [10] DEBUG NHibernate.SQL - SELECT userprofil0_.ID as ID2_0_, userprofil0_.UserName as UserName2_0_ FROM [UserProfile] userprofil0_ WHERE userprofil0_.ID=@p0;@p0 = d6ea96de-a21b-4944-8338-a1ce015a33ae [Type: Guid (0)]
-2013-05-30 21:10:50,845 [10] DEBUG NHibernate.Transaction.AdoTransaction - Enlist Command
-2013-05-30 21:10:50,865 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - ExecuteReader took 19 ms
-2013-05-30 21:10:50,865 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Opened IDataReader, open IDataReaders: 1
-2013-05-30 21:10:50,865 [10] DEBUG NHibernate.Loader.Loader - processing result set
-2013-05-30 21:10:50,865 [10] DEBUG NHibernate.Loader.Loader - result set row: 0
-2013-05-30 21:10:50,866 [10] DEBUG NHibernate.Loader.Loader - result row: EntityKey[App.Domain.Models.User.UserProfile#d6ea96de-a21b-4944-8338-a1ce015a33ae]
-2013-05-30 21:10:50,866 [10] DEBUG NHibernate.Loader.Loader - Initializing object from DataReader: [App.Domain.Models.User.UserProfile#d6ea96de-a21b-4944-8338-a1ce015a33ae]
-2013-05-30 21:10:50,866 [10] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Hydrating entity: [App.Domain.Models.User.UserProfile#d6ea96de-a21b-4944-8338-a1ce015a33ae]
-2013-05-30 21:10:50,866 [10] DEBUG NHibernate.Type.StringType - returning 'khoacoigmail' as column: UserName2_0_
-2013-05-30 21:10:50,866 [10] DEBUG NHibernate.Loader.Loader - done processing result set (1 rows)
-2013-05-30 21:10:50,866 [10] DEBUG NHibernate.Driver.NHybridDataReader - running NHybridDataReader.Dispose()
-2013-05-30 21:10:50,866 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Closed IDataReader, open IDataReaders :0
-2013-05-30 21:10:50,866 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - DataReader was closed after 21 ms
-2013-05-30 21:10:50,866 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - Closed IDbCommand, open IDbCommands: 0
-2013-05-30 21:10:50,866 [10] DEBUG NHibernate.Loader.Loader - total objects hydrated: 1
-2013-05-30 21:10:50,866 [10] DEBUG NHibernate.Engine.TwoPhaseLoad - resolving associations for [App.Domain.Models.User.UserProfile#d6ea96de-a21b-4944-8338-a1ce015a33ae]
-2013-05-30 21:10:50,867 [10] DEBUG NHibernate.Engine.TwoPhaseLoad - adding entity to second-level cache: [App.Domain.Models.User.UserProfile#d6ea96de-a21b-4944-8338-a1ce015a33ae]
-2013-05-30 21:10:50,867 [10] DEBUG NHibernate.Cache.NonstrictReadWriteCache - Caching: App.Domain.Models.User.UserProfile#d6ea96de-a21b-4944-8338-a1ce015a33ae
-2013-05-30 21:10:50,867 [10] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - root cache item for region not found.
-2013-05-30 21:10:50,867 [10] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - Creating root cache entry for cache region: App.Domain.Models.User.UserProfile
-2013-05-30 21:10:50,867 [10] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - adding new data: key=NHibernate-Cache:App.Domain.Models.User.UserProfile:App.Domain.Models.User.UserProfile#d6ea96de-a21b-4944-8338-a1ce015a33ae@-705568972 & value=NHibernate.Cache.Entry.CacheEntry
-2013-05-30 21:10:50,867 [10] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - item will expire at: 05/30/2013 21:15:50
-2013-05-30 21:10:50,868 [10] DEBUG NHibernate.Engine.TwoPhaseLoad - done materializing entity [App.Domain.Models.User.UserProfile#d6ea96de-a21b-4944-8338-a1ce015a33ae]
-2013-05-30 21:10:50,868 [10] DEBUG NHibernate.Engine.StatefulPersistenceContext - initializing non-lazy collections
-2013-05-30 21:10:50,868 [10] DEBUG NHibernate.Loader.Loader - done entity load
-2013-05-30 21:10:50,885 [10] DEBUG NHibernate.Transaction.AdoTransaction - Start Commit
-2013-05-30 21:10:50,886 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - flushing session
-2013-05-30 21:10:50,887 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - processing flush-time cascades
-2013-05-30 21:10:50,889 [10] INFO  NHibernate.Engine.Cascade - processing cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for: App.Domain.Models.User.OAuthMembership
-2013-05-30 21:10:50,892 [10] DEBUG NHibernate.Engine.CascadingAction - cascading to saveOrUpdate: App.Domain.Models.User.UserProfile
-2013-05-30 21:10:50,895 [10] DEBUG NHibernate.Event.Default.AbstractSaveEventListener - persistent instance of: App.Domain.Models.User.UserProfile
-2013-05-30 21:10:50,896 [10] DEBUG NHibernate.Event.Default.DefaultSaveOrUpdateEventListener - ignoring persistent instance
-2013-05-30 21:10:50,896 [10] DEBUG NHibernate.Event.Default.DefaultSaveOrUpdateEventListener - object already associated with session: [App.Domain.Models.User.UserProfile#d6ea96de-a21b-4944-8338-a1ce015a33ae]
-2013-05-30 21:10:50,896 [10] INFO  NHibernate.Engine.Cascade - done processing cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for: App.Domain.Models.User.OAuthMembership
-2013-05-30 21:10:50,896 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - dirty checking collections
-2013-05-30 21:10:50,897 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushing entities and processing referenced collections
-2013-05-30 21:10:50,908 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Processing unreferenced collections
-2013-05-30 21:10:50,908 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Scheduling collection removes/(re)creates/updates
-2013-05-30 21:10:50,909 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
-2013-05-30 21:10:50,909 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
-2013-05-30 21:10:50,909 [10] DEBUG NHibernate.Impl.Printer - listing entities:
-2013-05-30 21:10:50,913 [10] DEBUG NHibernate.Impl.Printer - App.Domain.Models.User.OAuthMembership{'Id'='3723255e-239a-4a24-9589-a1ce015a33ad', 'Provider'='google', 'ProviderUserID'='https://www.google.com/accounts/o8/id?id=AItOawkxd2NAka6Ez6oIkTPopMpikYqm0oDtoGA', 'UserProfile'='App.Domain.Models.User.UserProfile#d6ea96de-a21b-4944-8338-a1ce015a33ae'}
-2013-05-30 21:10:50,913 [10] DEBUG NHibernate.Impl.Printer - App.Domain.Models.User.UserProfile{'Id'='d6ea96de-a21b-4944-8338-a1ce015a33ae', 'UserName'='khoacoigmail'}
-2013-05-30 21:10:50,913 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - executing flush
-2013-05-30 21:10:50,913 [10] DEBUG NHibernate.AdoNet.ConnectionManager - registering flush begin
-2013-05-30 21:10:50,915 [10] DEBUG NHibernate.AdoNet.ConnectionManager - registering flush end
-2013-05-30 21:10:50,916 [10] DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - post flush
-2013-05-30 21:10:50,916 [10] DEBUG NHibernate.Impl.SessionImpl - before transaction completion
-2013-05-30 21:10:50,916 [10] DEBUG NHibernate.Transaction.AdoTransaction - IDbTransaction Committed
-2013-05-30 21:10:50,916 [10] DEBUG NHibernate.Impl.SessionImpl - transaction completion
-2013-05-30 21:10:50,916 [10] DEBUG NHibernate.AdoNet.ConnectionManager - aggressively releasing database connection
-2013-05-30 21:10:50,916 [10] DEBUG NHibernate.Connection.ConnectionProvider - Closing connection
-2013-05-30 21:10:50,917 [10] DEBUG NHibernate.Transaction.AdoTransaction - IDbTransaction disposed.
-2013-05-30 21:10:50,917 [10] DEBUG NHibernate.Impl.SessionImpl - closing session
-2013-05-30 21:10:50,917 [10] DEBUG NHibernate.AdoNet.AbstractBatcher - running BatcherImpl.Dispose(true)
-2013-05-30 21:10:50,917 [10] DEBUG NHibernate.Impl.SessionImpl - [session-id=3118b22f-616f-427f-b440-5a6ff701c7b3] running ISession.Dispose()
-2013-05-30 21:10:50,917 [10] DEBUG NHibernate.Impl.SessionImpl - [session-id=3118b22f-616f-427f-b440-5a6ff701c7b3] executing real Dispose(True)
-2013-05-30 21:36:02,042 [16] DEBUG NHibernate.Impl.SessionImpl - [session-id=68b38120-df92-46bd-b2a1-a6ea5e799fc5] opened session at timestamp: 5611314225319936, for session factory: [/f0f009d0078149578cff25f4370d9e86]
-2013-05-30 21:36:02,042 [16] DEBUG NHibernate.Transaction.AdoTransaction - Begin (Unspecified)
-2013-05-30 21:36:02,042 [16] DEBUG NHibernate.Connection.DriverConnectionProvider - Obtaining IDbConnection from Driver
-2013-05-30 21:36:02,125 [16] DEBUG NHibernate.Loader.Criteria.CriteriaQueryTranslator - put criteria=UserName = rewr alias=this0_
-2013-05-30 21:36:02,133 [16] DEBUG NHibernate.Loader.Criteria.CriteriaQueryTranslator - returning alias=this_ for criteria=UserName = rewr
-2013-05-30 21:36:02,145 [16] DEBUG NHibernate.AdoNet.AbstractBatcher - Opened new IDbCommand, open IDbCommands: 1
-2013-05-30 21:36:02,145 [16] DEBUG NHibernate.AdoNet.AbstractBatcher - Building an IDbCommand object for the SqlString: SELECT this_.ID as ID2_0_, this_.UserName as UserName2_0_ FROM [UserProfile] this_ WHERE this_.UserName = ?
-2013-05-30 21:36:02,145 [16] DEBUG NHibernate.Type.StringType - binding 'rewr' to parameter: 0
-2013-05-30 21:36:02,145 [16] INFO  NHibernate.Loader.Loader - SELECT this_.ID as ID2_0_, this_.UserName as UserName2_0_ FROM [UserProfile] this_ WHERE this_.UserName = @p0
-2013-05-30 21:36:02,145 [16] DEBUG NHibernate.SQL - SELECT this_.ID as ID2_0_, this_.UserName as UserName2_0_ FROM [UserProfile] this_ WHERE this_.UserName = @p0;@p0 = 'rewr' [Type: String (4000)]
-2013-05-30 21:36:02,145 [16] DEBUG NHibernate.Transaction.AdoTransaction - Enlist Command
-2013-05-30 21:36:02,167 [16] DEBUG NHibernate.AdoNet.AbstractBatcher - ExecuteReader took 21 ms
-2013-05-30 21:36:02,167 [16] DEBUG NHibernate.AdoNet.AbstractBatcher - Opened IDataReader, open IDataReaders: 1
-2013-05-30 21:36:02,168 [16] DEBUG NHibernate.Loader.Loader - processing result set
-2013-05-30 21:36:02,168 [16] DEBUG NHibernate.Loader.Loader - done processing result set (0 rows)
-2013-05-30 21:36:02,168 [16] DEBUG NHibernate.Driver.NHybridDataReader - running NHybridDataReader.Dispose()
-2013-05-30 21:36:02,168 [16] DEBUG NHibernate.AdoNet.AbstractBatcher - Closed IDataReader, open IDataReaders :0
-2013-05-30 21:36:02,168 [16] DEBUG NHibernate.AdoNet.AbstractBatcher - DataReader was closed after 22 ms
-2013-05-30 21:36:02,168 [16] DEBUG NHibernate.AdoNet.AbstractBatcher - Closed IDbCommand, open IDbCommands: 0
-2013-05-30 21:36:02,168 [16] DEBUG NHibernate.Loader.Loader - total objects hydrated: 0
-2013-05-30 21:36:02,168 [16] DEBUG NHibernate.Engine.StatefulPersistenceContext - initializing non-lazy collections
-2013-05-30 21:36:02,180 [16] DEBUG NHibernate.Transaction.AdoTransaction - Start Commit
-2013-05-30 21:36:02,180 [16] DEBUG NHibernate.Impl.SessionImpl - before transaction completion
-2013-05-30 21:36:02,180 [16] DEBUG NHibernate.Transaction.AdoTransaction - IDbTransaction Committed
-2013-05-30 21:36:02,180 [16] DEBUG NHibernate.Impl.SessionImpl - transaction completion
-2013-05-30 21:36:02,180 [16] DEBUG NHibernate.AdoNet.ConnectionManager - aggressively releasing database connection
-2013-05-30 21:36:02,180 [16] DEBUG NHibernate.Connection.ConnectionProvider - Closing connection
-2013-05-30 21:36:02,180 [16] DEBUG NHibernate.Transaction.AdoTransaction - IDbTransaction disposed.
-2013-05-30 21:36:02,180 [16] DEBUG NHibernate.Impl.SessionImpl - closing session
-2013-05-30 21:36:02,180 [16] DEBUG NHibernate.AdoNet.AbstractBatcher - running BatcherImpl.Dispose(true)
-2013-05-30 21:36:02,180 [16] DEBUG NHibernate.Impl.SessionImpl - [session-id=68b38120-df92-46bd-b2a1-a6ea5e799fc5] running ISession.Dispose()
-2013-05-30 21:36:02,180 [16] DEBUG NHibernate.Impl.SessionImpl - [session-id=68b38120-df92-46bd-b2a1-a6ea5e799fc5] executing real Dispose(True)
+2013-05-30 22:20:46,862 [1] DEBUG NHibernate.Impl.SessionImpl - [session-id=887890a4-bb4e-453e-a354-9f0971bda757] running ISession.Dispose()
+2013-05-30 22:20:46,862 [1] DEBUG NHibernate.Impl.SessionImpl - [session-id=887890a4-bb4e-453e-a354-9f0971bda757] executing real Dispose(True)
+2013-05-30 22:20:46,863 [1] DEBUG NHibernate.Impl.SessionImpl - closing session
+2013-05-30 22:20:46,863 [1] DEBUG NHibernate.AdoNet.AbstractBatcher - running BatcherImpl.Dispose(true)
+2013-05-30 22:20:46,865 [1] DEBUG NHibernate.Connection.ConnectionProvider - Closing connection
+2013-05-30 22:20:46,865 [1] DEBUG NHibernate.Impl.SessionImpl - transaction completion
+2013-05-30 22:20:46,870 [1] INFO  NHibernate.Cfg.Configuration - checking mappings queue
+2013-05-30 22:20:46,870 [1] INFO  NHibernate.Cfg.Configuration - processing one-to-many association mappings
+2013-05-30 22:20:46,870 [1] INFO  NHibernate.Cfg.Configuration - processing one-to-one association property references
+2013-05-30 22:20:46,870 [1] INFO  NHibernate.Cfg.Configuration - processing foreign key constraints
+2013-05-30 22:20:46,870 [1] DEBUG NHibernate.Cfg.Configuration - resolving reference to class: App.Domain.Models.User.UserProfile
+2013-05-30 22:20:46,870 [1] DEBUG NHibernate.Cfg.Configuration - resolving reference to class: App.Domain.Models.User.UserProfile
+2013-05-30 22:20:46,870 [1] INFO  NHibernate.Cfg.Configuration - processing filters (second pass)
+2013-05-30 22:20:46,870 [1] INFO  NHibernate.Dialect.Dialect - Using dialect: NHibernate.Dialect.MsSql2008Dialect
+2013-05-30 22:20:46,870 [1] INFO  NHibernate.Dialect.Dialect - Using dialect: NHibernate.Dialect.MsSql2008Dialect
+2013-05-30 22:20:46,871 [1] INFO  NHibernate.Exceptions.SQLExceptionConverterFactory - Using dialect defined converter
+2013-05-30 22:20:46,871 [1] INFO  NHibernate.Cfg.SettingsFactory - Generate SQL with comments: disabled
+2013-05-30 22:20:46,871 [1] INFO  NHibernate.Connection.ConnectionProviderFactory - Initializing connection provider: App.Common.Data.Drivers.ContextDriverConnectionProvider, App.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2013-05-30 22:20:46,871 [1] INFO  NHibernate.Connection.ConnectionProvider - Configuring ConnectionProvider
+2013-05-30 22:20:46,871 [1] INFO  NHibernate.Cfg.SettingsFactory - Transaction factory: NHibernate.Transaction.AdoNetWithDistributedTransactionFactory
+2013-05-30 22:20:46,871 [1] INFO  NHibernate.Cfg.SettingsFactory - Optimize cache for minimal puts: False
+2013-05-30 22:20:46,871 [1] INFO  NHibernate.Cfg.SettingsFactory - Connection release mode: auto
+2013-05-30 22:20:46,871 [1] INFO  NHibernate.Cfg.SettingsFactory - Default batch fetch size: 1
+2013-05-30 22:20:46,871 [1] INFO  NHibernate.Cfg.SettingsFactory - Statistics: disabled
+2013-05-30 22:20:46,871 [1] INFO  NHibernate.Cfg.SettingsFactory - Deleted entity synthetic identifier rollback: disabled
+2013-05-30 22:20:46,871 [1] INFO  NHibernate.Cfg.SettingsFactory - Query translator: NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory
+2013-05-30 22:20:46,872 [1] INFO  NHibernate.Cfg.SettingsFactory - Query language substitutions: {'true'='1', 'false'='0', 'yes'=''Y'', 'no'=''N''}
+2013-05-30 22:20:46,872 [1] INFO  NHibernate.Cfg.SettingsFactory - cache provider: NHibernate.Caches.SysCache2.SysCacheProvider, NHibernate.Caches.SysCache2, Version=3.1.0.4000, Culture=neutral, PublicKeyToken=6876f2ea66c9f443
+2013-05-30 22:20:46,872 [1] INFO  NHibernate.Cfg.SettingsFactory - query cache factory: NHibernate.Cache.StandardQueryCacheFactory
+2013-05-30 22:20:46,872 [1] INFO  NHibernate.Cfg.SettingsFactory - Order SQL inserts for batching: enabled
+2013-05-30 22:20:46,872 [1] DEBUG NHibernate.Cfg.SettingsFactory - Wrap result sets: disabled
+2013-05-30 22:20:46,872 [1] INFO  NHibernate.Cfg.SettingsFactory - Batcher factory: NHibernate.AdoNet.SqlClientBatchingBatcherFactory, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2013-05-30 22:20:46,872 [1] INFO  NHibernate.Cfg.SettingsFactory - Default entity-mode: Poco
+2013-05-30 22:20:46,872 [1] INFO  NHibernate.Cfg.SettingsFactory - Named query checking : enabled
+2013-05-30 22:20:46,872 [1] INFO  NHibernate.Impl.SessionFactoryImpl - building session factory
+2013-05-30 22:20:46,872 [1] DEBUG NHibernate.Impl.SessionFactoryImpl - Session factory constructed with filter configurations : {}
+2013-05-30 22:20:46,872 [1] DEBUG NHibernate.Impl.SessionFactoryImpl - instantiating session factory with properties: {'use_reflection_optimizer'='True', 'proxyfactory.factory_class'='NHibernate.Bytecode.DefaultProxyFactoryFactory, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'connection.provider'='App.Common.Data.Drivers.ContextDriverConnectionProvider, App.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null', 'connection.driver_class'='NHibernate.Driver.SqlClientDriver, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'dialect'='NHibernate.Dialect.MsSql2008Dialect, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'hibernate.dialect'='NHibernate.Dialect.MsSql2008Dialect, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'connection.connection_string'='Data Source=.;Initial Catalog=SOChatHub;Integrated Security=SSPI', 'current_session_context_class'='SharpLite.NHibernateProvider.LazySessionContext, SharpLite.NHibernateProvider, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f2f64e823dfaf078', 'cache.provider_class'='NHibernate.Caches.SysCache2.SysCacheProvider, NHibernate.Caches.SysCache2, Version=3.1.0.4000, Culture=neutral, PublicKeyToken=6876f2ea66c9f443', 'cache.use_second_level_cache'='true', 'cache.use_query_cache'='true'}
+2013-05-30 22:20:46,872 [1] DEBUG NHibernate.Connection.DriverConnectionProvider - Obtaining IDbConnection from Driver
+2013-05-30 22:20:46,873 [1] DEBUG NHibernate.Connection.ConnectionProvider - Closing connection
+2013-05-30 22:20:46,873 [1] DEBUG NHibernate.Cache.CacheFactory - cache for: App.Domain.Models.Menu.Menu usage strategy: nonstrict-read-write
+2013-05-30 22:20:46,873 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheProvider - building non-configured cache region : App.Domain.Models.Menu.Menu
+2013-05-30 22:20:46,873 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - Configuring cache region
+2013-05-30 22:20:46,873 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no priority specified using default : Default
+2013-05-30 22:20:46,873 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no expiration specified using default : 00:05:00
+2013-05-30 22:20:46,873 [1] DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: App.Domain.Models.Menu.Menu
+2013-05-30 22:20:46,873 [1] DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: App.Domain.Models.Menu.Menu
+2013-05-30 22:20:46,874 [1] DEBUG NHibernate.Tuple.Entity.PocoEntityTuplizer - Create Instantiator using optimizer for:App.Domain.Models.Menu.Menu
+2013-05-30 22:20:46,874 [1] DEBUG NHibernate.Cache.CacheFactory - cache for: App.Domain.Models.User.OAuthMembership usage strategy: nonstrict-read-write
+2013-05-30 22:20:46,874 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheProvider - building non-configured cache region : App.Domain.Models.User.OAuthMembership
+2013-05-30 22:20:46,874 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - Configuring cache region
+2013-05-30 22:20:46,874 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no priority specified using default : Default
+2013-05-30 22:20:46,874 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no expiration specified using default : 00:05:00
+2013-05-30 22:20:46,874 [1] DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: App.Domain.Models.User.OAuthMembership
+2013-05-30 22:20:46,874 [1] DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: App.Domain.Models.User.OAuthMembership
+2013-05-30 22:20:46,874 [1] DEBUG NHibernate.Tuple.Entity.PocoEntityTuplizer - Create Instantiator using optimizer for:App.Domain.Models.User.OAuthMembership
+2013-05-30 22:20:46,874 [1] DEBUG NHibernate.Cache.CacheFactory - cache for: App.Domain.Models.User.UserProfile usage strategy: nonstrict-read-write
+2013-05-30 22:20:46,874 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheProvider - building non-configured cache region : App.Domain.Models.User.UserProfile
+2013-05-30 22:20:46,874 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - Configuring cache region
+2013-05-30 22:20:46,874 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no priority specified using default : Default
+2013-05-30 22:20:46,874 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no expiration specified using default : 00:05:00
+2013-05-30 22:20:46,874 [1] DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: App.Domain.Models.User.UserProfile
+2013-05-30 22:20:46,875 [1] DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: App.Domain.Models.User.UserProfile
+2013-05-30 22:20:46,875 [1] DEBUG NHibernate.Tuple.Entity.PocoEntityTuplizer - Create Instantiator using optimizer for:App.Domain.Models.User.UserProfile
+2013-05-30 22:20:46,875 [1] DEBUG NHibernate.Cache.CacheFactory - cache for: App.Domain.Models.User.WebMemberShip usage strategy: nonstrict-read-write
+2013-05-30 22:20:46,875 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheProvider - building non-configured cache region : App.Domain.Models.User.WebMemberShip
+2013-05-30 22:20:46,875 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - Configuring cache region
+2013-05-30 22:20:46,875 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no priority specified using default : Default
+2013-05-30 22:20:46,875 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no expiration specified using default : 00:05:00
+2013-05-30 22:20:46,875 [1] DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: App.Domain.Models.User.WebMemberShip
+2013-05-30 22:20:46,875 [1] DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: App.Domain.Models.User.WebMemberShip
+2013-05-30 22:20:46,875 [1] DEBUG NHibernate.Tuple.Entity.PocoEntityTuplizer - Create Instantiator using optimizer for:App.Domain.Models.User.WebMemberShip
+2013-05-30 22:20:46,875 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Static SQL for entity: App.Domain.Models.Menu.Menu
+2013-05-30 22:20:46,875 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Version select: SELECT ID FROM [Menu] WHERE ID = ?
+2013-05-30 22:20:46,875 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Snapshot select: SELECT menu_.ID, menu_.Controller as Controller0_, menu_.Action as Action0_, menu_.IsAdministration as IsAdmini4_0_, menu_.Name as Name0_ FROM [Menu] menu_ WHERE menu_.ID=?
+2013-05-30 22:20:46,875 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Insert 0: INSERT INTO [Menu] (Controller, Action, IsAdministration, Name, ID) VALUES (?, ?, ?, ?, ?)
+2013-05-30 22:20:46,876 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Update 0: UPDATE [Menu] SET Controller = ?, Action = ?, IsAdministration = ?, Name = ? WHERE ID = ?
+2013-05-30 22:20:46,876 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Delete 0: DELETE FROM [Menu] WHERE ID = ?
+2013-05-30 22:20:46,876 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.Menu.Menu: SELECT menu0_.ID as ID0_0_, menu0_.Controller as Controller0_0_, menu0_.Action as Action0_0_, menu0_.IsAdministration as IsAdmini4_0_0_, menu0_.Name as Name0_0_ FROM [Menu] menu0_ WHERE menu0_.ID=?
+2013-05-30 22:20:46,876 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.Menu.Menu: SELECT menu0_.ID as ID0_0_, menu0_.Controller as Controller0_0_, menu0_.Action as Action0_0_, menu0_.IsAdministration as IsAdmini4_0_0_, menu0_.Name as Name0_0_ FROM [Menu] menu0_ WHERE menu0_.ID=?
+2013-05-30 22:20:46,876 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.Menu.Menu: SELECT menu0_.ID as ID0_0_, menu0_.Controller as Controller0_0_, menu0_.Action as Action0_0_, menu0_.IsAdministration as IsAdmini4_0_0_, menu0_.Name as Name0_0_ FROM [Menu] menu0_ with (updlock, rowlock) WHERE menu0_.ID=?
+2013-05-30 22:20:46,876 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.Menu.Menu: SELECT menu0_.ID as ID0_0_, menu0_.Controller as Controller0_0_, menu0_.Action as Action0_0_, menu0_.IsAdministration as IsAdmini4_0_0_, menu0_.Name as Name0_0_ FROM [Menu] menu0_ with (updlock, rowlock, nowait) WHERE menu0_.ID=?
+2013-05-30 22:20:46,876 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.Menu.Menu: SELECT menu0_.ID as ID0_0_, menu0_.Controller as Controller0_0_, menu0_.Action as Action0_0_, menu0_.IsAdministration as IsAdmini4_0_0_, menu0_.Name as Name0_0_ FROM [Menu] menu0_ with (updlock, rowlock) WHERE menu0_.ID=?
+2013-05-30 22:20:46,876 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity App.Domain.Models.Menu.Menu: SELECT menu0_.ID as ID0_0_, menu0_.Controller as Controller0_0_, menu0_.Action as Action0_0_, menu0_.IsAdministration as IsAdmini4_0_0_, menu0_.Name as Name0_0_ FROM [Menu] menu0_ WHERE menu0_.ID=?
+2013-05-30 22:20:46,876 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity App.Domain.Models.Menu.Menu: SELECT menu0_.ID as ID0_0_, menu0_.Controller as Controller0_0_, menu0_.Action as Action0_0_, menu0_.IsAdministration as IsAdmini4_0_0_, menu0_.Name as Name0_0_ FROM [Menu] menu0_ WHERE menu0_.ID=?
+2013-05-30 22:20:46,876 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Static SQL for entity: App.Domain.Models.User.OAuthMembership
+2013-05-30 22:20:46,876 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Version select: SELECT ID FROM [OAuthMembership] WHERE ID = ?
+2013-05-30 22:20:46,876 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Snapshot select: SELECT oauthmembe_.ID, oauthmembe_.Provider as Provider1_, oauthmembe_.ProviderUserID as Provider3_1_, oauthmembe_.UserProfileID as UserProf4_1_ FROM [OAuthMembership] oauthmembe_ WHERE oauthmembe_.ID=?
+2013-05-30 22:20:46,876 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Insert 0: INSERT INTO [OAuthMembership] (Provider, ProviderUserID, UserProfileID, ID) VALUES (?, ?, ?, ?)
+2013-05-30 22:20:46,876 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Update 0: UPDATE [OAuthMembership] SET Provider = ?, ProviderUserID = ?, UserProfileID = ? WHERE ID = ?
+2013-05-30 22:20:46,876 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Delete 0: DELETE FROM [OAuthMembership] WHERE ID = ?
+2013-05-30 22:20:46,876 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.OAuthMembership: SELECT oauthmembe0_.ID as ID1_0_, oauthmembe0_.Provider as Provider1_0_, oauthmembe0_.ProviderUserID as Provider3_1_0_, oauthmembe0_.UserProfileID as UserProf4_1_0_ FROM [OAuthMembership] oauthmembe0_ WHERE oauthmembe0_.ID=?
+2013-05-30 22:20:46,876 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.OAuthMembership: SELECT oauthmembe0_.ID as ID1_0_, oauthmembe0_.Provider as Provider1_0_, oauthmembe0_.ProviderUserID as Provider3_1_0_, oauthmembe0_.UserProfileID as UserProf4_1_0_ FROM [OAuthMembership] oauthmembe0_ WHERE oauthmembe0_.ID=?
+2013-05-30 22:20:46,876 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.OAuthMembership: SELECT oauthmembe0_.ID as ID1_0_, oauthmembe0_.Provider as Provider1_0_, oauthmembe0_.ProviderUserID as Provider3_1_0_, oauthmembe0_.UserProfileID as UserProf4_1_0_ FROM [OAuthMembership] oauthmembe0_ with (updlock, rowlock) WHERE oauthmembe0_.ID=?
+2013-05-30 22:20:46,877 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.OAuthMembership: SELECT oauthmembe0_.ID as ID1_0_, oauthmembe0_.Provider as Provider1_0_, oauthmembe0_.ProviderUserID as Provider3_1_0_, oauthmembe0_.UserProfileID as UserProf4_1_0_ FROM [OAuthMembership] oauthmembe0_ with (updlock, rowlock, nowait) WHERE oauthmembe0_.ID=?
+2013-05-30 22:20:46,877 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.OAuthMembership: SELECT oauthmembe0_.ID as ID1_0_, oauthmembe0_.Provider as Provider1_0_, oauthmembe0_.ProviderUserID as Provider3_1_0_, oauthmembe0_.UserProfileID as UserProf4_1_0_ FROM [OAuthMembership] oauthmembe0_ with (updlock, rowlock) WHERE oauthmembe0_.ID=?
+2013-05-30 22:20:46,877 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity App.Domain.Models.User.OAuthMembership: SELECT oauthmembe0_.ID as ID1_0_, oauthmembe0_.Provider as Provider1_0_, oauthmembe0_.ProviderUserID as Provider3_1_0_, oauthmembe0_.UserProfileID as UserProf4_1_0_ FROM [OAuthMembership] oauthmembe0_ WHERE oauthmembe0_.ID=?
+2013-05-30 22:20:46,877 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity App.Domain.Models.User.OAuthMembership: SELECT oauthmembe0_.ID as ID1_0_, oauthmembe0_.Provider as Provider1_0_, oauthmembe0_.ProviderUserID as Provider3_1_0_, oauthmembe0_.UserProfileID as UserProf4_1_0_ FROM [OAuthMembership] oauthmembe0_ WHERE oauthmembe0_.ID=?
+2013-05-30 22:20:46,877 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Static SQL for entity: App.Domain.Models.User.UserProfile
+2013-05-30 22:20:46,877 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Version select: SELECT ID FROM [UserProfile] WHERE ID = ?
+2013-05-30 22:20:46,877 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Snapshot select: SELECT userprofil_.ID, userprofil_.UserName as UserName2_ FROM [UserProfile] userprofil_ WHERE userprofil_.ID=?
+2013-05-30 22:20:46,877 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Insert 0: INSERT INTO [UserProfile] (UserName, ID) VALUES (?, ?)
+2013-05-30 22:20:46,877 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Update 0: UPDATE [UserProfile] SET UserName = ? WHERE ID = ?
+2013-05-30 22:20:46,877 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Delete 0: DELETE FROM [UserProfile] WHERE ID = ?
+2013-05-30 22:20:46,877 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.UserProfile: SELECT userprofil0_.ID as ID2_0_, userprofil0_.UserName as UserName2_0_ FROM [UserProfile] userprofil0_ WHERE userprofil0_.ID=?
+2013-05-30 22:20:46,877 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.UserProfile: SELECT userprofil0_.ID as ID2_0_, userprofil0_.UserName as UserName2_0_ FROM [UserProfile] userprofil0_ WHERE userprofil0_.ID=?
+2013-05-30 22:20:46,877 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.UserProfile: SELECT userprofil0_.ID as ID2_0_, userprofil0_.UserName as UserName2_0_ FROM [UserProfile] userprofil0_ with (updlock, rowlock) WHERE userprofil0_.ID=?
+2013-05-30 22:20:46,877 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.UserProfile: SELECT userprofil0_.ID as ID2_0_, userprofil0_.UserName as UserName2_0_ FROM [UserProfile] userprofil0_ with (updlock, rowlock, nowait) WHERE userprofil0_.ID=?
+2013-05-30 22:20:46,877 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.UserProfile: SELECT userprofil0_.ID as ID2_0_, userprofil0_.UserName as UserName2_0_ FROM [UserProfile] userprofil0_ with (updlock, rowlock) WHERE userprofil0_.ID=?
+2013-05-30 22:20:46,877 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity App.Domain.Models.User.UserProfile: SELECT userprofil0_.ID as ID2_0_, userprofil0_.UserName as UserName2_0_ FROM [UserProfile] userprofil0_ WHERE userprofil0_.ID=?
+2013-05-30 22:20:46,877 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity App.Domain.Models.User.UserProfile: SELECT userprofil0_.ID as ID2_0_, userprofil0_.UserName as UserName2_0_ FROM [UserProfile] userprofil0_ WHERE userprofil0_.ID=?
+2013-05-30 22:20:46,878 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Static SQL for entity: App.Domain.Models.User.WebMemberShip
+2013-05-30 22:20:46,878 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Version select: SELECT ID FROM [WebMemberShip] WHERE ID = ?
+2013-05-30 22:20:46,878 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Snapshot select: SELECT webmembers_.ID, webmembers_.Email as Email3_, webmembers_.Password as Password3_, webmembers_.CreatedDate as CreatedD4_3_, webmembers_.UserProfileID as UserProf5_3_ FROM [WebMemberShip] webmembers_ WHERE webmembers_.ID=?
+2013-05-30 22:20:46,878 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Insert 0: INSERT INTO [WebMemberShip] (Email, Password, CreatedDate, UserProfileID, ID) VALUES (?, ?, ?, ?, ?)
+2013-05-30 22:20:46,878 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Update 0: UPDATE [WebMemberShip] SET Email = ?, Password = ?, CreatedDate = ?, UserProfileID = ? WHERE ID = ?
+2013-05-30 22:20:46,878 [1] DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Delete 0: DELETE FROM [WebMemberShip] WHERE ID = ?
+2013-05-30 22:20:46,878 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.WebMemberShip: SELECT webmembers0_.ID as ID3_0_, webmembers0_.Email as Email3_0_, webmembers0_.Password as Password3_0_, webmembers0_.CreatedDate as CreatedD4_3_0_, webmembers0_.UserProfileID as UserProf5_3_0_ FROM [WebMemberShip] webmembers0_ WHERE webmembers0_.ID=?
+2013-05-30 22:20:46,878 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.WebMemberShip: SELECT webmembers0_.ID as ID3_0_, webmembers0_.Email as Email3_0_, webmembers0_.Password as Password3_0_, webmembers0_.CreatedDate as CreatedD4_3_0_, webmembers0_.UserProfileID as UserProf5_3_0_ FROM [WebMemberShip] webmembers0_ WHERE webmembers0_.ID=?
+2013-05-30 22:20:46,878 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.WebMemberShip: SELECT webmembers0_.ID as ID3_0_, webmembers0_.Email as Email3_0_, webmembers0_.Password as Password3_0_, webmembers0_.CreatedDate as CreatedD4_3_0_, webmembers0_.UserProfileID as UserProf5_3_0_ FROM [WebMemberShip] webmembers0_ with (updlock, rowlock) WHERE webmembers0_.ID=?
+2013-05-30 22:20:46,878 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.WebMemberShip: SELECT webmembers0_.ID as ID3_0_, webmembers0_.Email as Email3_0_, webmembers0_.Password as Password3_0_, webmembers0_.CreatedDate as CreatedD4_3_0_, webmembers0_.UserProfileID as UserProf5_3_0_ FROM [WebMemberShip] webmembers0_ with (updlock, rowlock, nowait) WHERE webmembers0_.ID=?
+2013-05-30 22:20:46,878 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity App.Domain.Models.User.WebMemberShip: SELECT webmembers0_.ID as ID3_0_, webmembers0_.Email as Email3_0_, webmembers0_.Password as Password3_0_, webmembers0_.CreatedDate as CreatedD4_3_0_, webmembers0_.UserProfileID as UserProf5_3_0_ FROM [WebMemberShip] webmembers0_ with (updlock, rowlock) WHERE webmembers0_.ID=?
+2013-05-30 22:20:46,878 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity App.Domain.Models.User.WebMemberShip: SELECT webmembers0_.ID as ID3_0_, webmembers0_.Email as Email3_0_, webmembers0_.Password as Password3_0_, webmembers0_.CreatedDate as CreatedD4_3_0_, webmembers0_.UserProfileID as UserProf5_3_0_ FROM [WebMemberShip] webmembers0_ WHERE webmembers0_.ID=?
+2013-05-30 22:20:46,878 [1] DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity App.Domain.Models.User.WebMemberShip: SELECT webmembers0_.ID as ID3_0_, webmembers0_.Email as Email3_0_, webmembers0_.Password as Password3_0_, webmembers0_.CreatedDate as CreatedD4_3_0_, webmembers0_.UserProfileID as UserProf5_3_0_ FROM [WebMemberShip] webmembers0_ WHERE webmembers0_.ID=?
+2013-05-30 22:20:46,878 [1] DEBUG NHibernate.Impl.SessionFactoryObjectFactory - registered: cfd51f78a7c144cca1d71d7aee4b34af(unnamed)
+2013-05-30 22:20:46,878 [1] INFO  NHibernate.Impl.SessionFactoryObjectFactory - no name configured
+2013-05-30 22:20:46,878 [1] DEBUG NHibernate.Impl.SessionFactoryImpl - Instantiated session factory
+2013-05-30 22:20:46,878 [1] INFO  NHibernate.Cache.UpdateTimestampsCache - starting update timestamps cache at region: UpdateTimestampsCache
+2013-05-30 22:20:46,878 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheProvider - building non-configured cache region : UpdateTimestampsCache
+2013-05-30 22:20:46,878 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - Configuring cache region
+2013-05-30 22:20:46,878 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no priority specified using default : Default
+2013-05-30 22:20:46,878 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no expiration specified using default : 00:05:00
+2013-05-30 22:20:46,879 [1] INFO  NHibernate.Cache.StandardQueryCache - starting query cache at region: NHibernate.Cache.StandardQueryCache
+2013-05-30 22:20:46,879 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheProvider - building non-configured cache region : NHibernate.Cache.StandardQueryCache
+2013-05-30 22:20:46,879 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - Configuring cache region
+2013-05-30 22:20:46,879 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no priority specified using default : Default
+2013-05-30 22:20:46,879 [1] DEBUG NHibernate.Caches.SysCache2.SysCacheRegion - no expiration specified using default : 00:05:00
+2013-05-30 22:20:46,879 [1] DEBUG NHibernate.Impl.SessionFactoryImpl - Checking 0 named HQL queries
+2013-05-30 22:20:46,879 [1] DEBUG NHibernate.Impl.SessionFactoryImpl - Checking 0 named SQL queries

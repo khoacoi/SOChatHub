@@ -247,7 +247,7 @@
     <Compile Include="Startup\Tasks\AuthorizeRegistrationTask.cs" />
     <Compile Include="Startup\Tasks\ControllerRegistrationTask.cs" />
     <Compile Include="Startup\Tasks\FluentValidationRegistrationTask.cs" />
-    <Compile Include="ViewModels\AccountModels.cs" />
+    <Compile Include="ViewModels\Account\AccountModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup\Tasks\BundleRegistrationTask.cs" />
     <Compile Include="Startup\Tasks\FilterRegistrationTask.cs" />
@@ -258,6 +258,7 @@
     <Compile Include="Startup\Tasks\SignalRRegistrationTask.cs" />
     <Compile Include="ViewModels\Account\RegisterUserViewModel.cs" />
     <Compile Include="ViewModels\Account\Validators\RegisterUserValidator.cs" />
+    <Compile Include="ViewModels\Chat\ChatViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\themes\base\images\animated-overlay.gif" />

@@ -12,7 +12,7 @@ namespace App.Core.Mvc
     /// Base viewmodel object for the Choice page view model. 
     /// Page view model is a view model represents data for one page of view, not a partial view model or json view model.
     /// </summary>
-    public class PageViewModel
+    public abstract class PageViewModel
     {
         /// <summary>
         /// Gets or sets the menu items. 

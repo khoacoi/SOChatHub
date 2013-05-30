@@ -4,9 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Web.ViewModels.Chat;
 
 namespace Web.Controllers.Chat
 {
+    [Authorize]
     public class ChatController : PageControllerBase
     {
         //
@@ -14,7 +16,9 @@ namespace Web.Controllers.Chat
 
         public ActionResult Index()
         {
-            return View();
+            var viewModel = new ChatViewModel();
+            viewModel.UserName = App.Common.Security.Authentication.User.Current.UserName;
+            return View(viewModel);
         }
 
     }
