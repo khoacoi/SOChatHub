@@ -343,6 +343,7 @@
     <Content Include="Scripts\knockout-2.2.1.debug.js" />
     <Content Include="Scripts\knockout-2.2.1.js" />
     <Content Include="Scripts\Modules\Account\RegisterUser.js" />
+    <Content Include="Scripts\Modules\Chat\Chat.js" />
     <Content Include="Scripts\plugins\knockout\infuser-amd.js" />
     <Content Include="Scripts\plugins\knockout\infuser-amd.min.gz.js" />
     <Content Include="Scripts\plugins\knockout\infuser-amd.min.js" />
