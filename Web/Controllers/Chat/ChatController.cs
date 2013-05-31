@@ -17,7 +17,6 @@ namespace Web.Controllers.Chat
         public ActionResult Index()
         {
             var viewModel = new ChatViewModel();
-            viewModel.UserName = App.Common.Security.Authentication.User.Current.UserName;
             return View(viewModel);
         }
 

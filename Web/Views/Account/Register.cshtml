@@ -49,7 +49,7 @@
         require(['@Url.Content("~/Scripts/Modules/Account/RegisterUser.js")'], function () {
             var options = {
                 RegisterNewUserUrl: '@Url.Action("Register","Account")',
-                RedirectUrl: '@Url.Action("Index","Home")'
+                RedirectUrl: '@Url.Action("Login","Account")'
             }
             RegisterUserViewModelFuntion(options);
         });

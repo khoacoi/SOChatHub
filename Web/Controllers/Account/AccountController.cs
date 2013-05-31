@@ -233,14 +233,15 @@ namespace Web.Controllers.Account
         // POST: /Account/Register
 
         [HttpPost]
+        [AllowAnonymous]
         public ActionResult Register(RegisterUserViewModel model)
         {
-            if (ModelState.IsValid)
+            if (IsRegisterUserModelValid(model))
             {
                 var encryptedPassword = App.Utilities.Security.Crypto.EncryptStringAES(model.Password, model.UserID);
                 var userProfile = new UserProfile() { UserName = model.UserID };
 
-                var webMemberShip = new WebMemberShip() { UserProfile = userProfile, CreatedDate = DateTime.Now, Email = model.Email, Password = encryptedPassword };
+                var webMemberShip = new WebMemberShip() { UserProfile = userProfile, CreatedDate = DateTime.Now, Email = model.Email.Trim().ToLower(), Password = encryptedPassword };
 
                 var repo = this.RepositoryFactory.CreateWithGuid<WebMemberShip>();
                 repo.SaveOrUpdate(webMemberShip);
@@ -251,9 +252,16 @@ namespace Web.Controllers.Account
                 });
             }
 
-            // If we got this far, something failed, redisplay form
-            //return View(model);
             return this.JsonValidation();
+        }
+
+        private bool IsRegisterUserModelValid(RegisterUserViewModel model)
+        {
+            if (this.RepositoryFactory.CreateWithGuid<UserProfile>().GetAll().Any(x => x.UserName.ToLower().Trim() == model.UserID.ToLower().Trim()))
+                ModelState.AddModelError("UserID", "User name already exists. Please enter a different user name.");
+            if (this.RepositoryFactory.CreateWithGuid<WebMemberShip>().GetAll().Any(x => x.Email == model.Email.ToLower()))
+                ModelState.AddModelError("Email", "Email already registered in system. Please recover your password or enter a different email.");
+            return ModelState.IsValid;
         }
 
         //

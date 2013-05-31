@@ -134,7 +134,7 @@
     <Compile Include="Security\Authentication\Authentication.cs" />
     <Compile Include="Security\Authentication\AuthenticationModule.cs" />
     <Compile Include="Security\Authentication\AuthenticationTicket.cs" />
-    <Compile Include="Security\Authentication\AuthorizeAttribute.cs" />
+    <Compile Include="Security\Authentication\AppAuthorizeAttribute.cs" />
     <Compile Include="Security\Authentication\Principal.cs" />
     <Compile Include="Security\Authentication\User.cs" />
     <Compile Include="Security\Authentication\UserIdentity.cs" />

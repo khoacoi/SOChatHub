@@ -9,14 +9,14 @@ using System.Web.Mvc;
 namespace App.Common.Security.Authentication
 {
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = true, Inherited = true)]
-    public class AuthorizeAttribute : FilterAttribute, IAuthorizationFilter
+    public class AppAuthorizeAttribute : FilterAttribute, IAuthorizationFilter
     {
         private readonly UserRole? _role;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ChoiceAuthorizeAttribute" /> class.
         /// </summary>
-        public AuthorizeAttribute()
+        public AppAuthorizeAttribute()
         {
         }
 
@@ -24,7 +24,7 @@ namespace App.Common.Security.Authentication
         /// Initializes a new instance of the <see cref="ChoiceAuthorizeAttribute" /> class.
         /// </summary>
         /// <param name="role">The role.</param>
-        public AuthorizeAttribute(UserRole role)
+        public AppAuthorizeAttribute(UserRole role)
         {
             _role = role;
         }
