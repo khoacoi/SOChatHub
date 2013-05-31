@@ -11,6 +11,9 @@ namespace Web.Hubs
     {
         public void Send(string message)
         {
+            if (string.IsNullOrWhiteSpace(message))
+                return;
+
             var clientUserName = App.Common.Security.Authentication.User.Current.UserName;
             // Call the addNewMessageToPage method to update clients.
             Clients.All.addNewMessageToPage(clientUserName, message);

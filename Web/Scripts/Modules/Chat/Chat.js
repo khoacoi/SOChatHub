@@ -18,10 +18,12 @@
 
         $.connection.hub.start().done(function () {
             $('#sendmessage').click(function () {
-                // Call the Send method on the hub. 
-                chat.server.send(self.chatMessage());
-                // Clear text box and reset focus for next comment. 
-                self.chatMessage("");
+                if (self.chatMessage() != "") {
+                    // Call the Send method on the hub. 
+                    chat.server.send(self.chatMessage());
+                    // Clear text box and reset focus for next comment. 
+                    self.chatMessage("");
+                }
                 $('#message').focus();
             });
         });
