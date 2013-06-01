@@ -10,12 +10,12 @@
     <input type="text" id="message" data-bind ="value: chatMessage, valueUpdate: 'afterkeydown', event: {keydown: chatMessageKeyDown}" />
     <input type="button" id="bntSendMessage" value="Send" data-bind="click: sendMessage"/>
     <input type="hidden" id="displayname" />
-    @*<div style ="max-height: 50px">
+    <div id="discussionpanel" style ="overflow:auto; height: 350px; width: 800px">
         <ul id="discussion">
         </ul>
-    </div>*@
-    <ul id="discussion">
-        </ul>
+    </div>
+    @*<ul id="discussion">
+        </ul>*@
     
 </div>
 

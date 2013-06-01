@@ -261,6 +261,7 @@
     <Compile Include="ViewModels\Chat\ChatViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\master\jquery.jscrollpane.css" />
     <Content Include="Content\themes\base\images\animated-overlay.gif" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -333,6 +334,8 @@
     <Content Include="Scripts\plugins\jquery\jquery-2.0.0.min.map" />
     <Content Include="Scripts\plugins\jquery\jquery-ui-1.10.3.js" />
     <Content Include="Scripts\plugins\jquery\jquery-ui-1.10.3.min.js" />
+    <Content Include="Scripts\plugins\jquery\jquery.jscrollpane.js" />
+    <Content Include="Scripts\plugins\jquery\jquery.mousewheel.js" />
     <Content Include="Scripts\plugins\jquery\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\plugins\jquery\jquery.unobtrusive-ajax.min.js" />
     <None Include="Scripts\plugins\jquery\jquery.validate-vsdoc.js" />
@@ -416,8 +419,11 @@
     <Content Include="Views\Chat\Index.cshtml" />
     <Content Include="Views\Home\Chat.cshtml" />
     <Content Include="Views\Shared\Partials\_ScriptsPartial.cshtml" />
+    <Content Include="Views\Shared\Partials\_CssPartial.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Content\plugins\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
