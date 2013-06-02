@@ -1,0 +1,50 @@
+﻿@model Web.ViewModels.Account.ManageAccountViewModel
+
+@{
+    ViewBag.Title = "Manage Account";
+}
+@{
+    
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+</hgroup>
+
+<p>You're logged in as <strong>@User.Identity.Name</strong>.</p>
+
+
+@using (Html.BeginForm("Manage", "Account")) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary()
+
+    var formHeader = Model.IsStoredWebmembership ? "Change Password Form" : "Set Password Form";
+    <fieldset>
+        <legend>@formHeader</legend>
+
+        <ol>
+            @if(Model.IsStoredWebmembership){
+                <li>
+                    @Html.LabelFor(m => Model.Password)
+                    @Html.PasswordFor(m => Model.Password)
+                </li>
+            }
+            <li>
+                @Html.LabelFor(m => Model.NewPassword)
+                @Html.PasswordFor(m => Model.NewPassword)
+            </li>
+            <li>
+                @Html.LabelFor(m => Model.NewPassword)
+                @Html.PasswordFor(m => Model.NewPassword)
+            </li>
+        </ol>
+        <input type="submit" value="Change password" />
+    </fieldset>
+}
+
+<section id="externalLogins">
+    @Html.Action("RemoveExternalLogins")
+
+    <h3>Add an external login</h3>
+    @Html.Action("ExternalLoginsList", new { ReturnUrl = ViewBag.ReturnUrl })
+</section>

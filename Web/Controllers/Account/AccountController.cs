@@ -298,14 +298,18 @@ namespace Web.Controllers.Account
 
         public ActionResult Manage(ManageMessageId? message)
         {
-            ViewBag.StatusMessage =
-                message == ManageMessageId.ChangePasswordSuccess ? "Your password has been changed."
-                : message == ManageMessageId.SetPasswordSuccess ? "Your password has been set."
-                : message == ManageMessageId.RemoveLoginSuccess ? "The external login was removed."
-                : "";
-            ViewBag.HasLocalPassword = OAuthWebSecurity.HasLocalAccount(WebSecurity.GetUserId(User.Identity.Name));
-            ViewBag.ReturnUrl = Url.Action("Manage");
-            return View();
+
+            //ViewBag.StatusMessage =
+            //    message == ManageMessageId.ChangePasswordSuccess ? "Your password has been changed."
+            //    : message == ManageMessageId.SetPasswordSuccess ? "Your password has been set."
+            //    : message == ManageMessageId.RemoveLoginSuccess ? "The external login was removed."
+            //    : "";
+            //ViewBag.HasLocalPassword = OAuthWebSecurity.HasLocalAccount(WebSecurity.GetUserId(User.Identity.Name));
+            //ViewBag.ReturnUrl = Url.Action("Manage");
+            var query = this.QueryFactory.Create<IManageAccountQuery>();
+            var manageAccountViewModel = query.GetManageAccountViewModel();
+
+            return View(manageAccountViewModel);
         }
 
         //
@@ -383,22 +387,26 @@ namespace Web.Controllers.Account
         [ChildActionOnly]
         public ActionResult RemoveExternalLogins()
         {
-            ICollection<OAuthAccount> accounts = OAuthWebSecurity.GetAccountsFromUserName(User.Identity.Name);
-            List<Web.ViewModels.Account.ExternalLogin> externalLogins = new List<Web.ViewModels.Account.ExternalLogin>();
-            foreach (OAuthAccount account in accounts)
-            {
-                AuthenticationClientData clientData = OAuthWebSecurity.GetOAuthClientData(account.Provider);
+            var externalLogins = this.QueryFactory.Create<IRemoveableExternalMembershipQuery>().GetAllRelatedAccountMembershipViewModels();
 
-                externalLogins.Add(new Web.ViewModels.Account.ExternalLogin
-                {
-                    Provider = account.Provider,
-                    ProviderDisplayName = clientData.DisplayName,
-                    ProviderUserId = account.ProviderUserId,
-                });
-            }
-
-            ViewBag.ShowRemoveButton = externalLogins.Count > 1 || OAuthWebSecurity.HasLocalAccount(WebSecurity.GetUserId(User.Identity.Name));
             return PartialView("_RemoveExternalLoginsPartial", externalLogins);
+
+            //ICollection<OAuthAccount> accounts = OAuthWebSecurity.GetAccountsFromUserName(User.Identity.Name);
+            //List<Web.ViewModels.Account.ExternalLogin> externalLogins = new List<Web.ViewModels.Account.ExternalLogin>();
+            //foreach (OAuthAccount account in accounts)
+            //{
+            //    AuthenticationClientData clientData = OAuthWebSecurity.GetOAuthClientData(account.Provider);
+
+            //    externalLogins.Add(new Web.ViewModels.Account.ExternalLogin
+            //    {
+            //        Provider = account.Provider,
+            //        ProviderDisplayName = clientData.DisplayName,
+            //        ProviderUserId = account.ProviderUserId,
+            //    });
+            //}
+
+            //ViewBag.ShowRemoveButton = externalLogins.Count > 1 || OAuthWebSecurity.HasLocalAccount(WebSecurity.GetUserId(User.Identity.Name));
+            //return PartialView("_RemoveExternalLoginsPartial", externalLogins);
         }
 
         #region Helpers

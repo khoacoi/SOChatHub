@@ -237,7 +237,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\Account\AccountController.cs" />
+    <Compile Include="Controllers\Account\Queries\IManageAccountQuery.cs" />
+    <Compile Include="Controllers\Account\Queries\IRemoveableExternalMembershipQuery.cs" />
     <Compile Include="Controllers\Account\Queries\IWebMemberLoginQuery.cs" />
+    <Compile Include="Controllers\Account\Queries\MangeAccountQuery.cs" />
+    <Compile Include="Controllers\Account\Queries\RemoveableExternalMembershipQuery.cs" />
     <Compile Include="Controllers\Account\Queries\WebMemberLoginQuery.cs" />
     <Compile Include="Controllers\Chat\ChatController.cs" />
     <Compile Include="Controllers\Home\HomeController.cs" />
@@ -256,6 +260,7 @@
     <Compile Include="Startup\Tasks\RouteRegistrationTask.cs" />
     <Compile Include="Hubs\ChatHub.cs" />
     <Compile Include="Startup\Tasks\SignalRRegistrationTask.cs" />
+    <Compile Include="ViewModels\Account\ManageAccountViewModel.cs" />
     <Compile Include="ViewModels\Account\RegisterUserViewModel.cs" />
     <Compile Include="ViewModels\Account\Validators\RegisterUserValidator.cs" />
     <Compile Include="ViewModels\Chat\ChatViewModel.cs" />
@@ -420,6 +425,7 @@
     <Content Include="Views\Home\Chat.cshtml" />
     <Content Include="Views\Shared\Partials\_ScriptsPartial.cshtml" />
     <Content Include="Views\Shared\Partials\_CssPartial.cshtml" />
+    <Content Include="Views\Account\Manage2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\plugins\" />
