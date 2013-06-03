@@ -310,7 +310,7 @@ namespace Web.Controllers.Account
             var query = this.QueryFactory.Create<IManageAccountQuery>();
             var manageAccountViewModel = query.GetManageAccountViewModel();
 
-            return View(manageAccountViewModel);
+            return View("Manage2", manageAccountViewModel);
         }
 
         //
