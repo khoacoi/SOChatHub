@@ -238,9 +238,9 @@
   <ItemGroup>
     <Compile Include="Controllers\Account\AccountController.cs" />
     <Compile Include="Controllers\Account\Queries\IManageAccountQuery.cs" />
+    <Compile Include="Controllers\Account\Queries\MangeAccountQuery.cs" />
     <Compile Include="Controllers\Account\Queries\IRemoveableExternalMembershipQuery.cs" />
     <Compile Include="Controllers\Account\Queries\IWebMemberLoginQuery.cs" />
-    <Compile Include="Controllers\Account\Queries\MangeAccountQuery.cs" />
     <Compile Include="Controllers\Account\Queries\RemoveableExternalMembershipQuery.cs" />
     <Compile Include="Controllers\Account\Queries\WebMemberLoginQuery.cs" />
     <Compile Include="Controllers\Chat\ChatController.cs" />

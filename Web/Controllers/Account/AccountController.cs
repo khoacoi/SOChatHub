@@ -306,6 +306,7 @@ namespace Web.Controllers.Account
             //    : "";
             //ViewBag.HasLocalPassword = OAuthWebSecurity.HasLocalAccount(WebSecurity.GetUserId(User.Identity.Name));
             //ViewBag.ReturnUrl = Url.Action("Manage");
+
             var query = this.QueryFactory.Create<IManageAccountQuery>();
             var manageAccountViewModel = query.GetManageAccountViewModel();
 

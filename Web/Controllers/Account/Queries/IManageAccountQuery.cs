@@ -1,4 +1,5 @@
 ﻿using App.Common.Data;
+using App.Domain.Models.User;
 using System;
 using System.Collections.Generic;
 using System.Linq;
