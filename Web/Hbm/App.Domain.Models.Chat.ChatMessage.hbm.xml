@@ -1,0 +1,21 @@
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class xmlns="urn:nhibernate-mapping-2.2" name="App.Domain.Models.Chat.ChatMessage, App.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="`ChatMessage`">
+    <cache usage="nonstrict-read-write" />
+    <id name="Id" type="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="ID" />
+      <generator class="guid.comb" />
+    </id>
+    <property name="UserName" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="UserName" />
+    </property>
+    <property name="UserProfileID" type="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="UserProfileID" />
+    </property>
+    <property name="Message" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="Message" />
+    </property>
+    <property name="Date" type="System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <column name="Date" />
+    </property>
+  </class>
+</hibernate-mapping>

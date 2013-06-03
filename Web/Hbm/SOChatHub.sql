@@ -7,6 +7,8 @@ alter table [OAuthMembership]  drop constraint FKE18665EB158DC991
 alter table [WebMemberShip]  drop constraint FKC70167A4158DC991
 
 
+    if exists (select * from dbo.sysobjects where id = object_id(N'[ChatMessage]') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table [ChatMessage]
+
     if exists (select * from dbo.sysobjects where id = object_id(N'[Menu]') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table [Menu]
 
     if exists (select * from dbo.sysobjects where id = object_id(N'[OAuthMembership]') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table [OAuthMembership]
@@ -14,6 +16,15 @@ alter table [WebMemberShip]  drop constraint FKC70167A4158DC991
     if exists (select * from dbo.sysobjects where id = object_id(N'[UserProfile]') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table [UserProfile]
 
     if exists (select * from dbo.sysobjects where id = object_id(N'[WebMemberShip]') and OBJECTPROPERTY(id, N'IsUserTable') = 1) drop table [WebMemberShip]
+
+    create table [ChatMessage] (
+        ID UNIQUEIDENTIFIER not null,
+       UserName NVARCHAR(255) null,
+       UserProfileID UNIQUEIDENTIFIER null,
+       Message NVARCHAR(255) null,
+       Date DATETIME null,
+       primary key (ID)
+    )
 
     create table [Menu] (
         ID UNIQUEIDENTIFIER not null,

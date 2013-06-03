@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Chat\ChatMessage.cs" />
     <Compile Include="Models\Menu\Menu.cs" />
     <Compile Include="Models\User\OAuthMembership.cs" />
     <Compile Include="Models\User\UserProfile.cs" />
