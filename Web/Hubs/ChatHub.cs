@@ -43,7 +43,7 @@ namespace Web.Hubs
                 UserProfileID = App.Common.Security.Authentication.User.Current.UserID,
                 Date = DateTime.Now
             };
-            var profiles = RepositoryFactory.CreateWithGuid<ChatMessage>().SaveOrUpdate(chatMessage);
+            RepositoryFactory.CreateWithGuid<ChatMessage>().SaveOrUpdate(chatMessage);
         }
     }
 }

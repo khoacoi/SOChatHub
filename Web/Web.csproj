@@ -380,6 +380,7 @@
     <Content Include="Scripts\plugins\knockout\TrafficCop.js" />
     <Content Include="Scripts\plugins\knockout\TrafficCop.min.gz.js" />
     <Content Include="Scripts\plugins\knockout\TrafficCop.min.js" />
+    <Content Include="Scripts\test.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

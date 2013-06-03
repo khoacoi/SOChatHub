@@ -28,7 +28,8 @@ namespace Web.Startup.Tasks
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.unobtrusive*",
-                        "~/Scripts/jquery.validate*"));
+                        "~/Scripts/jquery.validate*",
+                        "~/Scripts/test.js"));
             //Signal-R
             bundles.Add(new ScriptBundle("~/bundles/signalR").Include(
                 "~/Scripts/plugins/signalR/jquery.signalR-{version}.js"
