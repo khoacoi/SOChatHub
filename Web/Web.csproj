@@ -430,6 +430,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\plugins\" />
+    <Folder Include="Scripts\Controllers\Common\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

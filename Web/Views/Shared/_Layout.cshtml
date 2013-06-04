@@ -10,9 +10,9 @@
         @Scripts.Render("~/bundles/modernizr")
     </head>
     <body>
-        <div id="validationSummary">
+        @*<div id="validationSummary">
             @Html.ValidationSummary()
-        </div>
+        </div>*@
         <header>
             <div class="content-wrapper">
                 <div class="float-left">
@@ -36,6 +36,15 @@
         <div id="body">
             @RenderSection("featured", required: false)
             <section class="content-wrapper main-content clear-fix">
+                <center>
+                    <div class="alert_error_container">
+                        @if (!ViewData.ModelState.IsValid)
+                        {
+                            @Html.ValidationSummary()
+                        }
+                    </div>
+                </center>
+
                 @RenderBody()
             </section>
         </div>

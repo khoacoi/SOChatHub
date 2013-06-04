@@ -1,6 +1,7 @@
 ﻿$(document).ready(function () {
-    RegisterGlobalAjaxHandlers();
+    //RegisterGlobalAjaxHandlers();
 });
+
 
 function RegisterGlobalAjaxHandlers() {
     $.ajaxPrefilter('json', function (options, originalOptions, xhr) {
