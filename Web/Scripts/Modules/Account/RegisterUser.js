@@ -7,8 +7,8 @@
         //    $(form).submit(function (e) {
         //        e.preventDefault();
         //    });
-        if(self.Password() == self.ConfirmPassword())
-        {
+        //if(self.Password() == self.ConfirmPassword())
+        //{
             $.ajax({
                 url: options.RegisterNewUserUrl,
                 type: 'POST',
@@ -25,7 +25,7 @@
                     alert("There was an error posting the data to the server: " + error.responseText);
                 }
             });
-        }
+        //}
     }
 
     ko.applyBindings(self);

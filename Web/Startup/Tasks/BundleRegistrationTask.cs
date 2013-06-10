@@ -28,8 +28,7 @@ namespace Web.Startup.Tasks
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.unobtrusive*",
-                        "~/Scripts/jquery.validate*",
-                        "~/Scripts/test.js"));
+                        "~/Scripts/jquery.validate*"));
             //Signal-R
             bundles.Add(new ScriptBundle("~/bundles/signalR").Include(
                 "~/Scripts/plugins/signalR/jquery.signalR-{version}.js"
@@ -46,6 +45,12 @@ namespace Web.Startup.Tasks
                        "~/Scripts/plugins/knockout/knockout.mapping-latest.js",
                        "~/Scripts/plugins/knockout/koExternalTemplateEngine.js",
                        "~/Scripts/plugins/knockout/knockout-postbox.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/common").Include(
+                        "~/Scripts/Controllers/Common/init.js"
+                ));
+            bundles.Add(new ScriptBundle("~/bundles/extension")
+                .IncludeDirectory("~/Scripts/Controllers/Extensions", "*.js"));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.

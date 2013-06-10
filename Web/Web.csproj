@@ -334,6 +334,8 @@
     <None Include="Properties\PublishProfiles\LocalDeploy.pubxml" />
     <None Include="Properties\PublishProfiles\SOChatHubLocalRelease.pubxml" />
     <None Include="Scripts\plugins\jquery\jquery-2.0.0.intellisense.js" />
+    <Content Include="Scripts\Controllers\Common\init.js" />
+    <Content Include="Scripts\Controllers\Extensions\knockout.helper.js" />
     <Content Include="Scripts\plugins\jquery\jquery-2.0.0.js" />
     <Content Include="Scripts\plugins\jquery\jquery-2.0.0.min.js" />
     <Content Include="Scripts\plugins\jquery\jquery-2.0.0.min.map" />
@@ -430,7 +432,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\plugins\" />
-    <Folder Include="Scripts\Controllers\Common\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
