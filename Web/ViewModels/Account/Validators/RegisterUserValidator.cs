@@ -10,7 +10,7 @@ namespace Web.ViewModels.Account.Validators
     {
         public RegisterUserValidator()
         {
-            RuleFor(x => x.Email).Must(ValidateEmailAddress).NotEmpty().WithMessage("Email is not valid, please check again.");
+            //RuleFor(x => x.Email).Must(ValidateEmailAddress).NotEmpty().WithMessage("Email is not valid, please check again.");
             RuleFor(x => x.Password).NotEmpty();
             RuleFor(x => x.ConfirmPassword).NotEmpty();
             RuleFor(x => x.ConfirmPassword).Must(ValidateConfirmationPassword).WithMessage("Confirmation Password do not match.");

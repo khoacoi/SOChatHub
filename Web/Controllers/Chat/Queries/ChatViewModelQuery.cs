@@ -13,6 +13,7 @@ namespace Web.Controllers.Chat.Queries
     {
         public ViewModels.Chat.ChatViewModel GetChatViewModel()
         {
+            var count = Web.Hubs.ChatHubAvailableUserManager.ConnectedUsers.Count();
             ChatViewModel viewModel = new ChatViewModel();
             // Get all user profile except current one.
             var availabelUsers = this.Session.QueryOver<UserProfile>().Where(x => x.Id != App.Common.Security.Authentication.User.Current.UserID).List();

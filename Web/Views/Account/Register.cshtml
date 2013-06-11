@@ -17,7 +17,7 @@
         <ol>
             <li>
                 @Html.LabelFor(m => m.Email)
-                @Html.TextBoxFor(m => m.Email, new { data_bind = "value: Email" })
+                @Html.EditorFor(m => m.Email, new { data_bind = "value: Email" })
                 @Html.ValidationMessageFor(m=> m.Email)
             </li>
             <li>

@@ -3,6 +3,7 @@ using App.Core.Mvc.Knockout;
 using FluentValidation.Attributes;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 using Web.ViewModels.Account.Validators;
@@ -14,6 +15,8 @@ namespace Web.ViewModels.Account
     public class RegisterUserViewModel : PageViewModel
     {
         public string UserID { get; set; }
+
+        [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
         public string Password { get; set; }
         public string ConfirmPassword { get; set; }
