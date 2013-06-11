@@ -8,9 +8,9 @@ function CheckValidationErrorResponse(response, form) {
     removePreviousValidationErrors();
 
     //Do not show ValidationSummary when having a modal dialog.
-    if ($(".ui-widget-overlay").length == 0) {
-        ValidationSummary(data.State);
-    }
+    //if ($(".ui-widget-overlay").length == 0) {
+    //    ValidationSummary(data.State);
+    //}
 
     $.each(data.State, function (i, item) {
         commonValidationErrors(item);
@@ -60,6 +60,7 @@ function getResponseValidationObject(response) {
     return null;
 }
 
+// Show Validation Summary in header of Content
 function ValidationSummary(data) {
     var errorSummaryEle = $('div.alert_error_container');
 
