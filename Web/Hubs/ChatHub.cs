@@ -23,7 +23,7 @@ namespace Web.Hubs
             }
         }
 
-        public void Send(string message)
+        public void SendToAll(string message)
         {
             if (string.IsNullOrWhiteSpace(message))
                 return;
@@ -34,6 +34,28 @@ namespace Web.Hubs
             StoreChatMessage(message);
         }
 
+        public void SendPrivateMessage(string toUserID, string message)
+        {
+        }
+
+        #region override functions
+        public override System.Threading.Tasks.Task OnConnected()
+        {
+            return base.OnConnected();
+        }
+
+        public override System.Threading.Tasks.Task OnDisconnected()
+        {
+            return base.OnDisconnected();
+        }
+
+        public override System.Threading.Tasks.Task OnReconnected()
+        {
+            return base.OnReconnected();
+        }
+        #endregion
+
+        #region private functions
         private void StoreChatMessage(string message)
         {
             var chatMessage = new ChatMessage()
@@ -45,5 +67,6 @@ namespace Web.Hubs
             };
             RepositoryFactory.CreateWithGuid<ChatMessage>().SaveOrUpdate(chatMessage);
         }
+        #endregion
     }
 }

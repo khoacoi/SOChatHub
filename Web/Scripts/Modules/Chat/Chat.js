@@ -14,7 +14,7 @@
     self.sendMessage = function () {
         if (self.chatMessage() != "") {
             // Call the Send method on the hub. 
-            chat.server.send(self.chatMessage());
+            chat.server.sendToAll(self.chatMessage());
             autoScrollToBottom();
             // Clear text box and reset focus for next comment. 
             self.chatMessage("");
@@ -25,7 +25,7 @@
     chat.client.addNewMessageToPage = function (name, message) {
         // Add the message to the page. 
         $('#discussion').append('<li><strong>' + htmlEncode(name)
-            + '</strong>: ' + htmlEncode(message) + '</li>');
+            + '</strong>: ' + messageHTMLEncode(message) + '</li>');
     };
 
     $.connection.hub.start().done(function () {
@@ -47,6 +47,10 @@
     function htmlEncode(value) {
         var encodedValue = $('<div />').text(value).html();
         return encodedValue;
+    }
+
+    function messageHTMLEncode(value) {
+        return value;
     }
     // End ChatScript
 
