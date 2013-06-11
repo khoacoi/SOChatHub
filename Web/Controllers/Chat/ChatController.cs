@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Web.Controllers.Chat.Queries;
 using Web.ViewModels.Chat;
 
 namespace Web.Controllers.Chat
@@ -16,7 +17,7 @@ namespace Web.Controllers.Chat
 
         public ActionResult Index()
         {
-            var viewModel = new ChatViewModel();
+            var viewModel = this.QueryFactory.Create<IChatViewModelQuery>().GetChatViewModel();
             return View(viewModel);
         }
 

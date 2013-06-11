@@ -244,6 +244,8 @@
     <Compile Include="Controllers\Account\Queries\RemoveableExternalMembershipQuery.cs" />
     <Compile Include="Controllers\Account\Queries\WebMemberLoginQuery.cs" />
     <Compile Include="Controllers\Chat\ChatController.cs" />
+    <Compile Include="Controllers\Chat\Queries\ChatViewModelQuery.cs" />
+    <Compile Include="Controllers\Chat\Queries\IChatViewModelQuery.cs" />
     <Compile Include="Controllers\Home\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -264,6 +266,7 @@
     <Compile Include="ViewModels\Account\RegisterUserViewModel.cs" />
     <Compile Include="ViewModels\Account\Validators\RegisterUserValidator.cs" />
     <Compile Include="ViewModels\Chat\ChatViewModel.cs" />
+    <Compile Include="ViewModels\Chat\UserProfileViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\master\jquery.jscrollpane.css" />

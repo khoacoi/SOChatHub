@@ -10,6 +10,11 @@ namespace Web.ViewModels.Chat
     [ClientViewModelName("ChatViewModel")]
     public class ChatViewModel : PageViewModel
     {
-        //public string UserName { get; set; }
+        public List<UserProfileViewModel> AvailableUser { get; set; }
+
+        public ChatViewModel()
+        {
+            this.AvailableUser = new List<UserProfileViewModel>();
+        }
     }
 }

@@ -20,9 +20,10 @@ alter table [WebMemberShip]  drop constraint FKC70167A4158DC991
     create table [ChatMessage] (
         ID UNIQUEIDENTIFIER not null,
        UserName NVARCHAR(255) null,
-       UserProfileID UNIQUEIDENTIFIER null,
+       SenderID UNIQUEIDENTIFIER null,
        Message NVARCHAR(255) null,
        Date DATETIME null,
+       SendStatus INT null,
        primary key (ID)
     )
 

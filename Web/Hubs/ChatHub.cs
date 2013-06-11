@@ -62,7 +62,7 @@ namespace Web.Hubs
             {
                 Message = message,
                 UserName = App.Common.Security.Authentication.User.Current.UserName,
-                UserProfileID = App.Common.Security.Authentication.User.Current.UserID,
+                SenderID = App.Common.Security.Authentication.User.Current.UserID,
                 Date = DateTime.Now
             };
             RepositoryFactory.CreateWithGuid<ChatMessage>().SaveOrUpdate(chatMessage);
